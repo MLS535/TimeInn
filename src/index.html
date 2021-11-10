@@ -2,31 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>TimeInn</title>
+    <link rel="stylesheet" type="text/css" href="css/project.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
-    <img src="img/logo.png" alt="logo">
-    <a>Experiencias</a>
-    <a>Conciertos</a>
-    <a>Festivales</a>
-    <a>Agenda mensual</a>
+    <div id="enlaces">
+    <img id="logo" src="img/logo.png" alt="logo">
+    <button class="button">Experiencias</button>
+    <button class="button">Conciertos</button>
+    <button class="button">Festivales</button>
+    <button class="button">Agenda mensual</button>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+
+            <video autoplay muted loop id="myVideo">
+                <source src="img/video%20(online-video-cutter.com).mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+
+        </div>
+
+        <div class="mySlides">
+
+            <img src="img/pexels-marcin-dampc-1684187.jpg" alt="altavoz" >
+
+        </div>
+
+        <div class="mySlides">
+          <img src="img/concierto1.jpg">
+
+        </div>
+
+
+
+        <a class="prev" >&#10094;</a>
+        <a class="next">&#10095;</a>
+
+    </div>
+
 </header>
 <main>
+    <section>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eget mattis quam.
+        Cras neque mi, tincidunt in finibus ac, mollis nec metus. Aliquam vel iaculis neque, ut euismod leo.
+        Sed ut orci nec metus blandit dictum. Morbi imperdiet viverra neque, id eleifend risus pellentesque sed.
+        Ut scelerisque laoreet lectus rutrum rutrum. Pellentesque ac ultricies sem, quis fringilla dui.
+        Cras eu nulla sollicitudin, aliquam ante efficitur, ultricies erat.</section>
     <section></section>
     <section></section>
     <section></section>
     <section></section>
     <section></section>
-    <section></section>
+
 </main>
 
 <footer>
     <img src="img/logo.png" alt="logo">
-    <a>Experiencias</a>
-    <a>Conciertos</a>
-    <a>Festivales</a>
-    <a>Agenda mensual</a>
+    <button>Experiencias</button>
+    <button>Conciertos</button>
+    <button>Festivales</button>
+    <button>Sobre la compañia</button>
 </footer>
+
+<script src="js/project.js"></script>
 </body>
 </html>
