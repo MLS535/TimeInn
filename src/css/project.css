@@ -5,7 +5,27 @@
     --color-secondary-variant: #c29219;
 }
 
-main{
+.eventHeader{
+    background-color: var(--color-primary-variant);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 102%;
+    height: 25vh;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    
+}
+.addEvent{
+    font-size: 1.5em;
+    background-color: var(--color-secondary);
+    box-shadow: 5px 5px 5px var(--color-secondary-variant);
+    border-radius: 0.4em;
+    margin-right: 5rem;
+    text-align: center;
+}
+
+.eventMain{
     display: grid;
     width: 100%;
     height: 100%;
@@ -16,11 +36,16 @@ main{
 .event{
     display: grid;
     background-color: var(--color-primary-variant);
-    grid-template-columns: 30% 50% 20%;
+    grid-template-columns: 35% 55% 10%;
     width: 90vw;
+    border-radius: 0.4em;
+    /* height: 35vh; */
+    min-height: 35vh;
+    max-height: 100vh;
     justify-content: center;
     margin-top: 5vh;
-    /* box-shadow: 5px 5px 5px black; */
+    margin-right: 3vw;
+    box-shadow: 5px 5px 5px black; 
 }
 .image{
     display: flex;
@@ -30,28 +55,46 @@ main{
 
 }
 .image>img{
-    width: 25vw;
-    height: 20vh;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    width: 19vw;
+    height: 25vh;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 1rem;
     background-color: var(--color-primary);
 }
 .event>.content{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 20% 20% 60%;
     grid-gap: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    margin-left: 2rem;
 }
 .title{
     font-size: 2em;
 }
 .date{
-
+    font-size: 1.3em;
+}
+.date i{
+    font-size: 1.7em;
+    margin-right: 0.5rem;
 }
 .text{
-
+    font-size: 1.3em;
 }
-.buttons>button{
-    background-color:var(--color-secondary);
-    box-shadow: 3px 3px 3px rgb(78, 78, 78);
-
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    align-content: space-between;
+    justify-items: center;
+      
+}
+.buttons>div i{
+    margin-top: 2rem;
+    margin-right: 1rem;
+    font-size: 2rem;
 }
