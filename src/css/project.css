@@ -13,7 +13,7 @@ body {
     align-items: baseline;
     */
     font-size: 18px;
-    gap:  30px;
+    gap: 8vw;
     z-index: 1;
 
 }
@@ -25,12 +25,10 @@ body {
 }
 
 #logo{
-
+flex-grow: 2;
 
 }
-/**
-HEADER BUTTONS
- */
+
 .button {
     /*position: fixed;*/
     position: relative;

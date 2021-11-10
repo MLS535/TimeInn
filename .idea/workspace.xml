@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/concierto1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/pexels-marcin-dampc-1684187.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/video (online-video-cutter.com).mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/project.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
