@@ -230,9 +230,10 @@ flex-grow: 2;
     font-family: 'Heebo', sans-serif;
     justify-content: space-evenly;
     font-size: 1.5rem;
+    padding-bottom: 2em;
 }
 .logofooter{
-    align-self: center;
+    margin-left: 29.5em;
 }
 
 
