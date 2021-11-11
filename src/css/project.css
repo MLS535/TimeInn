@@ -1,10 +1,22 @@
+/*
+General
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@100&display=swap');
 :root{
     --color-primary: #f5f5f5;
     --color-primary-variant: #8a8787;
     --color-secondary: #daa520;
     --color-secondary-variant: #c29219;
 }
+body {
+    margin:0;
+    box-sizing: border-box;
+}
 
+/*
+Event Page
+ */
 .eventHeader{
     background-color: var(--color-primary-variant);
     display: flex;
@@ -100,11 +112,10 @@
 }
 
 
-body {
-    margin:0;
-    box-sizing: border-box;
-}
 
+/**
+Front page CSS
+ */
 #enlaces{
     display: flex;
     position: absolute;
@@ -124,9 +135,10 @@ body {
 
 }
 
-#logo{
+.logo{
 flex-grow: 2;
-
+    max-width: 10vw;
+    max-height: 10vh;
 }
 
 .button {
@@ -211,6 +223,65 @@ flex-grow: 2;
     color: black;
 }
 
+.footer{
+    margin: 0;
+  background: black;
+    color: white;
+    font-family: 'Heebo', sans-serif;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+.logofooter{
+    align-self: center;
+}
+
+
+.content_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+}
+.list_ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.title_column_div{
+
+    justify-content: space-between;
+}
+
+.titles_footer{
+    font-weight: bold;
+    cursor: pointer;
+    align-self: baseline;
+
+}
+
+.item_li{
+    cursor: pointer;
+}
+
+.item_li:hover, .titles_footer:hover {
+    color: darkgrey;
+}
+
+.logos_images{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+}
+
+
+.legal-copy{
+    align-self: flex-end;
+}
 
 @media only screen and (max-width: 300px) {
     .prev, .next,.text {font-size: 11px}

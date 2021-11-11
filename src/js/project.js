@@ -28,3 +28,4 @@ function showDivs(n) {
     }
     elementsByClassName[slideIndex-1].style.display = "block";
 }
+

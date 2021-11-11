@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/pexels-snapwire-6966.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TimeInn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TimeInn.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/project.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +49,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img" />
@@ -101,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636473701687</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="gap del css aumentado">
+      <created>1636571004015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636571004015</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +138,8 @@
     <MESSAGE value="Update README.md with WireFrame" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="Creado el logo y empezado la estructura de html del front" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creado el logo y empezado la estructura de html del front" />
+    <MESSAGE value="gap del css aumentado" />
+    <MESSAGE value="push del front slider" />
+    <option name="LAST_COMMIT_MESSAGE" value="push del front slider" />
   </component>
 </project>
