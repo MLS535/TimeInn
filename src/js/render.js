@@ -3,18 +3,17 @@ import* as data from './data.js';
 import { news, events} from "./data.js";
 
 
-//TODO REVISAR Y CAMBIAR PARA QUE RENDERICE.
-// get the DOM element to where all the portfolio items will go into
+
 let portfolioItemsDiv = document.querySelector('#news-portfolio');
 let fragment = document.createDocumentFragment();
 let template = {
-    news: (project) => {
+    news: (newsproject) => {
         return `<div class="event">
-         <img class="image" src="${project.imgUrl}" alt="${project.title}" />
+         <img class="image" src="${newsproject.imgUrl}" alt="${newsproject.title}" />
           <div class="content">
-                <div class="title">${project.title}</div>
-                <div class="date"><i class="far fa-calendar-alt"></i> ${project.publication_date}</div>
-                <div class="text">${project.description}</div>
+                <div class="title">${newsproject.title}</div>
+                <div class="date"><i class="far fa-calendar-alt"></i> ${newsproject.publication_date}</div>
+                <div class="text">${newsproject.description}</div>
             </div>
              <div class="buttons">
                 <div class="edit"><i class="fas fa-pencil-alt"></i></div>
@@ -26,9 +25,9 @@ let template = {
 };
 
 // render each project to the DOM
-news.forEach((project) => {
+news.forEach((newsproject) => {
     let temp = document.createElement('div');
-    temp.innerHTML = template['news'].call(this, project);
+    temp.innerHTML = template['news'].call(this, newsproject);
     fragment.appendChild(temp.firstChild);
 });
 
