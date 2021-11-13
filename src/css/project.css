@@ -57,7 +57,8 @@ Event Page
     justify-content: center;
     margin-top: 5vh;
     margin-right: 3vw;
-    box-shadow: 5px 5px 5px black; 
+    box-shadow: 5px 5px 5px black;
+    color: white;
 }
 .image{
     display: flex;
