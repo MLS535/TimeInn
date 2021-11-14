@@ -1,9 +1,9 @@
 
 import* as data from './data.js';
 import { news, events} from "./data.js";
+console.log(data.events);
 
-
-
+//Event page part on es renderitza les noticies
 let portfolioItemsDiv = document.querySelector('#news-portfolio');
 let fragment = document.createDocumentFragment();
 let template = {
@@ -24,15 +24,16 @@ let template = {
     }
 };
 
+//Event page part on es renderitza les events
 // render each project to the DOM
-news.forEach((newsproject) => {
+data.news.forEach((newsproject) => {
     let temp = document.createElement('div');
     temp.innerHTML = template['news'].call(this, newsproject);
     fragment.appendChild(temp.firstChild);
 });
 
 //append the fragment to the document element
-portfolioItemsDiv.appendChild(fragment);
+// portfolioItemsDiv.appendChild(fragment);
 
 let querySelector = document.querySelector('#portfolio-events');
 let templates = {
@@ -41,10 +42,9 @@ let templates = {
          <img class="image" src="${project.imgUrl}" alt="${project.title}" />
           <div class="content">
                 <div class="title">${project.title}</div>
-                <div class="date"><i class="far fa-calendar-alt"></i> ${project.publication_date}</div>
-                <!-- <div>${project.time}</div>
-                <div>${project.price}</div> 
-                <div>${project.location}</div> -->
+                <div class="date"><i class="far fa-calendar-alt"></i> ${project.publication_date} a las ${project.time} y el precio es de
+                ${project.price} y se localiza en ${project.location}
+                </div>
                 <div class="text">${project.description}</div>
             </div>
              <div class="buttons">
@@ -56,12 +56,12 @@ let templates = {
     }
 };
 
+
 // render each project to the DOM
-events.forEach((project) => {
+data.events.forEach((project) => {
     let temp = document.createElement('div');
     temp.innerHTML = templates['events'].call(this, project);
     fragment.appendChild(temp.firstChild);
 });
 
-//append the fragment to the document element
 querySelector.appendChild(fragment);
