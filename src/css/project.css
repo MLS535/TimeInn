@@ -2,7 +2,7 @@
 General
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@100&family=Monoton&display=swap');
 :root{
     --color-primary: #f5f5f5;
     --color-primary-variant: #8a8787;
@@ -26,7 +26,7 @@ Event Page
     height: 25vh;
     margin-top: -0.5em;
     margin-left: -0.5em;
-    
+
 }
 .addEvent{
     font-size: 1.5em;
@@ -43,7 +43,7 @@ Event Page
     height: 100%;
     background-color: var(--color-primary);
     justify-content: center;
-    
+
 }
 .event{
     display: grid;
@@ -104,7 +104,7 @@ Event Page
     grid-gap: 5px;
     align-content: space-between;
     justify-items: center;
-      
+
 }
 .buttons>div i{
     margin-top: 2rem;
@@ -137,7 +137,7 @@ Front page CSS
 }
 
 .logo{
-flex-grow: 2;
+    flex-grow: 2;
     max-width: 10vw;
     max-height: 10vh;
 }
@@ -170,6 +170,12 @@ flex-grow: 2;
     background-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     transform: translateY(4px);
+}
+
+.title_section{
+    font-family: 'Monoton', cursive;
+    align-self: center;
+    text-align: center;
 }
 
 .mySlides {
@@ -226,7 +232,7 @@ flex-grow: 2;
 
 .footer{
     margin: 0;
-  background: black;
+    background: black;
     color: white;
     font-family: 'Heebo', sans-serif;
     justify-content: space-evenly;
@@ -297,7 +303,7 @@ flex-grow: 2;
     height: 5rem;
     z-index: -1;
 }
- 
+
 .goBackButton {
     background: var(--color-secondary);
     border-radius: 50%;
@@ -310,30 +316,41 @@ flex-grow: 2;
     z-index: -1;
 
 }
- 
+
 .display {
     z-index: 10;
 }
- 
+
 .display .goBackButton {
     animation: popup 0.3s ease-in-out;
     width: 3rem;
     height: 3rem;
     z-index: 11;
-   
+
 }
- 
+
 .display i {
     transform: translate(-50%, -50%) scale(1);
 }
+.card img {
+    height:180px;
+}
 
+.card img.blur {
+    position: absolute;
+    filter:blur(15px);
+    z-index:-1;
+    opacity:.40;
+    transform: translate(-160px,30px);
+    transition: all .35s ease-out;
+}
 .goBackButton>i {
     font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
 }
- 
+
 @keyframes popup {
     0% {
         width: 0;
@@ -349,3 +366,87 @@ flex-grow: 2;
     }
 }
 
+.card:hover .card-img {
+    transform:translate(70px,-15px);
+}
+
+.card:hover .card-img img.blur {
+    transform:translate(-100px,35px) scale(.85);
+    opacity:.25;
+    filter:blur(20px);
+}
+
+.card-content {
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    width:100%;
+    overflow:auto;
+    padding-top: 100px;
+    padding-left:60px;
+    padding-right: 50px;
+    scroll-behavior:smooth;
+}
+
+.card-content::-webkit-scrollbar {
+    height:0px;
+}
+
+.card-content:after {
+    content:'';
+    display:block;
+    min-width:20px;
+    height:100px;
+    position:relative;
+}
+
+.btn{
+    min-width:60px;
+    margin:auto 30px;
+    height:60px;
+    border-radius:20px;
+    background:#fff;
+    border:0px;
+    outline:none;
+    cursor:pointer;
+    z-index:9999;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+    transition: all .25s ease;
+}
+
+.btn:hover{
+    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+}
+
+.btn i {
+    font-size:1.2rem;
+}
+
+.slider {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgb(242,243,248);
+    width:100%;
+    overflow:hidden;
+}
+
+.slider:after {
+    content:'';
+    left:98px;
+    height:90vh;
+    position:absolute;
+    width:150px;
+    z-index:100;
+    cursor:none;
+}
+
+.slider:before {
+    content:'';
+    right:98px;
+    height:90vh;
+    position:absolute;
+    width:150px;
+    z-index:100;
+    cursor:none;
+}

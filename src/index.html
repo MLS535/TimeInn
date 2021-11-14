@@ -6,17 +6,17 @@
     <script src="https://kit.fontawesome.com/bfddb8114a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/project.css" />
     <script src="https://kit.fontawesome.com/bfddb8114a.js" crossorigin="anonymous"></script>
-    <script defer type="module" src="js/render.js"></script>
+    <script defer type="module" src="js/renderfront.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
     <div id="enlaces">
-    <img class="logo" src="img/logo2.png" alt="logo">
-    <button class="button">Experiencias</button>
-    <button class="button">Conciertos</button>
-    <button class="button">Festivales</button>
-    <button class="button">Agenda mensual</button>
+        <img class="logo" src="img/logo2.png" alt="logo">
+        <button class="button">Experiencias</button>
+        <button class="button">Conciertos</button>
+        <button class="button">Festivales</button>
+        <button class="button">Agenda mensual</button>
     </div>
 
     <div class="slideshow-container">
@@ -52,24 +52,45 @@
 </div>
 <main>
     <section>
-        <h1>News</h1>
+
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+        <h1 class="title_section">News</h1>
+        <div class="slider">
+
+            <button id="prev" class="btn">
+                <i class="las la-angle-left"></i>
+            </button>
+            <div class="card-content">
+                <!-- Card renderize -->
+
+            </div>
+            <button id="next" class="btn">
+                <i class="las la-angle-right"></i>
+            </button>
+        </div>
+
+
+
+
+
     </section>
-    <section>
-        <h1>Destacados del mes</h1>
+        <h1 class="title_section">Destacados del mes</h1>
+    <div id="root"></div>
         <section></section>
         <section></section>
     </section>
     <section>
-        <h1>Eventos</h1>
+        <h1 class="title_section">Eventos</h1>
     </section>
     <section>
-        <h1>Calendario</h1>
+        <h1 class="title_section">Calendario</h1>
     </section>
     <section>
-        <h1>NewsLetter</h1>
+        <h1 class="title_section">NewsLetter</h1>
     </section>
     <section>
-        <h1>Video</h1>
+        <h1 class="title_section">Video</h1>
     </section>
 
 
@@ -80,42 +101,42 @@
     <img class="logofooter" src="img/logo2.png" alt="logo">
 
     <div class="content_item">
-                <div><p class="title_column_div"><p class="titles_footer"><span>Quiénes somos</span></p>
-                    <ul class="list_ul">
-                        <li class="item_li">Prensa</li>
-                        <li class="item_li">Inversores</li>
-                        <li class="item_li">Política de privacidad</li>
-                        <li class="item_li">No vender mi información</li>
-                        <li class="item_li">Trabajar en TimeInn</li>
-                        <li class="item_li">Política de cookies</li>
-                        <li class="item_li">Condiciones de uso</li>
-                        <li class="item_li" id="navigation_manage_cookies">Administrar cookies</li>
-                    </ul>
-                </div>
-                <div class="title_column_div"><p class="titles_footer"><span>Contáctanos</span></p>
-                    <ul class="list_ul">
-                        <li class="item_li">Publicidad</li>
-                        <li class="item_li">¿Quieres salir en TimeInn?</li>
-                        <li class="item_li">Ayúdanos a mejorar</li>
-                        <li class="item_li">TimeInn Market</li>
-                    </ul>
-                </div>
-                <div class="title_column_div"><p class="titles_footer"><span>TimeInn Worldwide</span></p>
-                    <ul class="list_ul">
-                        <li class="item_li">TimeInn Madrid</li>
-                        <li class="item_li">TimeInn London</li>
-                        <li class="item_li">TimeInn New York</li>
-                        <li class="item_li">TimeInn Paris</li>
-                        <li class="item_li">TimeInn Mexico, DF</li>
-                    </ul>
-                </div>
+        <div><p class="title_column_div"><p class="titles_footer"><span>Quiénes somos</span></p>
+            <ul class="list_ul">
+                <li class="item_li">Prensa</li>
+                <li class="item_li">Inversores</li>
+                <li class="item_li">Política de privacidad</li>
+                <li class="item_li">No vender mi información</li>
+                <li class="item_li">Trabajar en TimeInn</li>
+                <li class="item_li">Política de cookies</li>
+                <li class="item_li">Condiciones de uso</li>
+                <li class="item_li" id="navigation_manage_cookies">Administrar cookies</li>
+            </ul>
+        </div>
+        <div class="title_column_div"><p class="titles_footer"><span>Contáctanos</span></p>
+            <ul class="list_ul">
+                <li class="item_li">Publicidad</li>
+                <li class="item_li">¿Quieres salir en TimeInn?</li>
+                <li class="item_li">Ayúdanos a mejorar</li>
+                <li class="item_li">TimeInn Market</li>
+            </ul>
+        </div>
+        <div class="title_column_div"><p class="titles_footer"><span>TimeInn Worldwide</span></p>
+            <ul class="list_ul">
+                <li class="item_li">TimeInn Madrid</li>
+                <li class="item_li">TimeInn London</li>
+                <li class="item_li">TimeInn New York</li>
+                <li class="item_li">TimeInn Paris</li>
+                <li class="item_li">TimeInn Mexico, DF</li>
+            </ul>
+        </div>
         <div class="logos_images" class="title_column_div">
             <span class="titles_footer">Siguenos</span>
             <div><i class="fab fa-facebook"></i></div>
             <div><i class="fab fa-twitter"></i></div>
             <div><i class="fab fa-instagram"></i></div>
         </div>
-        </div>
+    </div>
 </footer>
 
 
