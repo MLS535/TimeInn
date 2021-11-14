@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/project.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/render.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/render.js" afterDir="false" />
     </list>
@@ -133,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636595013377</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Todo correcto hasta aquí">
+      <created>1636908267018</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1636908267018</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +166,7 @@
     <MESSAGE value="Creado el footer y añadido html en eventPage y frontPage. Creado css. Falta ajustar imagen del logo." />
     <MESSAGE value="Cambiado el logo de color en el front page" />
     <MESSAGE value="push a develop" />
-    <option name="LAST_COMMIT_MESSAGE" value="push a develop" />
+    <MESSAGE value="Todo correcto hasta aquí" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todo correcto hasta aquí" />
   </component>
 </project>
