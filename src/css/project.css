@@ -200,7 +200,6 @@ Front page CSS
 
 }
 
-
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
@@ -450,3 +449,13 @@ Front page CSS
     z-index:100;
     cursor:none;
 }
+
+
+
+ #portfolio-events {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+
+} 
