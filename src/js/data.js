@@ -18,7 +18,7 @@ export const news = [
 ];
 
 export const events = [
-    {   title: 'MAD COOL FESTIVAL',
+    {   title: 'MAD COOL FESTIVAL 1',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
         publication_date: '11/11/2021',
         imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
@@ -26,7 +26,7 @@ export const events = [
         price: '50.00',
         location: 'Palma de Mallorca'
     },
-    {   title: 'MAD COOL FESTIVAL',
+    {   title: 'MAD COOL FESTIVAL 2',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
         publication_date: '11/11/2021',
         imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
@@ -34,7 +34,7 @@ export const events = [
         price: '50.00',
         location: 'Palma de Mallorca'
     },
-    { title: 'MAD COOL FESTIVAL',
+    { title: 'MAD COOL FESTIVAL 3',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
         publication_date: '11/11/2021',
         imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
@@ -42,7 +42,7 @@ export const events = [
         price: '50.00',
         location: 'Palma de Mallorca'
     },
-    {   title: 'MAD COOL FESTIVAL',
+    {   title: 'MAD COOL FESTIVAL 4',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
         publication_date: '11/11/2021',
         imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
