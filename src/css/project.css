@@ -85,20 +85,20 @@ Event Page
     margin-right: 1rem;
     margin-left: 2rem;
 }
-.title{
+.event .title{
     font-size: 2em;
 }
-.date{
+.event .date{
     font-size: 1.3em;
 }
 .date i{
     font-size: 1.7em;
     margin-right: 0.5rem;
 }
-.text{
+.event .text{
     font-size: 1.3em;
 }
-.buttons{
+.event>.buttons{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 5px;
@@ -451,10 +451,91 @@ Front page CSS
     cursor:none;
 }
 
-section>#portfolio-events {
+section>#portfolio-events,#portfolio-events2{
     display: grid;
+    background: rgb(242,243,248);
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-gap: 1rem;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    padding-right: 50px;
+    scroll-behavior: smooth;
+    align-items: center;
+}
 
+/*IndexEvent*/
+
+div>.indexEvent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.indexEvent>.image {
+    width: 31vw;
+    height: 35vh;
+}
+
+.indexEvent .title{    
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.indexEvent .date{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+/*IndexEvent2*/
+
+div>.indexEvent2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.indexEvent2>.image {
+    width: 13vw;
+    height: 15vh;
+    margin-left: 2rem;
+    margin-right: 3rem;
+}
+
+.indexEvent2 .title{    
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.indexEvent2 .content{
+    margin-left: 2rem;
+}
+
+.indexEvent2 .date{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }

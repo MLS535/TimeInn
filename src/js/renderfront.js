@@ -18,7 +18,7 @@ const front_card = Object.values(news).map(post => `
 
 document.querySelector('.card-content').innerHTML = front_card.join('\n');
 
-const event_news = Object.values([events[0],events[1],events[2],events[3]]).map(post => `
+const event_news = Object.values([events[0],events[1]]).map(post => `
    <div class="indexEvent">
          <img class="image" src="${post.imgUrl}" alt="${post.title}" />
           <div class="content">
@@ -32,3 +32,18 @@ const event_news = Object.values([events[0],events[1],events[2],events[3]]).map(
 `)
 
 document.querySelector('#portfolio-events').innerHTML = event_news.join('\n');
+
+const event_news2 = Object.values([events[2],events[3]]).map(post => `
+    <div class="indexEvent2">
+        <div class="content">
+            <div class="title">${post.title}</div>
+            <div class="date"><i class="far fa-calendar-alt"></i> ${post.publication_date} a las ${post.time} y el precio es de
+                ${post.price} y se localiza en ${post.location}
+            </div>
+            <div class="text">${post.description}</div>
+        </div>
+        <img class="image" src="${post.imgUrl}" alt="${post.title}" />
+    </div>
+`)
+
+document.querySelector('#portfolio-events2').innerHTML = event_news2.join('\n');
