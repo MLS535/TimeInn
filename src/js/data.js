@@ -41,7 +41,7 @@ export const events = [
         time: '21:30',
         price: '50.00',
         location: 'Palma de Mallorca',
-        destacado: false
+        destacado: true
     },
     { title: 'MAD COOL FESTIVAL 3',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
@@ -77,7 +77,7 @@ export const events = [
         time: '21:30',
         price: '50.00',
         location: 'Palma de Mallorca',
-        destacado: false
+        destacado: true
     }
 ]
 
