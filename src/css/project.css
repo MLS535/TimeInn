@@ -440,7 +440,7 @@ Front page CSS
     position:absolute;
     width:150px;
     z-index:100;
-    cursor:none;
+    /* cursor:none; */
 }
 
 .slider:before {
@@ -450,7 +450,7 @@ Front page CSS
     position:absolute;
     width:150px;
     z-index:100;
-    cursor:none;
+    /* cursor:none; */
 }
 
 section>#portfolio-events,#portfolio-events2{
