@@ -48,22 +48,23 @@ const event_news2 = Object.values([events[2],events[3]]).map(post => `
 
 document.querySelector('#portfolio-events2').innerHTML = event_news2.join('\n');
 
-const array = function (){
-    var output =  events.filter(event => event.destacado === true);
-    for(let i=0; i < output.length; i++){
+
+    let filter =  events.filter(event => event.destacado === true );
+
+let destacados = filter.map(eventfilter => {
         return ` <div class="indexEvent2">
         <div class="content">
-            <div class="title">${output[i].title}</div>
-            <div class="date"><i class="far fa-calendar-alt"></i> ${output[i].publication_date} a las ${output[i].time} y el precio es de
-                ${output[i].price} y se localiza en ${output[i].location}
+            <div class="title">${eventfilter.title}</div>
+            <div class="date"><i class="far fa-calendar-alt"></i> ${eventfilter.publication_date} a las ${eventfilter.time} y el precio es de
+                ${eventfilter.price} y se localiza en ${eventfilter.location}
             </div>
-            <div class="text">${output[i].description}</div>
+            <div class="text">${eventfilter.description}</div>
         </div>
-        <img class="image" src="${output[i].imgUrl}" alt="${output[i].title}" />
+        <img class="image" src="${eventfilter.imgUrl}" alt="${eventfilter.title}" />
     </div>`
-
-    };
 }
-document.querySelector('#destacado').innerHTML = array();
+
+);
+document.querySelector('#destacado').innerHTML = destacados.join('\n');
 
 
