@@ -20,7 +20,56 @@ export const news = [
             publication_date: '11/11/2021',
             imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
             destacado: false
-        }
+        },
+    {
+        title: '4Aitana Concierto',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        publication_date: '11/11/2021',
+        imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
+        destacado: true
+    },
+
+    {   title: '5Aitana Concierto',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        publication_date: '11/11/2021',
+        imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
+        destacado: false
+    },
+    {
+        title: '6Aitana Concierto',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        publication_date: '11/11/2021',
+        imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
+        destacado: true
+    },
+
+    {   title: '7Aitana Concierto',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        publication_date: '11/11/2021',
+        imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
+        destacado: false
+    },
+    {
+        title: '8Aitana Concierto',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        publication_date: '11/11/2021',
+        imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
+        destacado: true
+    },
+
+    {   title: '9Aitana Concierto',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        publication_date: '11/11/2021',
+        imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
+        destacado: false
+    },
+    {
+        title: '10Aitana Concierto',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        publication_date: '11/11/2021',
+        imgUrl: 'https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg',
+        destacado: true
+    }
 
 ];
 

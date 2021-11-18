@@ -65,6 +65,6 @@ let destacados = filter.map(eventfilter => {
 }
 
 );
-document.querySelector('#destacado').innerHTML = destacados.join('\n');
+document.querySelector('#destacado').innerHTML = destacados;
 
 
