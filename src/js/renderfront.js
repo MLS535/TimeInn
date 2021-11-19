@@ -2,7 +2,9 @@ import* as data from './data.js';
 
 import { news, events} from "./data.js";
 
-const front_card = Object.values(news).map(post => `
+let sort = news.sort((newsA, newsB) => newsA.publication_date - newsB.publication_date);
+//TODO LIMITAR EL TIEMPO A QUE NO APAREZCA NOTICIAS Y EVENTOS YA PASADOS
+const front_card = sort.map(post => `
    <div class="card">
                     <div class="card-img">
                         <img src="${post.imgUrl}" alt="">
@@ -47,3 +49,26 @@ const event_news2 = Object.values([events[2],events[3]]).map(post => `
 `)
 
 document.querySelector('#portfolio-events2').innerHTML = event_news2.join('\n');
+
+
+    let filter =  events.filter(event => event.destacado === true ).sort((eventA, eventB) => eventA.publication_date - eventB.publication_date);
+
+
+
+let destacados = filter.map(eventfilter => {
+        return ` <div class="indexEvent2">
+        <div class="content">
+            <div class="title">${eventfilter.title}</div>
+            <div class="date"><i class="far fa-calendar-alt"></i> ${eventfilter.publication_date} a las ${eventfilter.time} y el precio es de
+                ${eventfilter.price} y se localiza en ${eventfilter.location}
+            </div>
+            <div class="text">${eventfilter.description}</div>
+        </div>
+        <img class="image" src="${eventfilter.imgUrl}" alt="${eventfilter.title}" />
+    </div>`
+}
+
+);
+document.querySelector('#destacado').innerHTML = destacados.join('\n');
+
+

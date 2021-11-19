@@ -59,7 +59,7 @@ function showDivs(n) {
 setInterval(showDivs, )
 
 
-//TODO CARD SLIDER RENDERIZAR
+
 
 const next=document.querySelector('#next')
 const prev=document.querySelector('#prev')
