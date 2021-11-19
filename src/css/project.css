@@ -2,7 +2,8 @@
 General
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@100&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@100;400&family=Monoton&display=swap');
+
 :root{
     --color-primary: #f5f5f5;
     --color-primary-variant: #8a8787;
@@ -142,13 +143,14 @@ Front page CSS
     max-height: 10vh;
 }
 
+
 .button {
-    /*position: fixed;*/
-    position: relative;
-    right: 0;
-    bottom: 0;
-    padding: 10px;
-    font-size: 18px;
+    /* position: fixed; */
+    /* position: relative; */
+    /* right: 0; */
+    /* bottom: 0; */
+    padding: 1vw;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -157,8 +159,7 @@ Front page CSS
     background: black;
     border: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    width: 200px;
-
+    width: 12vw;
 }
 
 .button:hover {
@@ -168,14 +169,15 @@ Front page CSS
 
 .button:active {
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0vw 1vw 1vw -1vw;
     transform: translateY(4px);
 }
 
 .title_section{
-    font-family: 'Monoton', cursive;
+    font-family: 'Monoton', sans-serif;
     align-self: center;
     text-align: center;
+    font-size: 2rem;
 }
 
 .mySlides {
@@ -207,12 +209,12 @@ Front page CSS
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
-    margin-top: -22px;
+    padding: 1vw;
+    margin-top: -1vw;
     color: white;
     background: black;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1rem;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
@@ -292,7 +294,7 @@ Front page CSS
 }
 
 @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
+    .prev, .next,.text {font-size: 0.5rem}
 }
 
 .goBackContainer {
@@ -539,4 +541,36 @@ div>.indexEvent2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+}
+
+/*
+Newsletter
+ */
+
+
+.section_newsletter {
+    border-style: dashed;
+    font-family: 'Heebo', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    margin: 3vw;
+    flex-direction: row;
+    align-items: center;
+    font-style: revert;
+}
+.newsletter_divs{
+    margin: 1vw;
+}
+
+.title_newsletter{
+    font-family: Monoton, sans-serif;
+    font-size: 2rem;
+    color: var(--color-secondary);
+}
+
+.video_footer{
+    height: 90vh;
+    width: 98.8vw;
+    object-fit: cover;
+    z-index: -1;
 }
