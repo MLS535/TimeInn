@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="" />
+    <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/renderfront.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/renderfront.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +75,8 @@
       <workItem from="1636827509512" duration="1271000" />
       <workItem from="1637090334184" duration="2885000" />
       <workItem from="1637093320663" duration="4599000" />
-      <workItem from="1637176211564" duration="3671000" />
+      <workItem from="1637176211564" duration="4996000" />
+      <workItem from="1637339399585" duration="2055000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md with WireFrame">
       <created>1636395942895</created>
@@ -143,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637243655788</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="añadido 10 noticias en data.">
+      <created>1637244063404</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637244063404</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +186,7 @@
     <MESSAGE value="añadido en data destacado para poder realizar destacado del mes" />
     <MESSAGE value="creado destacado del mes en data" />
     <MESSAGE value="Template de destacados del mes realizado con un filter y un map. Ahora pinta solo aquellas que sean destacadas en el front" />
-    <option name="LAST_COMMIT_MESSAGE" value="Template de destacados del mes realizado con un filter y un map. Ahora pinta solo aquellas que sean destacadas en el front" />
+    <MESSAGE value="añadido 10 noticias en data." />
+    <option name="LAST_COMMIT_MESSAGE" value="añadido 10 noticias en data." />
   </component>
 </project>
