@@ -1,6 +1,6 @@
 //button go to top
 window.onscroll = function(){
-    console.log(document.documentElement.scrollTop);
+   // console.log(document.documentElement.scrollTop);
     if(document.documentElement.scrollTop > 100) {
       document.querySelector('.goBackContainer').classList.add('display');
 

@@ -17,7 +17,7 @@
 <!--        -->
         <!-- TODO AÑADIR A NUEVO EVENTO BOTON LAS PROPIEDADES DE ADDEVENT-->
         <div class="box">
-            <a class="button_overlay" href="#popup1">➕ Nuevo Evento </a>
+            <a class="button_overlay" href="#popup1"><i class="fas fa-plus-square"></i><span>  </span>  Nuevo Evento </a>
         </div>
     </header>
     <div class="goBackContainer">
@@ -36,23 +36,45 @@
                     <h2>Formulario de Nuevo Evento</h2>
                     <a class="close" href="#">×</a>
                     <div class="content-overlay">
-                      <form>
-                          <label>Titulo del evento:</label>
-                          <input type="text" name="titulo" placeholder="Titulo">
-                          <label>Lugar del evento:</label>
-                          <input type="text" name="lugar" placeholder="Lugar">
-                          <label>Fecha del evento</label>
-                          <input type="date" name="date" placeholder="date">
-                          <label>Hora del evento</label>
-                          <input type="time" name="time" placeholder="time">
-                          <label>Precio del evento</label>
-                          <input type="text" name="price" placeholder="price">
-                          <label>Descripción del evento</label>
-                          <textarea name="description" placeholder="inserte una descripcion" rows="5" cols="50"></textarea>
+                      <form class="form" id="formOverlay">
+                          <div class="field">
+                              <label class="label">Titulo del evento:*</label>
+                              <input value="prueba" id="title" class="inputform" type="text" name="titulo" placeholder="Titulo: Concierto Tomeu Penya" required>
+                          </div>
+                          <div class="field" >
+                              <label class="label">Lugar del evento:*</label>
+                              <input value="prueba" id="location" class="inputform" type="text" name="lugar" placeholder="Lugar" required>
+                          </div>
 
-                          <label>Inserte una url de una imagen</label>
-                          <input type="url" name="image" alt="imagen">
-                          <input type="submit">
+                          <div class="field">
+                          <label class="label">Fecha del evento:*</label>
+                          <input class="inputform" id="date_form" type="date" name="date" placeholder="date">
+                          </div>
+
+                          <div class="field">
+                              <label class="label">Hora del evento:*</label>
+                              <input class="inputform" id="time_form" type="time" name="time" placeholder="time" >
+                          </div>
+
+                          <div class="field">
+                              <label class="label">Precio del evento:*</label>
+                              <input value="prueba" id="price" class="inputform" type="text" name="price" placeholder="ex: 9.5, gratis" required>
+
+                          </div>
+
+                          <div class="field">
+                              <label class="label">Descripción del evento*</label>
+                              <textarea  id="description" name="description" placeholder="inserte una descripcion" rows="5" cols="50" required>value="prueba"</textarea>
+                          </div>
+
+                            <div class="field">
+                                <label class="label">Inserte una url de una imagen*</label>
+                                <input id="imgUrl" class="inputform" type="url" name="image" alt="imagen" value="https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg" required>
+                            </div>
+                          <div class="field">
+                              <input class="submit" type="submit" value="Guardar evento">
+                          </div>
+
                       </form>
                     </div>
                 </div>
