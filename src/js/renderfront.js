@@ -37,7 +37,7 @@ document.querySelector('#portfolio-events').innerHTML = event_news.join('\n');
 
 const event_news2 = Object.values([events[2],events[3]]).map(post => `
     <div class="indexEvent2">
-        <div class="content">
+        <div class="content-overlay">
             <div class="title">${post.title}</div>
             <div class="date"><i class="far fa-calendar-alt"></i> ${post.publication_date} a las ${post.time} y el precio es de
                 ${post.price} y se localiza en ${post.location}
@@ -57,7 +57,7 @@ document.querySelector('#portfolio-events2').innerHTML = event_news2.join('\n');
 
 let destacados = filter.map(eventfilter => {
         return ` <div class="indexEvent2">
-        <div class="content">
+        <div class="content-overlay">
             <div class="title">${eventfilter.title}</div>
             <div class="date"><i class="far fa-calendar-alt"></i> ${eventfilter.publication_date} a las ${eventfilter.time} y el precio es de
                 ${eventfilter.price} y se localiza en ${eventfilter.location}
