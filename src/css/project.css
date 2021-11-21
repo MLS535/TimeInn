@@ -113,7 +113,9 @@ Event Page
     font-size: 2rem;
 }
 
-
+.delete{
+    cursor: pointer;
+}
 
 /**
 Front page CSS

@@ -4,7 +4,8 @@
     <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/renderEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/renderEvents.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +78,7 @@
       <workItem from="1637093320663" duration="4599000" />
       <workItem from="1637176211564" duration="4996000" />
       <workItem from="1637339399585" duration="2055000" />
+      <workItem from="1637493029872" duration="3311000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md with WireFrame">
       <created>1636395942895</created>
@@ -155,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637244063404</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Creado html de newsletter y añadido video final">
+      <created>1637346065637</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637346065637</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +196,7 @@
     <MESSAGE value="creado destacado del mes en data" />
     <MESSAGE value="Template de destacados del mes realizado con un filter y un map. Ahora pinta solo aquellas que sean destacadas en el front" />
     <MESSAGE value="añadido 10 noticias en data." />
-    <option name="LAST_COMMIT_MESSAGE" value="añadido 10 noticias en data." />
+    <MESSAGE value="Creado html de newsletter y añadido video final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creado html de newsletter y añadido video final" />
   </component>
 </project>
