@@ -52,13 +52,22 @@ var formOverlay = document.getElementById("formOverlay");
 
 formOverlay.addEventListener("submit", function(evt) {
     evt.preventDefault();
+
      let title = document.getElementById("title").value;
      let location = document.getElementById("location").value;
+    let publication_date = document.getElementById("date_form").value;
+    let time = document.getElementById("time_form").value;
      let price = document.getElementById("price").value;
      let description = document.getElementById("description").value;
      let imgUrl = document.getElementById("imgUrl").value;
-    const eventAdd = {title,location, price, description, imgUrl};
+     let id = Math.floor(Math.random() * 999.999)
+
+    const eventAdd = {id,title,description, publication_date, imgUrl, time, price, location};
+
+     document.getElementById('addElement').innerText = "Se ha añadido un nuevo evento.";
+
     eventos.push(eventAdd);
+
 
    porfolioEvents.insertAdjacentHTML("afterbegin", function_events([eventAdd]).join("\n"));
 });

@@ -9,8 +9,11 @@
     <script defer type="module" src="js/renderEvents.js"></script>
     <link rel="stylesheet" href="css/project.css">
     <title>TimeInn Event Changes</title>
+
 </head>
 <body>
+
+
     <header class="eventHeader">
         <img src="img/logo.png" alt="logo">
 <!--        <div class="addEvent">➕ Nuevo Evento </div>-->
@@ -39,41 +42,44 @@
                       <form class="form" id="formOverlay">
                           <div class="field">
                               <label class="label">Titulo del evento:*</label>
-                              <input value="prueba" id="title" class="inputform" type="text" name="titulo" placeholder="Titulo: Concierto Tomeu Penya" required>
+                              <input  id="title" class="inputform" type="text" name="titulo" placeholder="Titulo: Concierto Tomeu Penya" required>
                           </div>
                           <div class="field" >
                               <label class="label">Lugar del evento:*</label>
-                              <input value="prueba" id="location" class="inputform" type="text" name="lugar" placeholder="Lugar" required>
+                              <input  id="location" class="inputform" type="text" name="lugar" placeholder="Lugar" required>
                           </div>
 
                           <div class="field">
                           <label class="label">Fecha del evento:*</label>
-                          <input class="inputform" id="date_form" type="date" name="date" placeholder="date">
+                          <input  class="inputform" id="date_form" type="date" name="date" placeholder="date" required>
                           </div>
 
                           <div class="field">
                               <label class="label">Hora del evento:*</label>
-                              <input class="inputform" id="time_form" type="time" name="time" placeholder="time" >
+                              <input class="inputform" id="time_form" type="time" name="time" placeholder="time" required>
                           </div>
 
                           <div class="field">
                               <label class="label">Precio del evento:*</label>
-                              <input value="prueba" id="price" class="inputform" type="text" name="price" placeholder="ex: 9.5, gratis" required>
+                              <input  id="price" class="inputform" type="text" name="price" placeholder="ex: 9.5, gratis" required>
 
                           </div>
 
                           <div class="field">
                               <label class="label">Descripción del evento*</label>
-                              <textarea  id="description" name="description" placeholder="inserte una descripcion" rows="5" cols="50" required>value="prueba"</textarea>
+                              <textarea  id="description" name="description" placeholder="inserte una descripcion" rows="5" cols="50" required></textarea>
                           </div>
 
                             <div class="field">
                                 <label class="label">Inserte una url de una imagen*</label>
                                 <input id="imgUrl" class="inputform" type="url" name="image" alt="imagen" value="https://www.freejpg.com.ar/asset/400/2f/2ff3/F100027510.jpg" required>
                             </div>
+
                           <div class="field">
                               <input class="submit" type="submit" value="Guardar evento">
                           </div>
+
+                          <div id="addElement"></div>
 
                       </form>
                     </div>
@@ -128,5 +134,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
