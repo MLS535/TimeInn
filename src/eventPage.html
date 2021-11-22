@@ -7,9 +7,18 @@
     <script src="https://kit.fontawesome.com/bfddb8114a.js" crossorigin="anonymous"></script>
    <script src="js/project.js"></script>
     <script defer type="module" src="js/renderEvents.js"></script>
-    <link rel="stylesheet" href="css/project.css">
+
     <title>TimeInn Event Changes</title>
 
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            //Load the HTML contents of the header into <header>
+            $("footer").load("./resources/footer.html");
+        });
+    </script>
+    <link rel="stylesheet" href="css/project.css">
 </head>
 <body>
 
@@ -92,48 +101,8 @@
         </div>
     </main>
 
-    <footer class="footer">
-        <!--Footer inspirado en  https://www.timeout.es/barcelona/es-->
-        <img class="logofooter" src="img/logo2.png" alt="logo">
+    <footer></footer>
 
-        <div class="content_item">
-            <div><p class="title_column_div"><p class="titles_footer"><span>Quiénes somos</span></p>
-                <ul class="list_ul">
-                    <li class="item_li">Prensa</li>
-                    <li class="item_li">Inversores</li>
-                    <li class="item_li">Política de privacidad</li>
-                    <li class="item_li">No vender mi información</li>
-                    <li class="item_li">Trabajar en TimeInn</li>
-                    <li class="item_li">Política de cookies</li>
-                    <li class="item_li">Condiciones de uso</li>
-                    <li class="item_li" id="navigation_manage_cookies">Administrar cookies</li>
-                </ul>
-            </div>
-            <div class="title_column_div"><p class="titles_footer"><span>Contáctanos</span></p>
-                <ul class="list_ul">
-                    <li class="item_li">Publicidad</li>
-                    <li class="item_li">¿Quieres salir en TimeInn?</li>
-                    <li class="item_li">Ayúdanos a mejorar</li>
-                    <li class="item_li">TimeInn Market</li>
-                </ul>
-            </div>
-            <div class="title_column_div"><p class="titles_footer"><span>TimeInn Worldwide</span></p>
-                <ul class="list_ul">
-                    <li class="item_li">TimeInn Madrid</li>
-                    <li class="item_li">TimeInn London</li>
-                    <li class="item_li">TimeInn New York</li>
-                    <li class="item_li">TimeInn Paris</li>
-                    <li class="item_li">TimeInn Mexico, DF</li>
-                </ul>
-            </div>
-            <div class="logos_images" class="title_column_div">
-                <span class="titles_footer">Siguenos</span>
-                <div><i class="fab fa-facebook"></i></div>
-                <div><i class="fab fa-twitter"></i></div>
-                <div><i class="fab fa-instagram"></i></div>
-            </div>
-        </div>
-    </footer>
 
 </body>
 </html>
