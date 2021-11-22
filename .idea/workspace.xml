@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
+    <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="Creado html de newsletter y añadido video final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/logo2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eventPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/renderEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/renderEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
