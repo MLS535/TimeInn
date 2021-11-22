@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/bfddb8114a.js" crossorigin="anonymous"></script>
-   <script src="js/project.js"></script>
+    <script src="js/project.js"></script>
     <script defer type="module" src="js/renderEvents.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#date_form" ).datepicker();
+    } );
+    </script>
 
     <title>TimeInn Event Changes</title>
-
-    <script
-            src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         $(document).ready(() => {
             //Load the HTML contents of the header into <header>
@@ -60,7 +65,7 @@
 
                           <div class="field">
                           <label class="label">Fecha del evento:*</label>
-                          <input  class="inputform" id="date_form" type="date" name="date" placeholder="date" required>
+                          <input  class="inputform" id="date_form" type="text" name="date" placeholder="date" required>
                           </div>
 
                           <div class="field">

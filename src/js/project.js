@@ -1,3 +1,5 @@
+
+
 //button go to top
 window.onscroll = function(){
    // console.log(document.documentElement.scrollTop);
@@ -111,4 +113,3 @@ function checkCookie() {
       document.querySelector('.overlay2').className = 'overlayOff';
     }}
     
-      
