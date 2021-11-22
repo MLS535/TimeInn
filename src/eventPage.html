@@ -13,7 +13,12 @@
 <body>
     <header class="eventHeader">
         <img src="img/logo.png" alt="logo">
-        <div class="addEvent">➕ Nuevo Evento </div>
+<!--        <div class="addEvent">➕ Nuevo Evento </div>-->
+<!--        -->
+        <!-- TODO AÑADIR A NUEVO EVENTO BOTON LAS PROPIEDADES DE ADDEVENT-->
+        <div class="box">
+            <a class="button_overlay" href="#popup1">➕ Nuevo Evento </a>
+        </div>
     </header>
     <div class="goBackContainer">
         <div class="goBackButton">
@@ -23,6 +28,36 @@
     <main class="eventMain">
         <div id="news_slider"> </div>
         <div id="news-portfolio">
+        </div>
+        <div>
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Formulario de Nuevo Evento</h2>
+                    <a class="close" href="#">×</a>
+                    <div class="content-overlay">
+                      <form>
+                          <label>Titulo del evento:</label>
+                          <input type="text" name="titulo" placeholder="Titulo">
+                          <label>Lugar del evento:</label>
+                          <input type="text" name="lugar" placeholder="Lugar">
+                          <label>Fecha del evento</label>
+                          <input type="date" name="date" placeholder="date">
+                          <label>Hora del evento</label>
+                          <input type="time" name="time" placeholder="time">
+                          <label>Precio del evento</label>
+                          <input type="text" name="price" placeholder="price">
+                          <label>Descripción del evento</label>
+                          <textarea name="description" placeholder="inserte una descripcion" rows="5" cols="50"></textarea>
+
+                          <label>Inserte una url de una imagen</label>
+                          <input type="url" name="image" alt="imagen">
+                          <input type="submit">
+                      </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div id="portfolio-events">

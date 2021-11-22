@@ -4,8 +4,10 @@
     <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eventPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/eventPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/renderEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/renderEvents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/renderfront.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/renderfront.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +27,12 @@
     </option>
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="MAITE1" />
+    <option name="BRANCH" value="feauture/MAITE4" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="MAITE1" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,7 +76,11 @@
       <workItem from="1636663286096" duration="1085000" />
       <workItem from="1636735639253" duration="2527000" />
       <workItem from="1636827509512" duration="1271000" />
-      <workItem from="1637090334184" duration="1407000" />
+      <workItem from="1637090334184" duration="2885000" />
+      <workItem from="1637093320663" duration="4599000" />
+      <workItem from="1637176211564" duration="4996000" />
+      <workItem from="1637339399585" duration="2055000" />
+      <workItem from="1637493029872" duration="3311000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md with WireFrame">
       <created>1636395942895</created>
@@ -125,7 +131,42 @@
       <option name="project" value="LOCAL" />
       <updated>1636908267018</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="añadido en data destacado para poder realizar destacado del mes">
+      <created>1637091772840</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637091772840</updated>
+    </task>
+    <task id="LOCAL-00009" summary="creado destacado del mes en data">
+      <created>1637178204189</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637178204189</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Template de destacados del mes realizado con un filter y un map. Ahora pinta solo aquellas que sean destacadas en el front">
+      <created>1637243655788</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637243655788</updated>
+    </task>
+    <task id="LOCAL-00011" summary="añadido 10 noticias en data.">
+      <created>1637244063404</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637244063404</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Creado html de newsletter y añadido video final">
+      <created>1637346065637</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637346065637</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +194,11 @@
     <MESSAGE value="Cambiado el logo de color en el front page" />
     <MESSAGE value="push a develop" />
     <MESSAGE value="Todo correcto hasta aquí" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todo correcto hasta aquí" />
+    <MESSAGE value="añadido en data destacado para poder realizar destacado del mes" />
+    <MESSAGE value="creado destacado del mes en data" />
+    <MESSAGE value="Template de destacados del mes realizado con un filter y un map. Ahora pinta solo aquellas que sean destacadas en el front" />
+    <MESSAGE value="añadido 10 noticias en data." />
+    <MESSAGE value="Creado html de newsletter y añadido video final" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creado html de newsletter y añadido video final" />
   </component>
 </project>
