@@ -64,10 +64,8 @@ formOverlay.addEventListener("submit", function(evt) {
 
     const eventAdd = {id,title,description, publication_date, imgUrl, time, price, location};
 
-     document.getElementById('addElement').innerText = "Se ha añadido un nuevo evento.";
-
     eventos.push(eventAdd);
 
-
    porfolioEvents.insertAdjacentHTML("afterbegin", function_events([eventAdd]).join("\n"));
-});
+    }
+    );
