@@ -589,10 +589,11 @@ div>.indexEvent2 {
     background-color: rgb(36, 35, 35);
     align-items: center;
     text-align: center;
-    width: 28vw;
-    height: 48vh;
+    min-width: 28vw;
+    min-height: 52vh;
     padding: 1rem;
     flex-direction: column;
+    
 
 }
 
