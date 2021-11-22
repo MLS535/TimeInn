@@ -666,8 +666,7 @@ Newsletter
     border-radius: 5px;
     width: 30%;
     position: relative;
-    transition: all 3s ease-in-out;
-    animation-delay: 3s;
+    /* transition: all 3s ease-in-out; */
 }
 
 .overlay2 {
@@ -677,14 +676,22 @@ Newsletter
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
+    transition:  opacity 500ms;
     visibility: visible;
     opacity: 1;
-    animation-delay: 3s;
+   
 }
 
-#popup2:target{
-    visibility: hidden; /* Se regresa a hidden para ocultar */
-    opacity: 0; /* Se regresa a o para hacerlo "invisible" */
-  }
+.overlayOff {
+    position: fixed;
+    top: 0;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
 

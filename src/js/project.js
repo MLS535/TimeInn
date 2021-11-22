@@ -25,6 +25,8 @@ function goBack(){
 
 window.addEventListener("DOMContentLoaded", function () {
   goBack();
+  overlay();
+  checkCookie();
 });
 
 //Slide front
@@ -76,3 +78,37 @@ function handleScrollPrev (direction) {
 
 next.addEventListener('click', handleScrollNext)
 prev.addEventListener('click', handleScrollPrev)
+
+
+//overlay del index
+
+function overlay(){
+  const buttons = document.querySelectorAll('.close1');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function(){
+      document.querySelector('.overlay2').className = 'overlayOff';
+    });
+  });
+}
+
+//crear una cookie de un formulario
+var today = new Date();
+var expiry = new Date(today.getTime() + 7 * 24 * 3600 * 1000);
+
+function setCookie(name, value) {
+    document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+}
+//this should set the UserName cookie to the proper value;
+function storeValues(form){
+    setCookie('cookie',form.email.value);
+    return true;
+}
+
+// comprobar si hay cookie
+function checkCookie() {
+    if (document.cookie != "") {
+      document.querySelector('.overlay2').className = 'overlayOff';
+    }}
+    
+      

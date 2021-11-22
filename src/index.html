@@ -96,7 +96,7 @@
             <span> Suscríbete y mantente al día de nuestras novedades</span>
         </div>
     <div>
-        <form class="form">
+        <form class="form" onsubmit="storeValues(this)">
             <label>Introduce tu email</label>
             <input type="email" name="email" placeholder="Introduce tu email">
             <input type="submit" name="send">
@@ -104,10 +104,10 @@
 
     </div>
     
-    <div id="popup2" class="overlay2" >
+    <div id="popup2" class="overlay2">
         <div class="popupIndex">
-            <a class="close1" href="#popup2">×</a>
-            <form class="form">
+            <button class="close1">×</button>
+            <form class="form" onsubmit="storeValues(this)">
                 <label>Introduce tu email</label>
                 <input type="email" name="email" placeholder="Introduce tu email">
                 <input type="submit" name="send">
