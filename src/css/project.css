@@ -13,6 +13,7 @@ General
 body {
     margin:0;
     box-sizing: border-box;
+    background: var(--color-primary);
 }
 
 /*
@@ -133,55 +134,7 @@ Event Page
 /**
 Front page CSS
  */
-#enlaces{
-    display: flex;
-    position: absolute;
-    /*top: 8px;*/
-    /*right: 16px;
-    align-items: baseline;
-    */
-    font-size: 18px;
-    gap: 8vw;
-    z-index: 1;
 
-}
-.button_overlay{
-    align-self: center;
-    justify-self: flex-end;
-
-
-}
-
-
-
-.button_overlay {
-    /* position: fixed; */
-    /* position: relative; */
-    /* right: 0; */
-    /* bottom: 0; */
-    padding: 1vw;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background: black;
-    border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    width: 12vw;
-}
-
-.button_overlay:hover {
-    background-color: #fff;
-    color: black;
-}
-
-.button_overlay:active {
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.45) 0vw 1vw 1vw -1vw;
-    transform: translateY(4px);
-}
 
 .title_section{
     font-family: 'Monoton', sans-serif;

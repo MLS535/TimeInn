@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/renderfront.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/renderfront.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,7 @@
       <workItem from="1637493029872" duration="3311000" />
       <workItem from="1637527320408" duration="3610000" />
       <workItem from="1637595971624" duration="316000" />
-      <workItem from="1637678243344" duration="3835000" />
+      <workItem from="1637678243344" duration="4224000" />
     </task>
     <task id="LOCAL-00001" summary="Update README.md with WireFrame">
       <created>1636395942895</created>
@@ -196,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637524656792</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Hamburguesa realizada y jquery del footer hecho">
+      <created>1637682918930</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1637682918930</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +235,7 @@
     <MESSAGE value="Creado overlay del formulario, falta mejorar css" />
     <MESSAGE value="Cambiado borrar papelera por problemas al añadir un evento. El evento se añade correctamente y al borrar todos los elementos solo aparece el evento añadido cuando añadimos uno nuevo" />
     <MESSAGE value="Creado jquery de footer.html en eventPage.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creado jquery de footer.html en eventPage.html" />
+    <MESSAGE value="Hamburguesa realizada y jquery del footer hecho" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hamburguesa realizada y jquery del footer hecho" />
   </component>
 </project>
