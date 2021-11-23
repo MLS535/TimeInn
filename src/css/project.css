@@ -101,6 +101,17 @@ Event Page
 .event .text{
     font-size: 1.3em;
 }
+.text{
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: 2.6em; /* Fallback for non-webkit, line-height * 2 */
+    line-height: 1.3em;
+    -webkit-line-clamp: 2; /* if you change this, make sure to change the fallback line-height and height */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .event>.buttons{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -141,11 +152,6 @@ Front page CSS
 
 }
 
-.logo{
-    flex-grow: 2;
-    max-width: 10vw;
-    max-height: 10vh;
-}
 
 
 .button_overlay {
@@ -245,9 +251,7 @@ Front page CSS
     font-size: 1.5rem;
     padding-bottom: 2em;
 }
-.logofooter{
-    margin-left: 29.5em;
-}
+
 
 
 .content_item{
@@ -338,23 +342,29 @@ Front page CSS
 .display i {
     transform: translate(-50%, -50%) scale(1);
 }
-.card img {
-    height:180px;
-}
 
-.card img.blur {
-    position: absolute;
-    filter:blur(15px);
-    z-index:-1;
-    opacity:.40;
-    transform: translate(-160px,30px);
-    transition: all .35s ease-out;
-}
 .goBackButton>i {
     font-size: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
+}
+/*
+CARDS FROM NEWS EVENTS
+ */
+
+.card{
+    margin: 1vw;
+    background: white;
+    padding: 1rem;
+    border-radius: 1vw;
+    font-family: Heebo, sans-serif;
+
+}
+.card img {
+    height:25vh;
+
+
 }
 
 @keyframes popup {
@@ -372,30 +382,25 @@ Front page CSS
     }
 }
 
-.card:hover .card-img {
-    transform:translate(70px,-15px);
+.card:hover  {
+    transform:translate(1vw,-1vh);
 }
 
-.card:hover .card-img img.blur {
-    transform:translate(-100px,35px) scale(.85);
-    opacity:.25;
-    filter:blur(20px);
-}
+
 
 .card-content {
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    width:100%;
-    overflow:auto;
-    padding-top: 100px;
-    padding-left:60px;
-    padding-right: 50px;
-    scroll-behavior:smooth;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    align-content: center;
 }
 
 .card-content::-webkit-scrollbar {
     height:0px;
+
 }
 
 .card-content:after {
@@ -404,6 +409,7 @@ Front page CSS
     min-width:20px;
     height:100px;
     position:relative;
+
 }
 
 .btn{
@@ -449,6 +455,8 @@ Front page CSS
     /* cursor:none; */
 }
 
+
+
 .slider:before {
     content:'';
     right:98px;
@@ -458,6 +466,67 @@ Front page CSS
     z-index:100;
     /* cursor:none; */
 }
+
+.description_news{
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: 2.6em; /* Fallback for non-webkit, line-height * 2 */
+    line-height: 1.3em;
+    -webkit-line-clamp: 2; /* if you change this, make sure to change the fallback line-height and height */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+/*
+Destacados del mes
+ */
+
+.destacado {
+    display: flex;
+    margin: 1vw;
+    font-family: Heebo,sans-serif;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: justify;
+    padding: 1vw;
+    background: rgb(242,243,248);
+    border-radius: 1rem;
+    margin-left: 9vw;
+    margin-right: 9vw;
+}
+
+.destacado:hover{
+    transform:translate(1vw,-1vh);
+}
+
+.favicon-dest{
+    margin-left: 2rem;
+}
+.content-destacado{
+    align-self: center;
+}
+
+.text-dest{
+    margin: 1.5rem;
+}
+
+.title-destacado{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+.image-dest{
+    align-self: flex-start;
+    height: 34vh;
+    width: 25vw;
+    margin: 1vw;
+}
+
+/*
+section Eventos
+ */
 
 section>#portfolio-events,#portfolio-events2{
     display: grid;
@@ -480,6 +549,8 @@ div>.indexEvent {
     align-items: center;
     text-align: center;
     padding-top: 100px;
+    font-family: Heebo, sans-serif;
+
 }
 
 .indexEvent>.image {
@@ -495,6 +566,7 @@ div>.indexEvent {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    font-family: Heebo, sans-serif;
 }
 
 .indexEvent .date{
@@ -514,6 +586,7 @@ div>.indexEvent2 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: Heebo, sans-serif;
 }
 
 .indexEvent2>.image {
@@ -531,6 +604,7 @@ div>.indexEvent2 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
+    font-family: Heebo, sans-serif;
 }
 
 .indexEvent2 .content-overlay{
@@ -598,7 +672,6 @@ Botton new event
     padding: 10px;
     color: #fff;
     font-family: Heebo,sans-serif;
-    border-radius: 20px/50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
@@ -724,4 +797,189 @@ OVERLAY WITH FORM
 .submit:hover{
     background:#d8850e;
     align-self: center;
+}
+
+/*
+TODO DESDE AQUI HAMBURGUESA
+ */
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #000;
+}
+
+/* header */
+
+.header {
+    /* background-color: #fff; */
+    /* box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    /* margin-left: 1rem; */
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    /*background-color: #fff;*/
+
+
+}
+
+.header li a {
+    display: flex;
+    text-decoration: none;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1vw;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background: black;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: 12vw;
+
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: var(--color-secondary);
+}
+
+ .logo {
+    text-decoration: none;
+    flex-grow: 2;
+    max-width: 10vw;
+    max-height: 10vh;
+    position: absolute;
+    left: 0;
+
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    flex-grow: 2;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: flex;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    justify-content: flex-end;
+    border-radius: 50%;
+    border: double var(--color-secondary);
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: var(--color-secondary);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header .logo{
+        text-decoration: none;
+        flex-grow: 2;
+        max-width: 10vw;
+        max-height: 10vh;
+        position: absolute;
+        margin-right: 2vw;
+    }
+    .header li a {
+        margin: 2rem;
+        background: black;
+        color: white;
+        top: 0;
+        justify-self: flex-end;
+    }
+    .header .menu {
+        clear: none;
+        float: left;
+        max-height: none;
+        position: absolute;
+        z-index: 1;
+    }
+    .header .menu-icon {
+        display: none;
+    }
 }
