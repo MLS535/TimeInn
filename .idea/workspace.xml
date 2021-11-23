@@ -9,6 +9,8 @@
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/renderEvents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/renderEvents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
+    <list default="true" id="db3e7426-cccf-4e56-a49a-bd7ffdc10fcd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/css/project.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/project.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +23,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
@@ -60,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../DIW_DWEC_MAITE/jquery-hack" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maite_Whatsappgram" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -70,6 +71,7 @@
       <recent name="C:\FP\Segundo año\Proyectos DIW Y DWEC\TimeInn\src\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\FP\Segundo año\Proyectos DIW Y DWEC\TimeInn\src" />
       <recent name="C:\FP\Segundo año\Proyectos DIW Y DWEC\TimeInn\resources" />
       <recent name="C:\FP\Segundo año\Proyectos DIW Y DWEC\TimeInn" />
     </key>
@@ -197,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637524656792</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Hamburguesa realizada y jquery del footer hecho">
+      <created>1637682918930</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1637682918930</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +241,8 @@
     <MESSAGE value="Creado html de newsletter y añadido video final" />
     <MESSAGE value="Creado overlay del formulario, falta mejorar css" />
     <MESSAGE value="Cambiado borrar papelera por problemas al añadir un evento. El evento se añade correctamente y al borrar todos los elementos solo aparece el evento añadido cuando añadimos uno nuevo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiado borrar papelera por problemas al añadir un evento. El evento se añade correctamente y al borrar todos los elementos solo aparece el evento añadido cuando añadimos uno nuevo" />
+    <MESSAGE value="Creado jquery de footer.html en eventPage.html" />
+    <MESSAGE value="Hamburguesa realizada y jquery del footer hecho" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hamburguesa realizada y jquery del footer hecho" />
   </component>
 </project>

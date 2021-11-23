@@ -13,7 +13,7 @@ const front_card = sort.map(post => `
                     <div class="card-text">
                         <h2>${post.title}</h2>
                       <h3>${post.publication_date}</h3>
-                        <p>${post.description}<p>
+                        <p class="description_news">${post.description}<p>
                     </div>
                 </div>
 `)
@@ -24,10 +24,11 @@ const event_news = Object.values([events[0],events[1]]).map(post => `
    <div class="indexEvent">
          <img class="image" src="${post.imgUrl}" alt="${post.title}" />
           <div class="content">
-                <div class="title">${post.title}</div>
-                <div class="date"><i class="far fa-calendar-alt"></i> ${post.publication_date} a las ${post.time} y el precio es de
-                ${post.price} y se localiza en ${post.location}
-                </div>
+                 <div class="title">${post.title}</div>
+              <div class="date-destacado"><i class="far fa-calendar-alt"></i> ${post.publication_date} </div>
+            <div ><i class="far fa-clock"></i> Hora: ${post.time}</div>
+            <div><i class="fas fa-hand-holding-usd"></i> Precio: ${post.price}</div>
+            <div><i class="fas fa-map-marked-alt"></i> ${post.location}</div>
                 <div class="text">${post.description}</div>
             </div>
       </div>
@@ -38,10 +39,11 @@ document.querySelector('#portfolio-events').innerHTML = event_news.join('\n');
 const event_news2 = Object.values([events[2],events[3]]).map(post => `
     <div class="indexEvent2">
         <div class="content-overlay">
-            <div class="title">${post.title}</div>
-            <div class="date"><i class="far fa-calendar-alt"></i> ${post.publication_date} a las ${post.time} y el precio es de
-                ${post.price} y se localiza en ${post.location}
-            </div>
+        <div class="title">${post.title}</div>
+              <div class="date-destacado"><i class="far fa-calendar-alt"></i> ${post.publication_date} </div>
+            <div ><i class="far fa-clock"></i> Hora: ${post.time}</div>
+            <div><i class="fas fa-hand-holding-usd"></i> Precio: ${post.price}</div>
+            <div><i class="fas fa-map-marked-alt"></i> ${post.location}</div>
             <div class="text">${post.description}</div>
         </div>
         <img class="image" src="${post.imgUrl}" alt="${post.title}" />
@@ -56,15 +58,20 @@ document.querySelector('#portfolio-events2').innerHTML = event_news2.join('\n');
 
 
 let destacados = filter.map(eventfilter => {
-        return ` <div class="indexEvent2">
-        <div class="content-overlay">
-            <div class="title">${eventfilter.title}</div>
-            <div class="date"><i class="far fa-calendar-alt"></i> ${eventfilter.publication_date} a las ${eventfilter.time} y el precio es de
-                ${eventfilter.price} y se localiza en ${eventfilter.location}
+        return ` <div class="destacado">
+        <div class="content-destacado">
+            <div class="title-destacado">${eventfilter.title}</div>
+            
+            <div class="favicon-dest">
+             <div class="date-destacado"><i class="far fa-calendar-alt"></i> ${eventfilter.publication_date} </div>
+            <div ><i class="far fa-clock"></i> Hora: ${eventfilter.time}</div>
+            <div><i class="fas fa-hand-holding-usd"></i> Precio: ${eventfilter.price}</div>
+            <div><i class="fas fa-map-marked-alt"></i> ${eventfilter.location}</div>
             </div>
-            <div class="text">${eventfilter.description}</div>
+           
+            <div class="text-dest">${eventfilter.description}</div>
         </div>
-        <img class="image" src="${eventfilter.imgUrl}" alt="${eventfilter.title}" />
+        <img class="image-dest" src="${eventfilter.imgUrl}" alt="${eventfilter.title}" />
     </div>`
 }
 
