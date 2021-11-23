@@ -14,9 +14,10 @@ const function_events = function (events){
          <img class="image" src="${post.imgUrl}" alt="${post.title}" />
           <div class="content-overlay">
                 <div class="title">${post.title}</div>
-                <div class="date"><i class="far fa-calendar-alt"></i> ${post.publication_date} a las ${post.time} y el precio es de
-                ${post.price} y se localiza en ${post.location}
-                </div>
+                <div class="date-destacado"><i class="far fa-calendar-alt"></i> ${post.publication_date} </div>
+            <div ><i class="far fa-clock"></i> Hora: ${post.time}</div>
+            <div><i class="fas fa-hand-holding-usd"></i> Precio: ${post.price}</div>
+            <div><i class="fas fa-map-marked-alt"></i> ${post.location}</div>
                 <div class="text">${post.description}</div>
             </div>
              <div class="buttons">
