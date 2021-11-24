@@ -2,9 +2,13 @@ import* as data from './data.js';
 
 import { news, events} from "./data.js";
 
-let sort = news.sort((newsA, newsB) => newsA.publication_date - newsB.publication_date);
+
+let sort_news = news.sort(function(a,b) {
+    return b.destacado - a.destacado || new Date(a.publication_date).getTime() - new Date(b.publication_date).getTime()
+    });
+
 //TODO LIMITAR EL TIEMPO A QUE NO APAREZCA NOTICIAS Y EVENTOS YA PASADOS
-const front_card = sort.map(post => `
+const front_card = sort_news.map(post => `
    <div class="card">
                     <div class="card-img">
                         <img src="${post.imgUrl}" alt="">
@@ -12,8 +16,9 @@ const front_card = sort.map(post => `
                     </div>
                     <div class="card-text">
                         <h2>${post.title}</h2>
-                      <h3>${post.publication_date}</h3>
+                      <h3><i class="far fa-calendar-alt"></i> ${post.publication_date}</h3>
                         <p class="description_news">${post.description}<p>
+                        <div>${post.patrocinada}</div>
                     </div>
                 </div>
 `)
@@ -53,7 +58,10 @@ const event_news2 = Object.values([events[2],events[3]]).map(post => `
 document.querySelector('#portfolio-events2').innerHTML = event_news2.join('\n');
 
 
-    let filter =  events.filter(event => event.destacado === true ).sort((eventA, eventB) => eventA.publication_date - eventB.publication_date);
+    let filter =  events.filter(event => event.destacado === true ).
+    sort(function(a,b) {
+        return new Date(a.publication_date).getTime() - new Date(b.publication_date).getTime()
+    })
 
 
 
