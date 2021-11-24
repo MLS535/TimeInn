@@ -93,7 +93,7 @@ Event Page
     justify-content: center;
     align-content: center;
     align-items: center;
-    height: 25vh;
+    height: 30vh;
     margin: 2vw;
 }
 
@@ -349,9 +349,7 @@ Front page CSS
     align-self: flex-end;
 }
 
-@media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 0.5rem}
-}
+
 
 .goBackContainer {
     position: fixed;
@@ -567,7 +565,6 @@ Destacados del mes
 .image-dest{
     align-self: flex-start;
     height: 34vh;
-    width: 25vw;
     margin: 1vw;
 }
 
@@ -687,7 +684,7 @@ div>.indexEvent2 {
 }
 
 .calendarEvent .eventsTitle{
-    padding: 1rem;
+    /*padding: 1rem;*/
     text-decoration: underline;
 }
 
@@ -1111,6 +1108,13 @@ a {
     top: 0;
 }
 @media only screen and (max-width: 65em) {
+   /*
+   HEADER
+    */
+
+
+    .prev, .next,.text {font-size: 0.5rem}
+
     .header li {
         float: left;
     }
@@ -1140,6 +1144,69 @@ a {
     .header .menu-icon {
         display: none;
     }
+
+    /*
+  Destacado del mes
+   */
+
+    .destacado{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 1rem;
+    }
+   .destacado :nth-child(1){
+       order: 2;
+   }
+    .destacado :nth-child(2){
+        order: 1;
+        align-self: center;
+        max-width: 80vw;
+    }
+    .destacado .favicon-dest{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    /*
+       Section events front mobile
+        */
+    .eventos_mobile{
+        display: none;
+    }
+
+
+    /*
+    Calendar front
+     */
+    .eventsTitle{
+        padding: 1rem;
+    }
+
+    .calendar{
+        display: flex;
+        flex-direction: column;
+
+    }
+   /*
+   SECTION MEDIA NEWSLETTER
+    */
+    .title_newsletter{
+        text-align: center;
+    }
+    .section_newsletter{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+    .form{
+        margin: 1rem;
+    }
+
     /*
     MEDIA EVENT PAGE
      */
@@ -1173,6 +1240,12 @@ a {
     .buttons{
         margin-bottom: 1rem;
     }
+
+
+
+
+
+
     /*
         footer
          */
@@ -1198,14 +1271,7 @@ a {
 
 
 
-    /*
-    Destacado del mes
-     */
-    .destacado{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+
 
 
 }
