@@ -98,7 +98,7 @@ export const news = [
 
 export const events = [
     {   title: 'MAD COOL FESTIVAL 1',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur sit amet, laborum accusantium tempore praesentium ali',
         publication_date: '2022-06-28',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_960_720.jpg',
         time: '21:30',

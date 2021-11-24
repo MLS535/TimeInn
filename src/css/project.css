@@ -24,10 +24,10 @@ Event Page
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 102%;
+    width: 100%;
     height: 25vh;
-    margin-top: -0.5em;
-    margin-left: -0.5em;
+    /*margin-top: -0.5em;*/
+    /*margin-left: -0.5em;*/
 
 }
 
@@ -55,14 +55,18 @@ Event Page
 
 
 
-.eventMain{
-    display: grid;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255,255,255);
-    justify-content: center;
 
+.eventMain {
+    display: grid;
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: rgb(255,255,255);
+    align-content: space-evenly;
+    justify-items: end;
+    align-items: center;
+    justify-content: space-evenly;
 }
+
 .event{
     display: grid;
     background-color: rgb(242,243,248);
@@ -89,7 +93,6 @@ Event Page
     justify-content: center;
     align-content: center;
     align-items: center;
-    width: 19vw;
     height: 25vh;
     margin: 2vw;
 }
@@ -127,6 +130,7 @@ Event Page
 }
 .event .text{
     font-size: 1.3em;
+    margin: 0.5rem;
 }
 .text{
     display: block; /* Fallback for non-webkit */
@@ -314,7 +318,6 @@ Front page CSS
 }
 
 .title_column_div{
-
     justify-content: space-between;
 }
 
@@ -781,10 +784,7 @@ Botton new event
  */
 
 .box {
-    width: 20%;
     margin: 0 auto;
-    padding: 35px;
-    border-radius: 20px/50px;
     background-clip: padding-box;
     text-align: center;
 }
@@ -833,7 +833,6 @@ OVERLAY WITH FORM
     border-radius: 5px;
     width: 30%;
     position: relative;
-    transition: all 5s ease-in-out;
 }
 
 .popup h2 {
@@ -1113,10 +1112,11 @@ a {
 
 /* 48em = 768px */
 
+.header li {
+    float: left;
+}
+
 @media only screen and (max-width: 65em) {
-    .header li {
-        float: left;
-    }
 
     .header .logo{
         text-decoration: none;
@@ -1147,9 +1147,69 @@ a {
     /*
     MEDIA EVENT PAGE
      */
-    .event{
+    .event {
         display: flex;
         flex-direction: column;
+        align-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
+
+    .title{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .event_favicon {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /*
+    Button new event
+     */
+
+    .buttons{
+        margin-bottom: 1rem;
+    }
+    /*
+        footer
+         */
+    .content_item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: baseline;
+
+    }
+
+
+    .logos_images {
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+    }
+
+    /*
+    media front page
+     */
+
+
+
+
+    /*
+    Destacado del mes
+     */
+    .destacado{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
 
 }
