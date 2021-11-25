@@ -14,6 +14,7 @@ body {
     margin:0;
     box-sizing: border-box;
     background: var(--color-primary);
+    font-family: 'Heebo', sans-serif;
 }
 
 /*
@@ -246,6 +247,8 @@ Front page CSS
     height: 90vh;
     width: 98.8vw;
     min-width: fit-content;
+    object-fit: cover;
+    padding: 0;
 }
 .mySlides>video{
     height: 90vh;
@@ -286,7 +289,7 @@ Front page CSS
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-    background-color: white;
+    background-color: var(--color-secondary);
     color: black;
 }
 
@@ -461,18 +464,19 @@ CARDS FROM NEWS EVENTS
     min-width:60px;
     margin:auto 30px;
     height:60px;
-    border-radius:20px;
-    background:#fff;
+    border-radius: 0 3px 3px 0;
+    color: white;
+    background: black;
     border:0px;
     outline:none;
     cursor:pointer;
     z-index:9999;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
-    transition: all .25s ease;
+    transition: 0.6s ease;
 }
 
 .btn:hover{
-    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+    background: var(--color-secondary);
 }
 
 .btn i {
@@ -770,7 +774,7 @@ Newsletter
 
 .video_footer{
     height: 90vh;
-    width: 98.8vw;
+    width: 97vw;
     object-fit: cover;
     z-index: -1;
 }
@@ -954,25 +958,9 @@ OVERLAY WITH FORM
 }
 
 
-
-
-/*
-TODO DESDE AQUI HAMBURGUESA
- */
-
-body {
-    margin: 0;
-    font-family: Helvetica, sans-serif;
-    background-color: rgb(255,255,255);
+.header li {
+    float: left;
 }
-
-a {
-    color: #000;
-}
-
-/* header */
-
-
 .header {
     /* background-color: #fff; */
     /* box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1); */
@@ -984,6 +972,15 @@ a {
     flex-direction: column;
     align-items: flex-end;
 }
+.logo {
+    text-decoration: none;
+    flex-grow: 2;
+    max-width: 10vw;
+    max-height: 10vh;
+    position: absolute;
+    left: 0;
+
+}
 
 .header ul {
     margin: 0;
@@ -991,11 +988,16 @@ a {
     list-style: none;
     overflow: hidden;
     /*background-color: #fff;*/
-
-
 }
 
+
+
 .header li a {
+    margin: 2rem;
+    background: black;
+    color: white;
+    top: 0;
+    justify-self: flex-end;
     display: flex;
     text-decoration: none;
     align-content: center;
@@ -1007,88 +1009,24 @@ a {
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
-    background: black;
-    border: none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-    width: 12vw;
-
 }
-
-.header li a:hover,
-.header .menu-btn:hover {
-    background-color: var(--color-secondary);
-}
-
-.logo {
-    text-decoration: none;
-    flex-grow: 2;
-    max-width: 10vw;
-    max-height: 10vh;
-    position: absolute;
-    left: 0;
-
-}
-
-/* menu */
 
 .header .menu {
-    clear: both;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-    flex-grow: 2;
-}
-
-/* menu icon */
-
-.header .menu-icon {
-    cursor: pointer;
-    display: flex;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-    justify-content: flex-end;
-    border-radius: 50%;
-    border: double var(--color-secondary);
-}
-
-.header .menu-icon .navicon {
-    background: #333;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-    background: var(--color-secondary);
-    content: '';
-    display: block;
-    height: 100%;
+    clear: none;
+    float: left;
+    max-height: none;
     position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
+    z-index: 1;
 }
-
-.header .menu-icon .navicon:before {
-    top: 5px;
+.header .menu-icon {
+    display: none;
 }
-
-.header .menu-icon .navicon:after {
-    top: -5px;
-}
-
-/* menu btn */
-
 .header .menu-btn {
     display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
-    max-height: 240px;
+    max-height: 150em;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -1107,43 +1045,130 @@ a {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
-@media only screen and (max-width: 65em) {
+
+/*
+TODO DESDE AQUI HAMBURGUESA
+ */
+
+@media only screen and (max-width: 65em)  {
+
+
    /*
    HEADER
     */
 
-
-    .prev, .next,.text {font-size: 0.5rem}
-
-    .header li {
-        float: left;
-    }
-
-    .header .logo{
-        text-decoration: none;
-        flex-grow: 2;
-        max-width: 10vw;
-        max-height: 10vh;
-        position: absolute;
-        margin-right: 2vw;
-    }
-    .header li a {
-        margin: 2rem;
+    /* header */
+    .header ul{
         background: black;
-        color: white;
-        top: 0;
-        justify-self: flex-end;
     }
+    .header li {
+        float: none;
+    }
+
+    .header li a {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        background: black;
+        border: none;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    }
+
+    #limenu{
+        margin-top: 4rem;
+    }
+
+    .header li a:hover,
+    .header .menu-btn:hover {
+        background-color: var(--color-secondary);
+    }
+
+
+
+    /* menu */
+
     .header .menu {
-        clear: none;
-        float: left;
-        max-height: none;
-        position: absolute;
-        z-index: 1;
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+        flex-grow: 2;
     }
+
+    /* menu icon */
+
     .header .menu-icon {
-        display: none;
+        background: black;
+        cursor: pointer;
+        display: flex;
+        z-index: 3;
+        float: right;
+        padding: 2rem 1.5rem;
+        position: relative;
+        user-select: none;
+        justify-content: flex-end;
+        border-radius: 50%;
+        border: double var(--color-secondary);
     }
+
+    .header .menu-icon .navicon {
+        background: var(--color-secondary);
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+
+    .header .menu-icon .navicon:before,
+    .header .menu-icon .navicon:after {
+        background: var(--color-secondary);
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+
+    .header .menu-icon .navicon:before {
+        top: 5px;
+    }
+
+    .header .menu-icon .navicon:after {
+        top: -5px;
+    }
+
+    /* menu btn */
+
+    /*
+    Slider
+     */
+  .mySlides{
+      overflow: hidden;
+  }
+
+
+   .video_footer{
+     /*height: 50vh;*/
+     /*  width: 98vw;*/
+       height:100%;
+       width:100%;
+       overflow: hidden;
+   }
+
+   /*
+   MEDIA NEWS
+    */
+
+    .btn {
+        min-width: 0.3vw;
+        margin: auto;
+        padding: 1rem;
+        height: 8vh;
+        align-items: center;
+    }
+
 
     /*
   Destacado del mes
@@ -1185,11 +1210,23 @@ a {
     .eventsTitle{
         padding: 1rem;
     }
+    .calendar1{
+        color: var(--color-secondary);
+    }
 
+    .calendar1:hover{
+        color: white;
+    }
     .calendar{
         display: flex;
         flex-direction: column;
+    }
 
+    .calendar .calendarMonth{
+        padding: 0;
+    }
+    .dayCalendar th, td{
+        padding: 0.5rem;
     }
    /*
    SECTION MEDIA NEWSLETTER
