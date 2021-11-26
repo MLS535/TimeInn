@@ -2,12 +2,12 @@ import* as data from './data.js';
 
 import { news, events} from "./data.js";
 
-
+//Filtrado de las noticias por news patrocinadas primero y luego los eventos más cercanos en el tiempo
 let sort_news = news.sort(function(a,b) {
     return b.destacado - a.destacado || new Date(a.publication_date).getTime() - new Date(b.publication_date).getTime()
     });
 
-//TODO LIMITAR EL TIEMPO A QUE NO APAREZCA NOTICIAS Y EVENTOS YA PASADOS
+//Renderizado de las noticias
 const front_card = sort_news.map(post => `
    <div class="card">
                     <div class="card-img">
@@ -57,14 +57,14 @@ const event_news2 = Object.values([events[2],events[3]]).map(post => `
 
 document.querySelector('#portfolio-events2').innerHTML = event_news2.join('\n');
 
-
+//Filtrado de eventos destacados y eventos más próximos
     let filter =  events.filter(event => event.destacado === true ).
     sort(function(a,b) {
         return new Date(a.publication_date).getTime() - new Date(b.publication_date).getTime()
     })
 
 
-
+//renderizado de eventos destacados del mes
 let destacados = filter.map(eventfilter => {
         return ` <div class="destacado">
         <div class="content-destacado">

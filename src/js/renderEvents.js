@@ -4,9 +4,12 @@ import {events, news} from "./data.js";
 
 
 const porfolioEvents = document.querySelector('#portfolio-events');
+const btnEdit = document.getElementById("boton_editar");
 
+//Crea una copia de eventos en otro array
 const eventos = [...events];
 
+//function_events crea una función que recorre el parametro de eventos que será un objeto y lo recorre con un map
 const function_events = function (events){
     const event_news =  Object.values(events).map(post =>
         `
@@ -33,7 +36,7 @@ const function_events = function (events){
     return event_news;
 }
 
-
+// Pinta la función function_events en el id de portfolio.events que está en el html
     porfolioEvents.innerHTML = function_events(eventos).join('\n');
 
 
@@ -42,27 +45,43 @@ const function_events = function (events){
 //TODO AÑADIR UN NUEVO BOTON AL FORMULARIO QUE SEA DE EDITAR Y AL CLICKAR ESE BOTON SE EJECUTE ESA FUNCION QUE TE MODIFIQUE EL CONTENIDO DEL EVENTO.
 //
 
+//Al hacer click en la basurita que tiene la clase .delete te borrará el elemento seleccionado.
 const removeEvents =function (){
     porfolioEvents.addEventListener('click', evt => {
-        console.log(evt.target);
+        //devuelve el ascendiente más cercano al elemento actual que coincida con el selector proporcionado por parámetro.
         const papelera = evt.target.closest('.delete');
-        console.log(papelera);
         if ( !papelera ) return
+        //devolverá el elemento padre, en este caso busca el primer div y despues el segundo dentro de papelera que sería event y lo borrará con la función remove()
         papelera.parentElement.parentElement.remove()
+
     })
 }
-
+//Llama la función borrar
 removeEvents();
+
+let new_event = document.querySelector(".button_event");
+
+//Al hacer click a nuevo evento del html borrará el boton de editar y aplicará el botón de guardar
+new_event.addEventListener("click", function (){
+    btnEdit.style.display ="none";
+    document.querySelector(".submit").style.display ="block";
+})
 
 
 var formOverlay = document.getElementById("formOverlay");
 
-formOverlay.addEventListener("submit", function(evt) {
+//Con está función añadimos nuevos eventos
+formOverlay.addEventListener("click", function(evt) {
     evt.preventDefault();
-    // const submit = evt.target.closest('.submit');
-    // if ( !submit ) return
-    //     window.location.replace("eventPage.html#");
+    let submit = evt.target.closest(".submit");
+      //Si submit es distinto
+    if ( !submit ) return
 
+    //Hace aparecer el boton de crear evento en el formulario
+    document.querySelector(".submit").style.display ="block";
+
+
+//Selecciona los inputs del formulario
      let title = document.getElementById("title");
      let location = document.getElementById("location");
     let publication_date = document.getElementById("date_form");
@@ -72,23 +91,75 @@ formOverlay.addEventListener("submit", function(evt) {
      let imgUrl = document.getElementById("imgUrl");
      let id = Math.floor(Math.random() * 999.999)
 
+    //Inserta en eventAdd los nuevos elementos
     const eventAdd = {id,title: title.value,description: description.value, publication_date: publication_date.value, imgUrl: imgUrl.value
         , time: time.value, price: price.value, location: location.value};
 
+     //Añade eventAdd al objeto eventos
     eventos.push(eventAdd);
-    //hacer una funcion de la clase en concreto de donde está situado la funcion de editar.
+    //Inserta eventos al principio de portfolio y la renderiza con la función function_events
    porfolioEvents.insertAdjacentHTML("afterbegin", function_events([eventAdd]).join("\n"));
+   //Al hacer click en el boton quitará el formulario
+        window.location.replace("eventPage.html#");
 
-        title.value="";
-        location.value= "";
-        publication_date.value= "";
-        time.value = "";
-        price.value="";
-        description.value= "";
-        imgUrl.value = "";
 
     }
     );
+
+
+
+//Edita el evento
+const editEvents =function (){
+    porfolioEvents.addEventListener('click', evt => {
+
+        const editar = evt.target.closest('.edit');
+        if ( !editar ) return
+        const editParent = editar.parentElement.parentElement
+        //aplica el boton de editar y quita el boton de nuevo evento
+        btnEdit.style.display ="block";
+        document.querySelector(".submit").style.display ="none";
+        //Al hacer click en el boton añadirá el formulario
+        window.location.replace("eventPage.html#popup1")
+        //Al hacer click al boton de editar se editan los eventos
+        btnEdit.addEventListener('click', function()
+        {
+            //Selecciona los id de los inputs
+            let title = document.getElementById("title");
+            let location = document.getElementById("location");
+            let publication_date = document.getElementById("date_form");
+            let time = document.getElementById("time_form");
+            let price = document.getElementById("price");
+            let description = document.getElementById("description");
+            let imgUrl = document.getElementById("imgUrl");
+
+            //Pintamos el evento que queremos editar
+            const markup = `<img class="image" src="${imgUrl.value}" alt="${title.value}"/>
+            <div class="content-overlay">
+                <div class="title">${title.value}</div>
+                <div class="event_favicon">
+                    <div class="date-destacado"><i class="far fa-calendar-alt"></i> ${publication_date.value}
+                    </div>
+                    <div><i class="far fa-clock"></i> Hora: ${time.value}</div>
+                    <div><i class="fas fa-hand-holding-usd"></i> Precio: ${price.value}</div>
+                    <div><i class="fas fa-map-marked-alt"></i> ${location.value}</div>
+                </div>
+          
+                <div class="text">${description.value}</div>
+            </div>
+            <div class="buttons">
+                <div class="edit"><i class="fas fa-pencil-alt"></i></div>
+                <div class="delete"><i class="fas fa-trash-alt"></i></div>
+            </div>`
+
+            editParent.innerHTML = '';
+            //Inserta lo nuevo editado
+        editParent.insertAdjacentHTML('afterbegin', markup);
+            //Quita el formulario
+            window.location.replace("eventPage.html#");
+        })
+    })
+}
+editEvents();
 
 //filtros
 //filtro por titulo
@@ -104,7 +175,7 @@ function filterTitle() {
       }
     }
   }
-  
+
   //filtro por precio
   function filterPrice() {
     let input = document.getElementById("priceFilter");
@@ -118,7 +189,7 @@ function filterTitle() {
       }
     }
   }
-  
+
   //filtro por fecha
   function filterDate() {
     let input = document.getElementById("dateFilter");
@@ -132,7 +203,7 @@ function filterTitle() {
       }
     }
   }
-  
+
   //filtro por hora
   function filterHour() {
     let input = document.getElementById("timeFilter");
@@ -143,10 +214,10 @@ function filterTitle() {
       let txtValue = hour[i].textContent;
       if (txtValue != filter && filter != "") {
         divElem[i].style.display = "none";
-      } 
+      }
     }
   }
-  
+
   //filtro por lugar
   function filterPlace() {
     let input = document.getElementById("placeFilter");
@@ -156,15 +227,15 @@ function filterTitle() {
     for (let i = 0; i < divElem.length; i++) {
       let txtValue = place[i].textContent;
       if (txtValue.toLowerCase() != filter && filter != "") {
-        divElem[i].style.display = "none";  
+        divElem[i].style.display = "none";
       }
     }
   }
-  
+
   //boton de filtros
   function filter(){
     const buttons = document.querySelectorAll('.addFilter');
-  
+
     buttons.forEach(button => {
       button.addEventListener('click', function(){
         let divElem = document.getElementsByClassName("event");
@@ -191,10 +262,10 @@ function filterTitle() {
       });
     });
   }
-  
+
   function delFilters(){
     const buttons = document.querySelectorAll('.delFilters');
-  
+
     buttons.forEach(button => {
       button.addEventListener('click', function(){
         let divElem = document.getElementsByClassName("event");
