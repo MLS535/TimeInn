@@ -4,6 +4,10 @@ General
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@100;400&family=Monoton&display=swap');
 
+#boton_editar{
+    display: none;
+}
+
 :root{
     --color-primary: #f5f5f5;
     --color-primary-variant: #8a8787;
@@ -13,7 +17,7 @@ General
 body {
     margin:0;
     box-sizing: border-box;
-    background: var(--color-primary);
+    background: #ffffff;
     font-family: 'Heebo', sans-serif;
 }
 
