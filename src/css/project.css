@@ -747,12 +747,6 @@ div>.indexEvent2 {
     padding: 1rem;
 }
 
-.calendarMonth .days{}
-
-.days .dayCalendar{
-
-}
-
 .dayCalendar th,td{
     flex-grow: 1;
     padding: 0.7rem;
