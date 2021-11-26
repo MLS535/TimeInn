@@ -1,4 +1,4 @@
-
+//Base de datos de la aplicación
 
 
 export const news = [

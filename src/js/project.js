@@ -32,19 +32,20 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 //Slide front
-//https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto
+
  var slideIndex = 1;
 showDivs(slideIndex);
+//Si haces click en el boton del slider se irá a la izquierda
 document.querySelector(".prev").addEventListener("click", function (){
     let n = -1;
     showDivs(slideIndex += n)
 })
-
+//Si haces click en el boton del slider se irá a la derecha
 document.querySelector(".next").addEventListener("click", function (){
     let n = 1;
     showDivs(slideIndex += n)
 })
-
+//Función del slider
 function showDivs(n) {
     let i;
     let timer;
@@ -64,7 +65,7 @@ setInterval(showDivs, )
 
 
 
-
+//Slider de las news
 const next=document.querySelector('#next')
 const prev=document.querySelector('#prev')
 
