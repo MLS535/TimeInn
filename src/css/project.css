@@ -1237,7 +1237,17 @@ TODO DESDE AQUI HAMBURGUESA
     }
     .calendar{
         display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .calendar .calendarEvent{
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 
     .calendar .calendarMonth{
@@ -1256,7 +1266,6 @@ TODO DESDE AQUI HAMBURGUESA
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-
     }
     .form{
         margin: 1rem;
