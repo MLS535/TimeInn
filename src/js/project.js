@@ -29,6 +29,7 @@ window.addEventListener("DOMContentLoaded", function () {
   goBack();
   overlay();
   checkCookie();
+  filter();
 });
 
 //Slide front
@@ -113,3 +114,29 @@ function checkCookie() {
       document.querySelector('.overlay2').className = 'overlayOff';
     }}
     
+//filtros
+//filtro por titulo
+function filterTitle() {
+  let input = document.getElementById("title");
+  let filter = input.value.toLowerCase();
+  let divElem = document.getElementsByClassName("event");
+  let title = document.getElementsByClassName("title");
+  for (let i = 0; i < divElem.length; i++) {
+    let txtValue = title[i].textContent;
+    if (txtValue.toLowerCase() != filter) {
+      divElem[i].style.display = "none";
+    }
+  }
+}
+
+
+//boton de filtros
+function filter(){
+  const buttons = document.querySelectorAll('.filterButtom');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function(){
+      filterTitle();
+       });
+  });
+}
