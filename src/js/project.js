@@ -30,6 +30,7 @@ window.addEventListener("DOMContentLoaded", function () {
   overlay();
   checkCookie();
   filter();
+  delFilters();
 });
 
 //Slide front
@@ -117,7 +118,7 @@ function checkCookie() {
 //filtros
 //filtro por titulo
 function filterTitle() {
-  let input = document.getElementById("title");
+  let input = document.getElementById("titleFilter");
   let filter = input.value.toLowerCase();
   let divElem = document.getElementsByClassName("event");
   let title = document.getElementsByClassName("title");
@@ -129,14 +130,105 @@ function filterTitle() {
   }
 }
 
+//filtro por precio
+function filterPrice() {
+  let input = document.getElementById("priceFilter");
+  let filter = input.value.toLowerCase();
+  let divElem = document.getElementsByClassName("event");
+  let price = document.getElementsByClassName("price");
+  for (let i = 0; i < divElem.length; i++) {
+    let txtValue = price[i].textContent;
+    if (txtValue.toLowerCase() != filter) {
+      divElem[i].style.display = "none";
+    }
+  }
+}
+
+//filtro por fecha
+function filterDate() {
+  let input = document.getElementById("dateFilter");
+  let filter = input.value;
+  let divElem = document.getElementsByClassName("event");
+  let date = document.getElementsByClassName("dates");
+  for (let i = 0; i < divElem.length; i++) {
+    let txtValue = date[i].textContent;
+    if (txtValue != filter) {
+      divElem[i].style.display = "none";
+    }
+  }
+}
+
+//filtro por hora
+function filterHour() {
+  let input = document.getElementById("timeFilter");
+  let filter = input.value;
+  let divElem = document.getElementsByClassName("event");
+  let hour = document.getElementsByClassName("hour");
+  for (let i = 0; i < divElem.length; i++) {
+    let txtValue = hour[i].textContent;
+    if (txtValue != filter) {
+      divElem[i].style.display = "none";
+    }
+  }
+}
+
+//filtro por lugar
+function filterPlace() {
+  let input = document.getElementById("placeFilter");
+  let filter = input.value.toLowerCase();
+  let divElem = document.getElementsByClassName("event");
+  let place = document.getElementsByClassName("place");
+  for (let i = 0; i < divElem.length; i++) {
+    let txtValue = place[i].textContent;
+    if (txtValue.toLowerCase() != filter) {
+      divElem[i].style.display = "none";
+      
+    }
+  }
+}
+
+
+
 
 //boton de filtros
 function filter(){
-  const buttons = document.querySelectorAll('.filterButtom');
+  const buttons = document.querySelectorAll('.addFilter');
 
   buttons.forEach(button => {
     button.addEventListener('click', function(){
-      filterTitle();
+      if(!(document.getElementById("titleFilter") == null)){
+        filterTitle();
+      }
+      if(!(document.getElementById("priceFilter") == null)){
+        filterPrice();
+      }
+      if(!(document.getElementById("dateFilter") == null)){
+        filterDate();
+      }
+      if(!(document.getElementById("timeFilter") == null)){
+        filterHour();
+      }
+      if(!(document.getElementById("placeFilter") == null)){
+        filterPlace();
+      }
        });
   });
 }
+
+function delFilters(){
+  const buttons = document.querySelectorAll('.delFilters');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function(){
+      let divElem = document.getElementsByClassName("event");
+      let input = document.getElementsByTagName("input");
+      for (let i = 0; i < divElem.length; i++) {
+          divElem[i].style.display = "";
+          input[i].value = "";
+      }
+    });
+  });
+}
+        
+    
+

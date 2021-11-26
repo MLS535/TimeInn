@@ -15,10 +15,10 @@ const function_events = function (events){
           <div class="content-overlay">
                 <div class="title">${post.title}</div>
                 <div class="event_favicon">
-                 <div class="date-destacado"><i class="far fa-calendar-alt"></i> ${post.publication_date} </div>
-            <div class="hora"><i class="far fa-clock"></i> Hora: ${post.time}</div>
-            <div class="precio"><i class="fas fa-hand-holding-usd"></i> Precio: ${post.price}</div>
-            <div class="location"><i class="fas fa-map-marked-alt"></i> ${post.location}</div>
+                 <div class="date-destacado"><i class="far fa-calendar-alt"></i> <a class="dates">${post.publication_date}</a> </div>
+            <div class="hora"><i class="far fa-clock"></i> Hora: <a class="hour">${post.time}</a></div>
+            <div class="precio"><i class="fas fa-hand-holding-usd"></i> Precio: <a class="price">${post.price}</a></div>
+            <div class="location"><i class="fas fa-map-marked-alt"></i> <a class="place">${post.location}</a></div>
                 </div>
                
                 <div class="text">${post.description}</div>

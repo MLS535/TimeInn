@@ -1100,13 +1100,13 @@ OVERLAY WITH FORM
     font-family: 'Lato',Arial,sans-serif;
     font-size:1rem;
     text-align: center;
-    cursor: pointer;
     transition: all 0.3s ease-out;  
 }
 
 .filterButton>button{
     box-shadow: 5px 5px 5px black;
     border-radius: 0.4em;
+    cursor: pointer;
 }
 
 .filter_content .filter_item>input{
