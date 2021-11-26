@@ -1324,6 +1324,10 @@ TODO DESDE AQUI HAMBURGUESA
         cursor: pointer;
     }
 
+    .list_ul{
+        display:none;
+    }
+
     /*
     media front page
      */
