@@ -102,7 +102,7 @@ export const events = [
         publication_date: '2022-06-28',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_960_720.jpg',
         time: '21:30',
-        price: '50.00',
+        price: 50.00,
         location: 'Palma de Mallorca',
         destacado: false
     },
@@ -111,7 +111,7 @@ export const events = [
         publication_date: '2019-07-10',
         imgUrl: 'https://cdn.pixabay.com/photo/2018/06/17/10/38/artist-3480274_960_720.jpg',
         time: '21:30',
-        price: '50.00',
+        price: 50.00,
         location: 'Palma de Mallorca',
         destacado: true
     },
@@ -120,16 +120,16 @@ export const events = [
         publication_date: '2019-06-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/11/19/13/57/drum-set-1839383_960_720.jpg',
         time: '21:30',
-        price: '50.00',
-        location: 'Palma de Mallorca',
+        price: 50.00,
+        location: 'Andrax',
         destacado: false
     },
     {   title: 'MAD COOL FESTIVAL 4',
         description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
         publication_date: '2022-06-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2017/04/11/22/56/stage-2223130_960_720.jpg',
-        time: '21:30',
-        price: '50.00',
+        time: '20:30',
+        price: 50.00,
         location: 'Palma de Mallorca',
         destacado: false
     },
@@ -138,7 +138,7 @@ export const events = [
         publication_date: '2019-06-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/09/10/11/11/jazz-1658886_960_720.jpg',
         time: '21:30',
-        price: '50.00',
+        price: 30.00,
         location: 'Palma de Mallorca',
         destacado: true
     },
@@ -147,7 +147,7 @@ export const events = [
         publication_date: '2022-06-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2017/08/01/12/42/concert-2565099_960_720.jpg',
         time: '21:30',
-        price: '50.00',
+        price: 30.00,
         location: 'Palma de Mallorca',
         destacado: true
     }

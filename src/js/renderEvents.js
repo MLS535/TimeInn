@@ -17,7 +17,7 @@ const function_events = function (events){
                 <div class="event_favicon">
                  <div class="date-destacado"><i class="far fa-calendar-alt"></i> <a class="dates">${post.publication_date}</a> </div>
             <div class="hora"><i class="far fa-clock"></i> Hora: <a class="hour">${post.time}</a></div>
-            <div class="precio"><i class="fas fa-hand-holding-usd"></i> Precio: <a class="price">${post.price}</a></div>
+            <div class="precio"><i class="fas fa-hand-holding-usd"></i> Precio: <a class="price">${post.price}</a>€</div>
             <div class="location"><i class="fas fa-map-marked-alt"></i> <a class="place">${post.location}</a></div>
                 </div>
                

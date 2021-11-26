@@ -124,7 +124,7 @@ function filterTitle() {
   let title = document.getElementsByClassName("title");
   for (let i = 0; i < divElem.length; i++) {
     let txtValue = title[i].textContent;
-    if (txtValue.toLowerCase() != filter) {
+    if (txtValue.toLowerCase() != filter && filter != "") {
       divElem[i].style.display = "none";
     }
   }
@@ -133,12 +133,12 @@ function filterTitle() {
 //filtro por precio
 function filterPrice() {
   let input = document.getElementById("priceFilter");
-  let filter = input.value.toLowerCase();
+  let filter = input.value;
   let divElem = document.getElementsByClassName("event");
   let price = document.getElementsByClassName("price");
   for (let i = 0; i < divElem.length; i++) {
     let txtValue = price[i].textContent;
-    if (txtValue.toLowerCase() != filter) {
+    if (txtValue != filter && filter != "") {
       divElem[i].style.display = "none";
     }
   }
@@ -152,7 +152,7 @@ function filterDate() {
   let date = document.getElementsByClassName("dates");
   for (let i = 0; i < divElem.length; i++) {
     let txtValue = date[i].textContent;
-    if (txtValue != filter) {
+    if (txtValue != filter && filter != "") {
       divElem[i].style.display = "none";
     }
   }
@@ -166,9 +166,9 @@ function filterHour() {
   let hour = document.getElementsByClassName("hour");
   for (let i = 0; i < divElem.length; i++) {
     let txtValue = hour[i].textContent;
-    if (txtValue != filter) {
+    if (txtValue != filter && filter != "") {
       divElem[i].style.display = "none";
-    }
+    } 
   }
 }
 
@@ -180,9 +180,8 @@ function filterPlace() {
   let place = document.getElementsByClassName("place");
   for (let i = 0; i < divElem.length; i++) {
     let txtValue = place[i].textContent;
-    if (txtValue.toLowerCase() != filter) {
-      divElem[i].style.display = "none";
-      
+    if (txtValue.toLowerCase() != filter && filter != "") {
+      divElem[i].style.display = "none";  
     }
   }
 }
@@ -196,21 +195,25 @@ function filter(){
 
   buttons.forEach(button => {
     button.addEventListener('click', function(){
-      if(!(document.getElementById("titleFilter") == null)){
+      
+      if(document.getElementById("titleFilter") != ""){
         filterTitle();
       }
-      if(!(document.getElementById("priceFilter") == null)){
+      if(document.getElementById("priceFilter") != ""){
         filterPrice();
       }
-      if(!(document.getElementById("dateFilter") == null)){
+      if(document.getElementById("dateFilter") != ""){
         filterDate();
       }
-      if(!(document.getElementById("timeFilter") == null)){
+      if(document.getElementById("timeFilter") != ""){
         filterHour();
       }
-      if(!(document.getElementById("placeFilter") == null)){
+      if(document.getElementById("placeFilter") != ""){
         filterPlace();
+      } else {
+        alert("No hay filtros");
       }
+      
        });
   });
 }
