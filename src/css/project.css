@@ -9,15 +9,15 @@ General
 }
 
 :root{
-    --color-primary: #f5f5f5;
-    --color-primary-variant: #8a8787;
+    --color-primary: black;
+    --color-primary-variant: rgb(242,243,248);
     --color-secondary: #daa520;
-    --color-secondary-variant: #c29219;
+    --color-secondary-variant: #f8ae45;
 }
 body {
     margin:0;
     box-sizing: border-box;
-    background: #ffffff;
+    background: white;
     font-family: 'Heebo', sans-serif;
 }
 
@@ -31,9 +31,7 @@ Event Page
     align-items: center;
     width: 100%;
     height: 25vh;
-    /*margin-top: -0.5em;*/
-    /*margin-left: -0.5em;*/
-
+    margin-bottom: -1rem;
 }
 
 .button_event{
@@ -73,7 +71,7 @@ Event Page
 
 .event{
     display: grid;
-    background-color: rgb(242,243,248);
+    background-color: var(--color-primary-variant);
     grid-template-columns: 35% 55% 10%;
     width: 90vw;
     border-radius: 0.4em;
@@ -194,11 +192,13 @@ Front page CSS
 }
 
 
-.logo{
+/* .logo{
     flex-grow: 2;
     max-width: 10vw;
     max-height: 10vh;
-}
+    margin-left: 1rem;
+    margin-top: 1rem;
+}*/
 
 
 .button_overlay {
@@ -299,7 +299,7 @@ Front page CSS
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    z-index: 5;
+    /* z-index: 5; */
 
 }
 
@@ -328,7 +328,9 @@ Front page CSS
     margin-top: 1.5rem;
 }
 
-
+.footer>img{
+    margin-left: 45vw;
+}
 
 .content_item{
     display: flex;
@@ -494,7 +496,7 @@ CARDS FROM NEWS EVENTS
     border:0px;
     outline:none;
     cursor:pointer;
-    z-index:9999;
+    z-index:50;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
     transition: 0.6s ease;
 }
@@ -513,7 +515,7 @@ CARDS FROM NEWS EVENTS
     display:flex;
     align-items:center;
     justify-content:center;
-    background:rgb(242,243,248);
+    background:var(--color-primary-variant);
     width:100%;
     overflow:hidden;
 }
@@ -551,6 +553,48 @@ CARDS FROM NEWS EVENTS
     text-overflow: ellipsis;
 
 }
+/*slider events*/
+
+.slider1 {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--color-primary-variant);
+    width:100%;
+    overflow:hidden;
+}
+
+.slider1:after {
+    content:'';
+    left:98px;
+    height:90vh;
+    position:absolute;
+    width:150px;
+    z-index:100;
+    /* cursor:none; */
+}
+
+.event-content{
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+    align-content: center;
+    overflow-x: hidden
+}
+
+
+.slider1:before {
+    content:'';
+    right:98px;
+    height:90vh;
+    position:absolute;
+    width:150px;
+    z-index:100;
+    /* cursor:none; */
+}
 
 /*
 Destacados del mes
@@ -564,7 +608,7 @@ Destacados del mes
     justify-content: flex-start;
     text-align: justify;
     padding: 1vw;
-    background: rgb(242,243,248);
+    background: var(--color-primary-variant);
     border-radius: 1rem;
     margin-left: 9vw;
     margin-right: 9vw;
@@ -602,7 +646,7 @@ section Eventos
 
 section>#portfolio-events,#portfolio-events2{
     display: grid;
-    background: rgb(242,243,248);
+    background: var(--color-primary-variant);
     grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
     padding-bottom: 50px;
@@ -701,7 +745,7 @@ div>.indexEvent2 {
     justify-content: center;
     align-items: center;
     align-content: center;
-    background: rgb(242,243,248);
+    background: var(--color-primary-variant);
     font-size: 1.5rem;
 }
 
@@ -733,7 +777,7 @@ div>.indexEvent2 {
 
 .calendar .calendarMonth{
     display: flex;
-    color: rgb(242,243,248);
+    color: var(--color-primary-variant);
     background-color: rgb(36, 35, 35);
     align-items: center;
     text-align: center;
@@ -850,13 +894,13 @@ OVERLAY WITH FORM
     padding: 20px;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 26rem;
     position: relative;
 }
 
 .popup h2 {
 
-    color: #f8ae45;
+    color: var(--color-secondary-variant);
     font-family: Tahoma, Arial, sans-serif;
     margin: 0 auto;
     padding: 1em;
@@ -901,10 +945,11 @@ OVERLAY WITH FORM
     font-size:1rem;
     background-color: lightgray;
     border: black;
+    width: 18rem;
 }
 
 .label{
-    color:#f8ae45;
+    color:var(--color-secondary-variant);
 }
 
 .inputform{
@@ -914,19 +959,19 @@ OVERLAY WITH FORM
     font-size:1rem;
     background-color: lightgray;
     border: black;
-    width: 15vw;
+    width: 14rem;
 }
 
 #date_form{
-    width: 10vw;
+    width: 10rem;
 }
 
 #time_form{
-    width: 5vw;
+    width: 5rem;
 }
 .submit{
     border:none;
-    background:#f8ae45;
+    background:var(--color-secondary-variant);
     color:#FFFFFF;
     padding:12px 25px;
     cursor:pointer;
@@ -939,18 +984,42 @@ OVERLAY WITH FORM
     align-self: center;
 }
 
+
+/*TODO Mejorar css cookies y adaptarlo a los tamaños*/
 /*overlay Index*/
 .popupIndex {
-    margin: 70px auto;
-    padding: 20px;
+   /*  margin-left: 35vw;
+    margin-top: 25vh; */
+    padding: 1.5rem;
     background: #fff;
     border-radius: 5px;
-    width: 30%;
+    width: 20rem;
     position: relative;
-    /* transition: all 3s ease-in-out; */
+}
+
+.inputEmail{
+    width: 15rem;
+}
+
+.popupIndex>button{
+    background: var(--color-secondary-variant);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+.buttonOverlayOn{
+    background: var(--color-secondary-variant);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .overlay2 {
+    display: flex;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -960,7 +1029,9 @@ OVERLAY WITH FORM
     transition:  opacity 500ms;
     visibility: visible;
     opacity: 1;
-
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 }
 
 .overlayOff {
@@ -997,6 +1068,8 @@ OVERLAY WITH FORM
     max-height: 10vh;
     position: absolute;
     left: 0;
+    margin-left: 1rem;
+    margin-top: 1rem;
 
 }
 
@@ -1034,7 +1107,8 @@ OVERLAY WITH FORM
     float: left;
     max-height: none;
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
+
 }
 .header .menu-icon {
     display: none;
@@ -1073,7 +1147,7 @@ OVERLAY WITH FORM
 }
 
 .filter_container{  
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-variant);
     margin-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
@@ -1111,6 +1185,14 @@ OVERLAY WITH FORM
     box-shadow: 5px 5px 5px black;
     border-radius: 0.4em;
     cursor: pointer;
+    border: none;
+    background: var(--color-secondary);
+    color: #FFFFFF;
+    padding: 5px 17px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1.3vw;
 }
 
 .filter_content .filter_item>input{
@@ -1119,6 +1201,17 @@ OVERLAY WITH FORM
     
 }
 
+.buttonSelection{
+    display: none;
+}
+
+.eventIndex{
+    display:none;
+}
+
+.eventIndexOff{
+    display: none;
+}
 
 
 /*
@@ -1168,6 +1261,8 @@ TODO DESDE AQUI HAMBURGUESA
         max-height: 0;
         transition: max-height .2s ease-out;
         flex-grow: 2;
+        margin-top: 1rem;
+        margin-right: 1rem;
     }
 
     /* menu icon */
@@ -1184,6 +1279,8 @@ TODO DESDE AQUI HAMBURGUESA
         justify-content: flex-end;
         border-radius: 50%;
         border: double var(--color-secondary);
+        margin-top: 1rem;
+        margin-right: 1rem;
     }
 
     .header .menu-icon .navicon {
@@ -1232,9 +1329,70 @@ TODO DESDE AQUI HAMBURGUESA
        overflow: hidden;
    }
 
+   .eventIndex{
+       display: flex;
+   }
+
+   .eventIndexOff{
+    display: none;
+    }
+
+   div>.indexEvent{
+    margin: 1vw;
+    background: white;
+    padding: 1rem;
+    border-radius: 1vw;
+    font-family: Heebo, sans-serif;
+}
+
+/*overlay Index*/
+.popupIndex {
+    /*  margin-left: 35vw;
+     margin-top: 25vh; */
+     padding: 1.5rem;
+     background: #fff;
+     border-radius: 5px;
+     width: 10rem;
+     position: relative;
+ }
+ .inputEmail{
+    width: 10rem;
+}
+
+
    /*
    MEDIA NEWS
     */
+    .news .title_section{
+        display: none;
+    }
+
+
+    .newsOff{
+        display: none;
+    }
+
+    .buttonSelection{
+        display: flex;
+        justify-content: center;
+    }
+    .buttonSelection>button{
+        font-size: 2rem;
+        width: 48vw;
+        font-weight: bold;
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+        border-style: solid;
+        border-color: var(--color-secondary);
+    }
+    .newsButton:active{
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+    }
+    .eventsButton:active{
+        background-color: var(--color-secondary);
+        color: var(--color-primary);
+    }
 
     .btn {
         min-width: 0.3vw;
@@ -1307,7 +1465,9 @@ TODO DESDE AQUI HAMBURGUESA
         justify-content: center;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        
+        width: 22rem;
+        height: 20rem;
+
     }
 
     .calendar .calendarMonth{
@@ -1327,7 +1487,7 @@ TODO DESDE AQUI HAMBURGUESA
         flex-direction: column;
         justify-content: space-around;
     }
-    .form{
+    .form1{
         margin: 1rem;
     }
 
@@ -1365,6 +1525,15 @@ TODO DESDE AQUI HAMBURGUESA
         margin-bottom: 1rem;
     }
 
+    /*Formulario*/
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 27rem;
+    position: relative;
+}
 
     /*
         footer
@@ -1374,7 +1543,12 @@ TODO DESDE AQUI HAMBURGUESA
         flex-direction: column;
         justify-content: space-evenly;
         align-items: baseline;
+        margin-left: 1rem;
+    }
 
+    .footer>img{
+        margin-left: 1rem;
+        margin-top: 1rem;
     }
 
 
@@ -1400,6 +1574,10 @@ TODO DESDE AQUI HAMBURGUESA
     align-items: end;
 }
 
+.inputform {
+    width: 14rem;
+}
+
 
 
 
@@ -1417,4 +1595,50 @@ TODO DESDE AQUI HAMBURGUESA
 #time_form {
     width: 9vw;
 }
+
+.goBackButton {
+    background: var(--color-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+    top: 70%;
+    left: 120%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/*Formulario*/
+.popup {
+    margin: 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 91vw;
+    position: relative;
+    height: 100%;
+}
+
+.popup .content-overlay {
+    max-height: 28rem;
+    font-weight: 400;
+    font-size: 1em;
+    font-family: 'Lato', Arial, sans-serif;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.field > textarea {
+    font-family: 'Lato',Arial,sans-serif;
+    font-size: 1rem;
+    background-color: lightgray;
+    border: black;
+    width: 18rem;
+}
+
+.button_event {
+    margin-left: 8rem;
+}
+
 }
