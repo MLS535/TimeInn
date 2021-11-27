@@ -25,6 +25,27 @@ const front_card = sort_news.map(post => `
 
 document.querySelector('.card-content').innerHTML = front_card.join('\n');
 
+//cards de eventos
+
+const front_event = events.map(post => `
+   <div class="card">
+                    <div class="card-img">
+                        <img src="${post.imgUrl}" alt="">
+                        <img class="blur" src="" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h2>${post.title}</h2>
+                        <div class="date-destacado"><i class="far fa-calendar-alt"></i> ${post.publication_date} </div>
+                        <div ><i class="far fa-clock"></i> Hora: ${post.time}</div>
+                        <div><i class="fas fa-hand-holding-usd"></i> Precio: ${post.price}</div>
+                        <div><i class="fas fa-map-marked-alt"></i> ${post.location}</div>
+                        <p class="description_news">${post.description}<p>
+                    </div>
+                </div>
+`)
+
+document.querySelector('.event-content').innerHTML = front_event.join('\n');
+
 const event_news = Object.values([events[0],events[1]]).map(post => `
    <div class="indexEvent">
          <img class="image" src="${post.imgUrl}" alt="${post.title}" />
@@ -85,5 +106,3 @@ let destacados = filter.map(eventfilter => {
 
 );
 document.querySelector('#destacado').innerHTML = destacados.join('\n');
-
-

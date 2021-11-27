@@ -29,6 +29,8 @@ window.addEventListener("DOMContentLoaded", function () {
   goBack();
   overlay();
   checkCookie();
+  changeToNew();
+  changeToEvent();
 });
 
 //Slide front
@@ -62,9 +64,7 @@ function showDivs(n) {
 }
 setInterval(showDivs, )
 
-
-
-
+//news
 const next=document.querySelector('#next')
 const prev=document.querySelector('#prev')
 
@@ -81,6 +81,23 @@ function handleScrollPrev (direction) {
 next.addEventListener('click', handleScrollNext)
 prev.addEventListener('click', handleScrollPrev)
 
+//events
+
+const next1=document.querySelector('#next1')
+const prev1=document.querySelector('#prev1')
+
+function handleScrollNext1 (direction) {
+    const cards = document.querySelector('.event-content')
+    cards.scrollLeft=cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth /2 : window.innerWidth -100
+}
+
+function handleScrollPrev1 (direction) {
+    const cards = document.querySelector('.event-content')
+    cards.scrollLeft=cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth /2 : window.innerWidth -100
+}
+
+next1.addEventListener('click', handleScrollNext1)
+prev1.addEventListener('click', handleScrollPrev1)
 
 //overlay del index
 
@@ -113,3 +130,26 @@ function checkCookie() {
       document.querySelector('.overlay2').className = 'overlayOff';
     }}
     
+
+//selector entre eventos y noticias
+
+function changeToNew(){
+  const buttons = document.querySelectorAll('.newsButton');
+  buttons.forEach(button => {
+    button.addEventListener('click', function(){
+      document.querySelector('.eventIndex').className = 'eventIndexOff';
+      document.querySelector('.newsOff').className = 'news';
+    });
+  });
+}
+
+
+function changeToEvent(){
+  const buttons = document.querySelectorAll('.eventsButton');
+  buttons.forEach(button => {
+      button.addEventListener('click', function(){
+      document.querySelector('.eventIndexOff').className = 'eventIndex';
+      document.querySelector('.news').className = 'newsOff';
+    });
+  });
+}
