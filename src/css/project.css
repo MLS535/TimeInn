@@ -471,6 +471,7 @@ CARDS FROM NEWS EVENTS
     overflow: auto;
     scroll-behavior: smooth;
     align-content: center;
+    overflow-x: hidden;
 }
 
 .card-content::-webkit-scrollbar {
@@ -523,7 +524,7 @@ CARDS FROM NEWS EVENTS
 .slider:after {
     content:'';
     left:98px;
-    height:90vh;
+    height:74vh;
     position:absolute;
     width:150px;
     z-index:100;
@@ -535,7 +536,7 @@ CARDS FROM NEWS EVENTS
 .slider:before {
     content:'';
     right:98px;
-    height:90vh;
+    height:74vh;
     position:absolute;
     width:150px;
     z-index:100;
@@ -567,7 +568,7 @@ CARDS FROM NEWS EVENTS
 .slider1:after {
     content:'';
     left:98px;
-    height:90vh;
+    height:74vh;
     position:absolute;
     width:150px;
     z-index:100;
@@ -589,7 +590,7 @@ CARDS FROM NEWS EVENTS
 .slider1:before {
     content:'';
     right:98px;
-    height:90vh;
+    height:74vh;
     position:absolute;
     width:150px;
     z-index:100;
@@ -1376,7 +1377,7 @@ TODO DESDE AQUI HAMBURGUESA
         display: flex;
         justify-content: center;
     }
-    .buttonSelection>button{
+    .buttonSelection>div{
         font-size: 2rem;
         width: 48vw;
         font-weight: bold;
@@ -1384,12 +1385,13 @@ TODO DESDE AQUI HAMBURGUESA
         color: var(--color-secondary);
         border-style: solid;
         border-color: var(--color-secondary);
+        text-align: center;
     }
-    .newsButton:active{
+    .buttonSelection .newsButtonOn{
         background-color: var(--color-secondary);
         color: var(--color-primary);
     }
-    .eventsButton:active{
+    .buttonSelection .eventsButtonOn{
         background-color: var(--color-secondary);
         color: var(--color-primary);
     }

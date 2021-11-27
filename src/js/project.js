@@ -137,11 +137,13 @@ function checkCookie() {
 //selector entre eventos y noticias
 
 function changeToNew(){
-  const buttons = document.querySelectorAll('.newsButton');
+  const buttons = document.querySelectorAll('.newsButtonOn');
   buttons.forEach(button => {
     button.addEventListener('click', function(){
       document.querySelector('.eventIndex').className = 'eventIndexOff';
       document.querySelector('.newsOff').className = 'news';
+      document.querySelector('.newsButton').className = 'newsButtonOn';
+      document.querySelector('.eventsButtonOn').className = 'eventsButton';
     });
   });
 }
@@ -153,6 +155,8 @@ function changeToEvent(){
       button.addEventListener('click', function(){
       document.querySelector('.eventIndexOff').className = 'eventIndex';
       document.querySelector('.news').className = 'newsOff';
+      document.querySelector('.newsButtonOn').className = 'newsButton';
+      document.querySelector('.eventsButton').className = 'eventsButtonOn';
     });
   });
 }
