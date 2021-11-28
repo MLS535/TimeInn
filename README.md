@@ -56,7 +56,7 @@
 
 El enlace de nuestro wireframe es el siguiente: https://balsamiq.cloud/sb1o4bb/pa31lcr
 
-##Color and font Pallete
+## Color and font Pallete
 
 - La paleta de colores utilizadas es la siguiente:
 <p><img src="src/img/Colour_palette.png" alt="paleta de colores"></p>
