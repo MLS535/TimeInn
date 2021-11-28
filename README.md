@@ -58,8 +58,11 @@ El enlace de nuestro wireframe es el siguiente: https://balsamiq.cloud/sb1o4bb/p
 
 ##Color and font Pallete
 
-La paleta de colores utilizadas es la siguiente:
-<p><img src="src/img/"></p>
+- La paleta de colores utilizadas es la siguiente:
+<p><img src="src/img/Colour_palette.png" alt="paleta de colores"></p>
+
+- La paleta de las fuentes de escritura es la siguiente, la paleta utiliza google font para añadir estilos que no tenemos:
+<p><img src="src/img/Font_Pallete.png" alt="paleta de colores"></p>
 
 ##Paginas web Inspiradas
 
