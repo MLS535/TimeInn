@@ -879,6 +879,7 @@ OVERLAY WITH FORM
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 10;
 }
 
 .overlay:target {
@@ -1006,23 +1007,33 @@ OVERLAY WITH FORM
     margin-top: 2vh;
 }
 
-.popupIndex>button{
-    background: var(--color-secondary-variant);
-    color:var(--fondo-layout);
-    font-size: 1em;
+.close1{ 
+    transition: all 200ms;
+    font-size: 30px;
     font-weight: bold;
     text-decoration: none;
+    color: var(--color-primary);
+    align-self: end;
     cursor: pointer;
-    align-self: flex-end;
+    height: 2vh;
 }
+.close1:hover{
+    color: var(--color-secondary-variant);
+}
+
 .buttonOverlayOn{
-    background: var(--color-secondary-variant);
-    color:var(--fondo-layout);
     font-size: 1em;
-    font-weight: bold;
+    /* padding: 10px; */
+    color: var(--fondo-layout);
+    font-family: Heebo,sans-serif;
     text-decoration: none;
     cursor: pointer;
+    background-color: var(--color-primary);
 }
+.buttonOverlayOn:hover{
+    background: var(--color-secondary-variant);
+}
+
 
 .overlay2 {
     display: flex;
@@ -1354,7 +1365,7 @@ TODO DESDE AQUI HAMBURGUESA
         padding: 1.5rem;
         background: #fff;
         border-radius: 5px;
-        width: 10rem;
+        width: 13rem;
         position: relative;
     }
 
@@ -1385,20 +1396,20 @@ TODO DESDE AQUI HAMBURGUESA
         width: 48vw;
         font-weight: bold;
         background-color: var(--color-primary);
-        color: var(--color-secondary);
-        border-style: solid;
+        color: var(--fondo-layout);
         border-color: var(--color-secondary);
         text-align: center;
+        cursor: pointer;
     }
 
     .buttonSelection .newsButtonOn {
         background-color: var(--color-secondary);
-        color: var(--color-primary);
+        color: var(--fondo-layout);
     }
 
     .buttonSelection .eventsButtonOn {
         background-color: var(--color-secondary);
-        color: var(--color-primary);
+        color: var(--fondo-layout);
     }
 
     .btn {
@@ -1541,6 +1552,14 @@ TODO DESDE AQUI HAMBURGUESA
     .buttons {
         margin-bottom: 1rem;
     }
+
+    /* filtro*/
+.filter_content{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+}
 }
 
 @media only screen and (max-width: 40em)  {
@@ -1550,15 +1569,6 @@ TODO DESDE AQUI HAMBURGUESA
     justify-content: center;
     grid-template-columns: 1fr;
     align-items: end;
-}
-    /*Formulario*/
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: var(--fondo-layout);
-    border-radius: 5px;
-    width: 27rem;
-    position: relative;
 }
 
     /*
@@ -1592,38 +1602,13 @@ TODO DESDE AQUI HAMBURGUESA
     media front page
      */
 
-/* filtro*/
-.filter_content{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: end;
-}
-
 .inputform {
     width: 14rem;
 }
 
-
-
-
-#time_form {
+/* #time_form {
     width: 9vw;
-}
-}
-
-@media only screen and (max-width: 40em)  {
-/* filtro*/
-.filter_content{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr;
-    align-items: end;
-}
-
-#time_form {
-    width: 9vw;
-}
+} */
 
 .goBackButton {
     background: var(--color-secondary);
@@ -1654,8 +1639,6 @@ TODO DESDE AQUI HAMBURGUESA
     font-size: 1em;
     font-family: 'Lato', Arial, sans-serif;
     overflow: auto;
-    /*display: flex;*/
-    /*justify-content: center;*/
 }
 
 .field > textarea {

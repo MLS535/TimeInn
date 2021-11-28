@@ -13,8 +13,8 @@ export const news = [
     },
 
         {   id: 2,
-            title: '2Aitana Concierto',
-            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+            title: 'Concierto de Roberto Fonseca',
+            description: 'El concierto estará basado en gran medida en su disco Yesun. “Es el álbum que siempre quise hacer”, dice Fonseca sobre un disco que combina todo, desde jazz hasta electrónica, saltándose las normas por el camino.',
             publication_date: '2022-01-22',
             imgUrl: 'https://cdn.pixabay.com/photo/2016/11/19/11/11/dua-lipa-1838653_960_720.jpg',
             destacado: false,
@@ -22,8 +22,8 @@ export const news = [
         },
 
         {   id: 3,
-            title: '3Aitana Concierto',
-            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+            title: 'David Rees',
+            description: 'David Rees es un cantante y youtuber español, cuyos inicios en la plataforma de contenido audiovisual vinieron motivados por una voluntad de expresar su talento musical.Sus vídeos tienen miles de reproducciones y, gracias a su naturalidad y cercanía, ha conseguido un gran número de fans incondicionales. Cuenta con más de 200 mil suscriptores en su canal de Youtube.',
             publication_date: '2022-06-22',
             imgUrl: 'https://cdn.pixabay.com/photo/2015/05/07/11/02/guitar-756326_960_720.jpg',
             destacado: false,
@@ -40,8 +40,8 @@ export const news = [
     },
 
     {   id: 5,
-        title: '5Aitana Concierto',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        title: 'Chopin Sessions 2022',
+        description: 'Las Chopin Sessions se llevarán a cabo en la plaza Los Caidos. En este se tocaran varias de las mas famosas obras de Chopin',
         publication_date: '2022-05-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/09/16/15/56/manhattan-1674404_960_720.jpg',
         destacado: false,
@@ -60,8 +60,8 @@ export const news = [
     },
 
     {   id: 7,
-        title: '7Aitana Concierto',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        title: 'El Funeral',
+        description: 'El funeral es un original espectáculo de música y teatro. El humor y la espectacularidad se fusionan para concluir una propuesta diferente en la que la ironía da alas a la risa caminando entre la comicidad y la tragedia.',
         publication_date: '2021-12-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/04/28/01/08/stage-1357961_960_720.jpg',
         destacado: false,
@@ -69,8 +69,8 @@ export const news = [
     },
     {
         id:8,
-        title: '8Aitana Concierto',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        title: 'Nuevo videoclip de Bruno Mars',
+        description: 'Bruno Mars y Anderson Paak, han creado una banda de puro R&B, llamada Silk Sonic. El pasado marzo, ya sacaron un primer adelanto, «Leave the Door Open» y luego lanzaron, «Skate». Así llevan, durante meses, publicando alguna que otra pista de lo que será su nuevo proyecto, «An Evening With Silk Sonic».',
         publication_date: '2022-10-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2018/03/06/06/58/performance-3202707_960_720.jpg',
         destacado: false,
@@ -79,8 +79,8 @@ export const news = [
 
     {
         id: 9,
-        title: '9Aitana Concierto',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
+        title: 'Subasta de guitarras con fines benéficos',
+        description: 'Radiohead , Paul McCartney , U2 , Green Day , Dave Grohl , Noel Gallagher y muchos más artistas están subastando guitarras para ayudar a los músicos afectados por la pandemia de COVID .',
         publication_date: '2022-07-22',
         imgUrl: 'https://cdn.pixabay.com/photo/2018/07/26/17/48/musician-3564169_960_720.jpg',
         destacado: false,
@@ -101,7 +101,7 @@ export const news = [
 export const events = [
     {   title: 'MAD COOL FESTIVAL 2022',
         description: 'La organización del festival ha comunicado que Mad Cool Festival 2022 regresará a Madrid el próximo verano, ocupando de nuevo el recinto ubicado en Valdebebas – Ifema concebido para albergar a 60.000 personas y que ofrece una extensión de 100.000 metros cuadrados.',
-        publication_date: '2022-06-28',
+        publication_date: '28/06/2022',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/11/23/15/48/audience-1853662_960_720.jpg',
         time: '21:30',
         price: 50.00,
@@ -112,30 +112,30 @@ export const events = [
         description: 'Es Gremi celebra su 18º aniversario y para ello han preparado un sábado muy especial para poder disfrutar de los mejores conciertos de indie rock del momento.\n' +
             '\n' +
             'Ginebras, el cuarteto femenino afincado en Madrid, actuará por primera vez en Palma presentando su primer disco "Ya dormiré cuando me muera" (Vanana Records, 2020). Diversión y buen rollo a raudales con alta dosis de guitarras poperas y dicharacheras que hacen de su directo una fiesta constante de espíritu festivalero',
-        publication_date: '2019-07-10',
+        publication_date: '10/07/2021',
         imgUrl: 'https://cdn.pixabay.com/photo/2018/06/17/10/38/artist-3480274_960_720.jpg',
-        time: '21:30',
-        price: 50.00,
+        time: '17:30',
+        price: 45.00,
         location: 'Palma de Mallorca',
         destacado: true
     },
-    { title: 'MAD COOL FESTIVAL 3',
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime consequuntur, laborum accusantium tempore praesentium ali',
-        publication_date: '2019-06-22',
+    { title: 'Mallorca Live Festival 2022',
+        description: 'El festival internacional de música más importante de las Islas Baleares. Mallorca Live Festival regresa en 2022 a su formato original para que puedas seguir bailando y disfrutando de lo que más nos gusta: los mejores directos nacionales e internacionales del momento.',
+        publication_date: '05/07/2022',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/11/19/13/57/drum-set-1839383_960_720.jpg',
-        time: '21:30',
-        price: 50.00,
-        location: 'Andrax',
+        time: '22:00',
+        price: 125.00,
+        location: 'Baleares',
         destacado: false
     },
     {   title: 'ES GREMI SOUNDS 2021',
         description: 'Es Gremi celebra su 18º aniversario y para ello han preparado un sábado muy especial para poder disfrutar de los mejores conciertos de indie rock del momento.\n' +
             '\n' +
             'Ginebras, el cuarteto femenino afincado en Madrid, actuará por primera vez en Palma presentando su primer disco "Ya dormiré cuando me muera" (Vanana Records, 2020). Diversión y buen rollo a raudales con alta dosis de guitarras poperas y dicharacheras que hacen de su directo una fiesta constante de espíritu festivalero',
-        publication_date: '2022-06-22',
+        publication_date: '18/09/2021',
         imgUrl: 'https://cdn.pixabay.com/photo/2017/04/11/22/56/stage-2223130_960_720.jpg',
-        time: '20:30',
-        price: 50.00,
+        time: '18:00',
+        price: 45.00,
         location: 'Palma de Mallorca',
         destacado: false
     },
@@ -143,16 +143,16 @@ export const events = [
         description: 'Vuelve el Festival Eivissa Jazz, uno de los eventos culturales más importantes del año en la isla, que celebra su 33ª edición del 1 al 4 de septiembre de 2021, recuperando una jornada respecto al año pasado.\n' +
             '\n' +
             'Una esperada cita con algunos de los mejores artistas nacionales e internacionales de jazz que este año nos ofrece ocho estupendos conciertos al aire libre.',
-        publication_date: '2019-06-22',
+        publication_date: '26/08/2019',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/09/10/11/11/jazz-1658886_960_720.jpg',
-        time: '21:30',
+        time: '20:30',
         price: 30.00,
         location: 'Ibiza',
         destacado: true
     },
     {   title: 'Mike Triste en concierto',
         description: 'Mike Triste artista actual del panorama musical indie rock tocará en concierto en son Moix, entre sus canciones más famosas se encuentra la balada "No puedo mas" y "Quiero terminar ya" que seguro que el público cantará con toda la ilusión del mundo ',
-        publication_date: '2022-06-22',
+        publication_date: '22/06/2022',
         imgUrl: 'https://cdn.pixabay.com/photo/2017/08/01/12/42/concert-2565099_960_720.jpg',
         time: '21:30',
         price: 30.00,
