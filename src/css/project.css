@@ -5,9 +5,7 @@ General
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Lato:wght@300&family=Monoton&display=swap');
 
 
-#boton_editar{
-    display: none;
-}
+
 
 :root{
     --color-primary: black;
@@ -38,6 +36,10 @@ Event Page
     margin-bottom: -1rem;
 }
 
+#boton_editar{
+    display: none;
+}
+
 .button_event{
 
     color:var(--fondo-layout);
@@ -59,8 +61,6 @@ Event Page
     margin-right: 5rem;
     text-align: center;
 }
-
-
 
 
 .eventMain {
@@ -88,7 +88,6 @@ Event Page
     grid-template-rows: 20% 20% 60%;
     grid-gap: 10px;
     color: var(--color-primary);
-    justify-items: center;
 }
 .event:hover{
     box-shadow: 5px 5px 5px var(--color-primary);
@@ -294,7 +293,7 @@ Front page CSS
     left: 50%;
     transform: translate(-50%, -50%);
     color:var(--fondo-layout);
-    /* z-index: 5; */
+     z-index: 5;
 
 }
 
@@ -986,17 +985,25 @@ OVERLAY WITH FORM
 /*TODO Mejorar css cookies y adaptarlo a los tamaños*/
 /*overlay Index*/
 .popupIndex {
-   /*  margin-left: 35vw;
-    margin-top: 25vh; */
     padding: 1.5rem;
     background: var(--fondo-layout);
     border-radius: 5px;
     width: 20rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    align-items: center;
+    /* margin: 4rem; */
+    gap: 1rem;
 }
+
 
 .inputEmail{
     width: 15rem;
+    margin-top: 2vh;
 }
 
 .popupIndex>button{
@@ -1006,6 +1013,7 @@ OVERLAY WITH FORM
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+    align-self: flex-end;
 }
 .buttonOverlayOn{
     background: var(--color-secondary-variant);
@@ -1403,7 +1411,8 @@ TODO DESDE AQUI HAMBURGUESA
 
     .search .input_search {
         width: 50vw;
-        margin: 0.5rem;
+        margin-top: 7.5rem;
+
     }
 
     /*
