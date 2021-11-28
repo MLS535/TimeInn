@@ -7,6 +7,7 @@
 - [Dificultades del proyecto](#Dificultades-del-proyecto)
 - [Mejoras del proyecto](#Mejoras-proyecto)
 - [Wireframe](#WireFrame)
+- [color_font_pallete](#Color-and-font-pallete)  
 - [Paginas_web_inspiradas](#Paginas-web-inspiradas)
 - [Video](#Video)
 - [Autor/es](#autores)
@@ -54,6 +55,11 @@
 ## WireFrame
 
 El enlace de nuestro wireframe es el siguiente: https://balsamiq.cloud/sb1o4bb/pa31lcr
+
+##Color and font Pallete
+
+La paleta de colores utilizadas es la siguiente:
+<p><img src="src/img/"></p>
 
 ##Paginas web Inspiradas
 
