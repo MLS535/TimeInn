@@ -95,14 +95,22 @@ formOverlay.addEventListener("click", function(evt) {
     const eventAdd = {id,title: title.value,description: description.value, publication_date: publication_date.value, imgUrl: imgUrl.value
         , time: time.value, price: price.value, location: location.value};
 
+        //condicion
+        if (title.value != "" && location.value != "" && publication_date.value != "" && time.value != "" && price.value != "" && description.value != "" && imgUrl.value != "") {
      //Añade eventAdd al objeto eventos
     eventos.push(eventAdd);
     //Inserta eventos al principio de portfolio y la renderiza con la función function_events
    porfolioEvents.insertAdjacentHTML("afterbegin", function_events([eventAdd]).join("\n"));
-   //Al hacer click en el boton quitará el formulario
-        window.location.replace("eventPage.html#");
-
-
+     //Al hacer click en el boton quitará el formulario
+     window.location.replace("eventPage.html#");
+     //borra los campos del formulario
+     title.value = "";
+     location.value = "";
+     publication_date.value = "";
+     time.value = "";
+     price.value = "";
+     description.value = "";
+    } 
     }
     );
 
@@ -118,7 +126,7 @@ const editEvents =function (){
         //aplica el boton de editar y quita el boton de nuevo evento
         btnEdit.style.display ="block";
         document.querySelector(".submit").style.display ="none";
-        //Al hacer click en el boton añadirá el formulario
+        //Al hacer click en el boton añadirá el formulario 
         window.location.replace("eventPage.html#popup1")
         //Al hacer click al boton de editar se editan los eventos
         btnEdit.addEventListener('click', function()
@@ -131,7 +139,8 @@ const editEvents =function (){
             let price = document.getElementById("price");
             let description = document.getElementById("description");
             let imgUrl = document.getElementById("imgUrl");
-
+            //condicion
+            if (title.value != "" && location.value != "" && publication_date.value != "" && time.value != "" && price.value != "" && description.value != "" && imgUrl.value != "") {
             //Pintamos el evento que queremos editar
             const markup = `<img class="image" src="${imgUrl.value}" alt="${title.value}"/>
             <div class="content-overlay">
@@ -154,9 +163,15 @@ const editEvents =function (){
             editParent.innerHTML = '';
             //Inserta lo nuevo editado
         editParent.insertAdjacentHTML('afterbegin', markup);
-            //Quita el formulario
-            window.location.replace("eventPage.html#");
-        })
+        //borra los campos del formulario
+         title.value = "";
+         location.value = "";
+         publication_date.value = "";
+         time.value = "";
+         price.value = "";
+         description.value = "";
+         window.location.replace("eventPage.html#");
+        }})
     })
 }
 editEvents();
