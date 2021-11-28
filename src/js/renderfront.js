@@ -46,7 +46,7 @@ const front_event = events.map(post => `
 
 document.querySelector('.event-content').innerHTML = front_event.join('\n');
 
-const event_news = Object.values([events[0],events[1]]).map(post => `
+const event_news = Object.values([events[0],events[2]]).map(post => `
    <div class="indexEvent">
          <img class="image" src="${post.imgUrl}" alt="${post.title}" />
           <div class="content">
@@ -62,7 +62,7 @@ const event_news = Object.values([events[0],events[1]]).map(post => `
 
 document.querySelector('#portfolio-events').innerHTML = event_news.join('\n');
 
-const event_news2 = Object.values([events[2],events[3]]).map(post => `
+const event_news2 = Object.values([events[4],events[5]]).map(post => `
     <div class="indexEvent2">
         <div class="content-overlay">
         <div class="title">${post.title}</div>

@@ -143,7 +143,7 @@ export const events = [
         description: 'Vuelve el Festival Eivissa Jazz, uno de los eventos culturales más importantes del año en la isla, que celebra su 33ª edición del 1 al 4 de septiembre de 2021, recuperando una jornada respecto al año pasado.\n' +
             '\n' +
             'Una esperada cita con algunos de los mejores artistas nacionales e internacionales de jazz que este año nos ofrece ocho estupendos conciertos al aire libre.',
-        publication_date: '26/08/2019',
+        publication_date: '26/08/2022',
         imgUrl: 'https://cdn.pixabay.com/photo/2016/09/10/11/11/jazz-1658886_960_720.jpg',
         time: '20:30',
         price: 30.00,
