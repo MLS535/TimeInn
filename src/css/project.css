@@ -2,30 +2,32 @@
 General
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Heebo:wght@100;400&family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Lato:wght@300&family=Monoton&display=swap');
 
-#boton_editar{
-    display: none;
-}
+
+
 
 :root{
     --color-primary: black;
     --color-primary-variant: rgb(242,243,248);
     --color-secondary: #daa520;
     --color-secondary-variant: #f8ae45;
+    --fondo-layout:white;
+    --overlay: rgba(0, 0, 0, 0.7);
 }
 body {
     margin:0;
     box-sizing: border-box;
-    background: white;
+    background:var(--fondo-layout);
     font-family: 'Heebo', sans-serif;
+    overflow-x: hidden;
 }
 
 /*
 Event Page
  */
 .eventHeader{
-    background-color: rgb(0 0 0);
+    background-color: var(--color-primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,16 +36,20 @@ Event Page
     margin-bottom: -1rem;
 }
 
+#boton_editar{
+    display: none;
+}
+
 .button_event{
 
-    color: white;
+    color:var(--fondo-layout);
     background: var(--color-secondary);
     padding: 1rem;
     text-decoration: none;
 }
 
 .button_event:hover{
-    background: white;
+    background:var(--fondo-layout);
     color: var(--color-secondary);
 }
 
@@ -57,13 +63,11 @@ Event Page
 }
 
 
-
-
 .eventMain {
     display: grid;
     /* width: 100%; */
     /* height: 100%; */
-    background-color: rgb(255,255,255);
+    background-color: var(--fondo-layout);
     align-content: space-evenly;
     align-items: center;
     justify-content: space-evenly;
@@ -83,11 +87,10 @@ Event Page
     margin-right: 3vw;
     grid-template-rows: 20% 20% 60%;
     grid-gap: 10px;
-    color: black;
-    justify-items: center;
+    color: var(--color-primary);
 }
 .event:hover{
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px var(--color-primary);
 }
 
 .image {
@@ -214,22 +217,13 @@ Front page CSS
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
-    background: black;
+    color: var(--fondo-layout);
+    background: var(--color-primary);
     border: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-/*.button_overlay:hover {*/
-/*    background-color: #fff;*/
-/*    color: black;*/
-/*}*/
 
-/*.button_overlay:active {*/
-/*    background-color: #fff;*/
-/*    box-shadow: rgba(0, 0, 0, 0.45) 0vw 1vw 1vw -1vw;*/
-/*    transform: translateY(4px);*/
-/*}*/
 
 .title_section{
     font-family: 'Monoton', sans-serif;
@@ -271,8 +265,8 @@ Front page CSS
     width: auto;
     padding: 1vw;
     margin-top: -1vw;
-    color: white;
-    background: black;
+    color:var(--fondo-layout);
+    background: var(--color-primary);
     font-weight: bold;
     font-size: 1rem;
     transition: 0.6s ease;
@@ -286,10 +280,10 @@ Front page CSS
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* On hover, add a var(--color-primary background color with a little bit see-through */
 .prev:hover, .next:hover {
     background-color: var(--color-secondary);
-    color: black;
+    color: var(--color-primary);
 }
 
 .search{
@@ -298,8 +292,8 @@ Front page CSS
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    /* z-index: 5; */
+    color:var(--fondo-layout);
+     z-index: 5;
 
 }
 
@@ -310,17 +304,17 @@ Front page CSS
 }
 .search .button_overlay{
     background: var(--color-secondary);
-    color: white;
+    color:var(--fondo-layout);
 }
 
 .search .button_overlay:hover{
-    background: black;
-    color: white;
+    background: var(--color-primary);
+    color:var(--fondo-layout);
 }
 .footer{
     margin: 0;
-    background: black;
-    color: white;
+    background: var(--color-primary);
+    color:var(--fondo-layout);
     font-family: 'Heebo', sans-serif;
     justify-content: space-evenly;
     font-size: 1.5rem;
@@ -362,7 +356,7 @@ Front page CSS
 }
 
 .item_li:hover, .titles_footer:hover {
-    color: darkgrey;
+    color: var(--color-secondary);
 }
 
 .logos_images{
@@ -430,7 +424,7 @@ CARDS FROM NEWS EVENTS
 
 .card{
     margin: 1vw;
-    background: white;
+    background:var(--fondo-layout);
     padding: 1rem;
     border-radius: 1vw;
     font-family: Heebo, sans-serif;
@@ -492,8 +486,8 @@ CARDS FROM NEWS EVENTS
     margin:auto 30px;
     height:60px;
     border-radius: 0 3px 3px 0;
-    color: white;
-    background: black;
+    color:var(--fondo-layout);
+    background: var(--color-primary);
     border:0px;
     outline:none;
     cursor:pointer;
@@ -779,7 +773,7 @@ div>.indexEvent2 {
 .calendar .calendarMonth{
     display: flex;
     color: var(--color-primary-variant);
-    background-color: rgb(36, 35, 35);
+    background-color: var(--color-primary);
     align-items: center;
     text-align: center;
     min-width: 28vw;
@@ -801,15 +795,17 @@ div>.indexEvent2 {
     margin-left: 0.5rem;
     border-left-style: solid ;
     border-right-style: solid;
-    border-color:rgb(36, 35, 35);
+    border-color:var(--color-primary);
 }
 
 .dayCalendar td:hover,th:hover{
-    color:black;
+    color:var(--color-primary);
     background-color: var(--color-secondary-variant);
     border-radius: 50%;
 }
-
+.calendar1{
+color: var(--color-secondary);
+}
 /*
 Newsletter
  */
@@ -856,7 +852,7 @@ Botton new event
 .button_overlay {
     font-size: 1em;
     padding: 10px;
-    color: #fff;
+    color: var(--fondo-layout);
     font-family: Heebo,sans-serif;
     text-decoration: none;
     cursor: pointer;
@@ -865,7 +861,7 @@ Botton new event
 
 .button_overlay:hover {
     background: var(--color-secondary-variant);
-    color: white;
+    color:var(--fondo-layout);
 }
 
 /*
@@ -879,10 +875,11 @@ OVERLAY WITH FORM
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--overlay);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
+    z-index: 10;
 }
 
 .overlay:target {
@@ -893,7 +890,7 @@ OVERLAY WITH FORM
 .popup {
     margin: 70px auto;
     padding: 20px;
-    background: #fff;
+    background: var(--fondo-layout);
     border-radius: 5px;
     width: 26rem;
     position: relative;
@@ -902,7 +899,7 @@ OVERLAY WITH FORM
 .popup h2 {
 
     color: var(--color-secondary-variant);
-    font-family: Tahoma, Arial, sans-serif;
+    font-family: Heebo, sans-serif;
     margin: 0 auto;
     padding: 1em;
     text-align: center;
@@ -917,7 +914,7 @@ OVERLAY WITH FORM
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: var(--color-primary);
 }
 
 .popup .close:hover {
@@ -944,8 +941,8 @@ OVERLAY WITH FORM
 .field>textarea{
     font-family: 'Lato',Arial,sans-serif;
     font-size:1rem;
-    background-color: lightgray;
-    border: black;
+    background-color: var(--color-primary-variant);
+    border: var(--color-primary);
     width: 18rem;
 }
 
@@ -954,12 +951,12 @@ OVERLAY WITH FORM
 }
 
 .inputform{
-    color:#000000;
+    color:var(--color-primary);
     display: flex;
     font-family: 'Lato',Arial,sans-serif;
     font-size:1rem;
-    background-color: lightgray;
-    border: black;
+    background-color: var(--color-primary-variant);
+    border: var(--color-primary);
     width: 14rem;
 }
 
@@ -972,8 +969,8 @@ OVERLAY WITH FORM
 }
 .submit{
     border:none;
-    background:var(--color-secondary-variant);
-    color:#FFFFFF;
+    background:var(--color-secondary);
+    color:var(--fondo-layout);
     padding:12px 25px;
     cursor:pointer;
     text-decoration:none;
@@ -981,7 +978,7 @@ OVERLAY WITH FORM
 }
 
 .submit:hover{
-    background:#d8850e;
+    background:var(--color-secondary-variant);
     align-self: center;
 }
 
@@ -989,35 +986,54 @@ OVERLAY WITH FORM
 /*TODO Mejorar css cookies y adaptarlo a los tamaños*/
 /*overlay Index*/
 .popupIndex {
-   /*  margin-left: 35vw;
-    margin-top: 25vh; */
     padding: 1.5rem;
-    background: #fff;
+    background: var(--fondo-layout);
     border-radius: 5px;
     width: 20rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* align-content: center; */
+    /* justify-content: center; */
+    align-items: center;
+    /* margin: 4rem; */
+    gap: 1rem;
 }
+
 
 .inputEmail{
     width: 15rem;
+    margin-top: 2vh;
 }
 
-.popupIndex>button{
-    background: var(--color-secondary-variant);
-    color: white;
-    font-size: 1em;
+.close1{ 
+    transition: all 200ms;
+    font-size: 30px;
     font-weight: bold;
     text-decoration: none;
+    color: var(--color-primary);
+    align-self: end;
     cursor: pointer;
+    height: 2vh;
 }
+.close1:hover{
+    color: var(--color-secondary-variant);
+}
+
 .buttonOverlayOn{
-    background: var(--color-secondary-variant);
-    color: white;
     font-size: 1em;
-    font-weight: bold;
+    /* padding: 10px; */
+    color: var(--fondo-layout);
+    font-family: Heebo,sans-serif;
     text-decoration: none;
     cursor: pointer;
+    background-color: var(--color-primary);
 }
+.buttonOverlayOn:hover{
+    background: var(--color-secondary-variant);
+}
+
 
 .overlay2 {
     display: flex;
@@ -1026,7 +1042,7 @@ OVERLAY WITH FORM
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--overlay);
     transition:  opacity 500ms;
     visibility: visible;
     opacity: 1;
@@ -1041,7 +1057,7 @@ OVERLAY WITH FORM
     bottom: 1px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--overlay);
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
@@ -1086,8 +1102,8 @@ OVERLAY WITH FORM
 
 .header li a {
     margin: 2rem;
-    background: black;
-    color: white;
+    background: var(--color-primary);
+    color:var(--fondo-layout);
     top: 0;
     justify-self: flex-end;
     display: flex;
@@ -1183,7 +1199,7 @@ OVERLAY WITH FORM
 }
 
 .filterButton>button{
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px var(--color-primary);
     border-radius: 0.4em;
     cursor: pointer;
     border: none;
@@ -1197,7 +1213,7 @@ OVERLAY WITH FORM
 }
 
 .filter_content .filter_item>input{
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px var(--color-primary);
     border-radius: 0.4em;
     
 }
@@ -1219,17 +1235,17 @@ OVERLAY WITH FORM
 TODO DESDE AQUI HAMBURGUESA
  */
 
-@media only screen and (max-width: 65em)  {
+@media only screen and (max-width: 65em) {
 
 
-   /*
-   HEADER
-    */
-
+    /*
+    HEADER
+     */
     /* header */
-    .header ul{
-        background: black;
+    .header ul {
+        background: var(--color-primary);
     }
+
     .header li {
         float: none;
     }
@@ -1237,14 +1253,14 @@ TODO DESDE AQUI HAMBURGUESA
     .header li a {
         display: flex;
         flex-direction: column;
-        color: #fff;
-        background: black;
+        color: var(--fondo-layout);
+        background: var(--color-primary);
         border: none;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 
     }
 
-    #limenu{
+    #limenu {
         margin-top: 4rem;
     }
 
@@ -1254,9 +1270,7 @@ TODO DESDE AQUI HAMBURGUESA
     }
 
 
-
     /* menu */
-
     .header .menu {
         clear: both;
         max-height: 0;
@@ -1267,9 +1281,8 @@ TODO DESDE AQUI HAMBURGUESA
     }
 
     /* menu icon */
-
     .header .menu-icon {
-        background: black;
+        background: var(--color-primary);
         cursor: pointer;
         display: flex;
         z-index: 3;
@@ -1313,87 +1326,90 @@ TODO DESDE AQUI HAMBURGUESA
     }
 
     /* menu btn */
-
     /*
     Slider
      */
-  .mySlides{
-      overflow: hidden;
-  }
-
-
-   .video_footer{
-     /*height: 50vh;*/
-     /*  width: 98vw;*/
-       height:100%;
-       width:100%;
-       overflow: hidden;
-   }
-
-   .eventIndex{
-       display: flex;
-   }
-
-   .eventIndexOff{
-    display: none;
+    .mySlides {
+        overflow: hidden;
     }
 
-   div>.indexEvent{
-    margin: 1vw;
-    background: white;
-    padding: 1rem;
-    border-radius: 1vw;
-    font-family: Heebo, sans-serif;
-}
 
-/*overlay Index*/
-.popupIndex {
-    /*  margin-left: 35vw;
-     margin-top: 25vh; */
-     padding: 1.5rem;
-     background: #fff;
-     border-radius: 5px;
-     width: 10rem;
-     position: relative;
- }
- .inputEmail{
-    width: 10rem;
-}
+    .video_footer {
+        /*height: 50vh;*/
+        /*  width: 98vw;*/
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .eventIndex {
+        display: flex;
+    }
+
+    .eventIndexOff {
+        display: none;
+    }
+
+    div > .indexEvent {
+        margin: 1vw;
+        background:var(--fondo-layout);
+        padding: 1rem;
+        border-radius: 1vw;
+        font-family: Heebo, sans-serif;
+    }
+
+    /*overlay Index*/
+    .popupIndex {
+        /*  margin-left: 35vw;
+         margin-top: 25vh; */
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 5px;
+        width: 13rem;
+        position: relative;
+    }
+
+    .inputEmail {
+        width: 10rem;
+    }
 
 
-   /*
-   MEDIA NEWS
-    */
-    .news .title_section{
+    /*
+    MEDIA NEWS
+     */
+    .news .title_section {
         display: none;
     }
 
 
-    .newsOff{
+    .newsOff {
         display: none;
     }
 
-    .buttonSelection{
+    .buttonSelection {
         display: flex;
         justify-content: center;
     }
-    .buttonSelection>div{
+
+    .buttonSelection > div {
         font-size: 2rem;
         width: 48vw;
         font-weight: bold;
         background-color: var(--color-primary);
-        color: var(--color-secondary);
-        border-style: solid;
+        color: var(--fondo-layout);
         border-color: var(--color-secondary);
         text-align: center;
+        cursor: pointer;
     }
-    .buttonSelection .newsButtonOn{
+
+    .buttonSelection .newsButtonOn {
         background-color: var(--color-secondary);
-        color: var(--color-primary);
+        color: var(--fondo-layout);
     }
-    .buttonSelection .eventsButtonOn{
+
+    .buttonSelection .eventsButtonOn {
         background-color: var(--color-secondary);
-        color: var(--color-primary);
+        color: var(--fondo-layout);
     }
 
     .btn {
@@ -1404,29 +1420,33 @@ TODO DESDE AQUI HAMBURGUESA
         align-items: center;
     }
 
-   .search .input_search{
+    .search .input_search {
         width: 50vw;
-       margin: 0.5rem;
+        margin-top: 7.5rem;
+
     }
+
     /*
   Destacado del mes
    */
-
-    .destacado{
+    .destacado {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         margin: 1rem;
     }
-   .destacado :nth-child(1){
-       order: 2;
-   }
-    .destacado :nth-child(2){
+
+    .destacado :nth-child(1) {
+        order: 2;
+    }
+
+    .destacado :nth-child(2) {
         order: 1;
         align-self: center;
         max-width: 80vw;
     }
-    .destacado .favicon-dest{
+
+    .destacado .favicon-dest {
         display: flex;
         flex-direction: column;
         align-content: center;
@@ -1434,10 +1454,11 @@ TODO DESDE AQUI HAMBURGUESA
         justify-content: center;
         flex-wrap: wrap;
     }
+
     /*
        Section events front mobile
         */
-    .eventos_mobile{
+    .eventos_mobile {
         display: none;
     }
 
@@ -1445,22 +1466,24 @@ TODO DESDE AQUI HAMBURGUESA
     /*
     Calendar front
      */
-    .eventsTitle{
+    .eventsTitle {
         padding: 1rem;
     }
-    .calendar1{
+
+    .calendar1 {
         color: var(--color-secondary);
     }
 
-    .calendar1:hover{
-        color: white;
+    .calendar1:hover {
+        color:var(--fondo-layout);
     }
-    .calendar{
+
+    .calendar {
         display: flex;
         flex-direction: column-reverse;
     }
 
-    .calendar .calendarEvent{
+    .calendar .calendarEvent {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1472,24 +1495,28 @@ TODO DESDE AQUI HAMBURGUESA
 
     }
 
-    .calendar .calendarMonth{
+    .calendar .calendarMonth {
         padding: 0;
     }
-    .dayCalendar th, td{
+
+    .dayCalendar th, td {
         padding: 0.5rem;
     }
-   /*
-   SECTION MEDIA NEWSLETTER
-    */
-    .title_newsletter{
+
+    /*
+    SECTION MEDIA NEWSLETTER
+     */
+    .title_newsletter {
         text-align: center;
     }
-    .section_newsletter{
+
+    .section_newsletter {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .form1{
+
+    .form1 {
         margin: 1rem;
     }
 
@@ -1505,7 +1532,7 @@ TODO DESDE AQUI HAMBURGUESA
         justify-content: center;
     }
 
-    .title{
+    .title {
         text-align: center;
         font-weight: bold;
     }
@@ -1522,19 +1549,26 @@ TODO DESDE AQUI HAMBURGUESA
     /*
     Button new event
      */
-
-    .buttons{
+    .buttons {
         margin-bottom: 1rem;
     }
 
-    /*Formulario*/
-.popup {
-    margin: 70px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    width: 27rem;
-    position: relative;
+    /* filtro*/
+.filter_content{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+}
+}
+
+@media only screen and (max-width: 40em)  {
+/* filtro*/
+.filter_content{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    align-items: end;
 }
 
     /*
@@ -1568,35 +1602,13 @@ TODO DESDE AQUI HAMBURGUESA
     media front page
      */
 
-/* filtro*/
-.filter_content{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: end;
-}
-
 .inputform {
     width: 14rem;
 }
 
-
-
-
-}
-
-@media only screen and (max-width: 40em)  {
-/* filtro*/
-.filter_content{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 1fr;
-    align-items: end;
-}
-
-#time_form {
+/* #time_form {
     width: 9vw;
-}
+} */
 
 .goBackButton {
     background: var(--color-secondary);
@@ -1614,7 +1626,7 @@ TODO DESDE AQUI HAMBURGUESA
 .popup {
     margin: 0;
     padding: 20px;
-    background: #fff;
+    background: var(--fondo-layout);
     border-radius: 5px;
     width: 91vw;
     position: relative;
@@ -1627,15 +1639,13 @@ TODO DESDE AQUI HAMBURGUESA
     font-size: 1em;
     font-family: 'Lato', Arial, sans-serif;
     overflow: auto;
-    display: flex;
-    justify-content: center;
 }
 
 .field > textarea {
     font-family: 'Lato',Arial,sans-serif;
     font-size: 1rem;
-    background-color: lightgray;
-    border: black;
+    background-color: var(--color-primary-variant);
+    border: var(--color-primary);
     width: 18rem;
 }
 
