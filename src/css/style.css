@@ -1,3 +1,12 @@
+:root{
+    --color-primary: black;
+    --color-primary-variant: rgb(242,243,248);
+    --color-secondary: #daa520;
+    --color-secondary-variant: #f8ae45;
+    --fondo-layout:white;
+    --overlay: rgba(0, 0, 0, 0.7);
+}
+
 /* TODO css del login */
 
 /* TODO css del signup */

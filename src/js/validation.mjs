@@ -4,7 +4,7 @@
  */
 
 
-//La validacion de los campos a de ser con expresiones regulares siempre que sea posible
+//TODO La validacion de los campos a de ser con expresiones regulares siempre que sea posible
 /*
  TODO mensajes del login correcto
     redireccionamos a front page y se muestra un mensaje como “Hola, Maria” (por ejemplo, si la usuaria es Maria) 
@@ -24,6 +24,7 @@ TODO validar el email
     - no puede estar vacío
     - no debe existir en la Tabla de Usuarios
     - Patron de validacion:
+        nombre@nombreorganizacion.tipo
         - nombre: solo la primera letra en mayúscula y el resto en minúscula
         - nombre de la organización: entre 5 y 10 minusculas
         - tipo: Solo pudeden ser com, net o gov
