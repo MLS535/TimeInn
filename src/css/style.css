@@ -6,7 +6,54 @@
     --fondo-layout:white;
     --overlay: rgba(0, 0, 0, 0.7);
 }
+body{
+    margin: 0;
+    padding: 0;
 
+}
 /* TODO css del login */
+.imageBackgroundLogin{
+    display: flex;
+    background: url('../img/indice.jpg') no-repeat;
+    background-size: cover;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+/*
+Mobile size
+ */
+.login {
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.titleslogin{
+   color: white;
+    display: flex;
+}
+.formlogin {
+    display: flex;
+    background-color: white;
+    /* padding: 50px; */
+    align-self: center;
+    border-radius: 1rem;
+    width: 70vw;
+    height: 40vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.labelLogin{
+    margin: 25px;
+}
+
 
 /* TODO css del signup */

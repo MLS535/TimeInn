@@ -25,6 +25,7 @@ crear, editar, filtrar y borrar eventos.
 <h3>El Front page contiene: (index.html && project.js && renderfront.js) </h3>
 - Header:
   Nuestro header contiene un buscador que es fake.
+  
 - Un menú de navegación, mínimo de 4 secciones. El menu de navegación es fake.
 - Un vídeo cuya actuación se reproduce al entrar en la página
 - Unas cards de news con título, descripción, fecha de publicación y foto. Se mostrarán primero las noticias patrocinadas y después las más recientes.
