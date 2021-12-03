@@ -10,3 +10,61 @@
 /* TODO css del login */
 
 /* TODO css del signup */
+@media only screen and (max-width: 40em)  {
+body{
+    margin: 0;
+    padding: 0;
+}
+.signup-form {
+    display: flex;
+    background-color: var(--color-primary-variant);
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    height: 60vh;
+    align-self: center;
+    border-radius: 1rem;
+    color: black;
+    justify-content: center;
+
+}
+
+.signup{
+    display: flex;
+    background: url('../img/índice.jpg') no-repeat;
+    background-size: cover;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    color: var(--fondo-layout);
+}
+
+.signupButton{
+    font-size: 1em;
+    padding: 10px;
+    color: var(--fondo-layout);
+    font-family: Heebo,sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.signupButton:hover{
+    background-color: var(--color-secondary-variant);
+    color: var(--color-primary);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+    
+}
