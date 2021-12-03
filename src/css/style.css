@@ -10,11 +10,14 @@
 /* TODO css del login */
 
 /* TODO css del signup */
-@media only screen and (max-width: 40em)  {
+
 body{
     margin: 0;
     padding: 0;
 }
+
+@media only screen and (max-width: 40em){
+    
 .signup-form {
     display: flex;
     background-color: var(--color-primary-variant);
@@ -42,20 +45,19 @@ body{
 }
 
 .signupButton{
-    font-size: 1em;
-    padding: 10px;
+    border: none;
+    background: var(--color-secondary);
     color: var(--fondo-layout);
-    font-family: Heebo,sans-serif;
-    text-decoration: none;
+    padding: 12px 25px;
     cursor: pointer;
-    transition: all 0.3s ease-out;
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
 }
 
 .signupButton:hover{
-    background-color: var(--color-secondary-variant);
-    color: var(--color-primary);
+    background:var(--color-secondary-variant);
+    align-self: center;
 }
 
 form{
@@ -65,6 +67,8 @@ form{
     justify-content: center;
     gap: 1rem;
 }
-
-    
+ .title{
+     position: relative;
+     top:-5%;
+ }
 }
