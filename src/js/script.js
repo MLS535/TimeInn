@@ -4,11 +4,6 @@
 */
 
 /*
-<div class="password">
-<label for="password">Contraseña</label><br />
-<input id="passwd1" type="password" name="password" placeholder="Contraseña" />
-<span class="passwd1"><i class="fas fa-eye"></i></span>
-</div>
 TODO Crear una funcion para mostrar y ocultar las contraseñas al clicar en el icono, tambien cambiar el icono al ocultar
 */
 
