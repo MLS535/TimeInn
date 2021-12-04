@@ -14,61 +14,164 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #0F1112;
 }
 
-@media only screen and (max-width: 40em){
-    
+.image{
+    background: url('../img/índice.jpg') no-repeat;
+    width: 20rem;
+    height: 30rem;
+    justify-content: center;
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: -15px 0 10px -10px var(--color-secondary);
+}
+
 .signup-form {
     display: flex;
     background-color: var(--color-primary-variant);
+    width: 20rem;
+    height: 30rem;
     flex-direction: column;
     align-items: center;
-    width: 70vw;
-    height: 60vh;
-    align-self: center;
-    border-radius: 1rem;
-    color: black;
     justify-content: center;
-
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 .signup{
     display: flex;
-    background: url('../img/índice.jpg') no-repeat;
-    background-size: cover;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    flex-direction: column;
-    align-items: center;
-    color: var(--fondo-layout);
+    flex-direction: row;
+    align-items: center;  
 }
 
 .signupButton{
     border: none;
     background: var(--color-secondary);
     color: var(--fondo-layout);
-    padding: 12px 25px;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 1rem;
+    width: 7rem;
+    height: 2rem;
 }
 
 .signupButton:hover{
     background:var(--color-secondary-variant);
     align-self: center;
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 5px var(--overlay) inset;
 }
 
 form{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     gap: 1rem;
 }
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+form>div input{
+    border: none;
+    font-weight: bold;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px var(--overlay) inset;
+    margin-top: 0.3rem;
+    padding-left: 1rem;
+}
+
+form>div input:hover{
+    box-shadow: 0 0 7px var(--color-secondary) inset;
+}
+
+input[type="password" i] {
+    -webkit-text-security: circle;     
+} 
+
+ .title{
+    color: var(--color-primary);
+ }
+
+.logo{
+    position: absolute;
+    top: 13%;
+    left: 51%;
+}
+
+ .logo img{
+    width: 5rem;
+    height: 4rem;
+ }
+ 
+ span{
+    position: absolute;
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+    font-size: 1.8rem;
+ }
+
+ span:hover{
+    color: var(--color-secondary);
+    cursor: pointer;
+ }
+
+@media only screen and (max-width: 40em){
+    
+.signup-form {
+    width: 16rem;
+    height: 25rem;
+    align-self: center;
+    border-radius: 1rem;
+    color: black;
+}
+
+.signup{
+    background: url('../img/índice.jpg') no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    color: var(--fondo-layout);
+}
+
+.signupButton{
+    margin-top: 1rem;
+}
+
+form{
+    position: relative;
+    top: -10%;
+}
  .title{
      position: relative;
-     top:-5%;
+     top:-20%;
+     color: white;
  }
+ .image{
+     display: none;
+ }
+
+ .logo{
+    top: 1%;
+    left: 2%;
+ }
+
+ span{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+ }
+
+ .password input{
+    width: 10rem;  
+}
+
 }

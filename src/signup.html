@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/bfddb8114a.js" crossorigin="anonymous"></script>
     <title>Sign Up</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- TODO crear esqueleto del signup -->
-<div class="signup">
-    <h1 class="title">Sign Up</h1>
-    <div class="signup-form">
-        <form>
+    
+    <div class="signup">
+      <div class="logo"><img src="img/logo2.png" alt="logo"></div>
+      <div class="image"></div>
+      <div class="signup-form">
+        <h1 class="title">Sign Up</h1>
+        <!-- TODO Craer los campos minimos: 
+          ·Email 
+          ·Name 
+          ·Password y Confirmar Password
+          Las contraseñas estaran ocultas por asteriscos -->
+          <form>
             <div class="username">
-                <label for="username">Nombre de usuario</label><br>
-                <input type="text" name="username" placeholder="Nombre de usuario">
+              <label for="username">Nombre de usuario</label><br />
+              <input type="text" name="username" placeholder="Nombre de usuario"/>
             </div>
             <div class="email">
-                <label for="email">Email</label><br>
-                <input type="email" name="email" placeholder="Correo electronico">
+              <label for="email">Email</label><br />
+              <input type="email" name="email" placeholder="Correo electronico"/>
+            </div>
+            <!-- TODO Crear un boton que te permita visualizar la contraseña -->
+            <div class="password">
+              <label for="password">Contraseña</label><br />
+              <input id="passwd1" type="password" name="password" placeholder="Contraseña" />
+              <span class="passwd1"><i class="fas fa-eye"></i></span>
             </div>
             <div class="password">
-                <label for="password">Contraseña</label><br>
-                <input type="password" name="password" placeholder="Contraseña">
+              <label for="password">Confirmar Contraseña</label><br />
+              <input id="passwd2" type="password" name="confirm_password" placeholder="Confirmar contraseña"/>
+              <span class="passwd2"><i class="fas fa-eye"></i></span>
             </div>
-            <div class="password">
-                <label for="password">Confirmar Contraseña</label><br>
-                <input type="password" name="confirm_password" placeholder="Confirmar contraseña">
+            <div class="button">
+              <button type="submit" name="signup" class="signupButton">
+                Sign Up
+              </button>
             </div>
-            <div class="form-group">
-                <button type="submit" name="signup" class="signupButton">Sign Up</button>
-            </div>
-        </form>
-    </div>
-</div>
-    <!-- TODO Craer los campos minimos: 
-            ·Email 
-            ·Name 
-            ·Password y Confirmar Password
-                Las contraseñas estaran ocultas por asteriscos -->
-                
-    <!-- TODO Crear un boton que te permita visualizar la contraseña -->
-</body>
+          </form>
+        </div>
+      </div>
+      <script src="js/script.js"></script>
+    </body>
 </html>
