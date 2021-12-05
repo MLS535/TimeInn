@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+
     <title>Login TimeInn</title>
 </head>
 
@@ -14,35 +15,39 @@
     <div class="logo"><img src="img/logo2.png" alt="logo"> </div>
     <div class="imagelogin"></div>
     <div class="login-form">
+
         <h1 class="titleslogin">Login</h1>
-        <div id="erroreslogin"></div>
+
         <!-- TODO Crear los campos de usuario y contraseña -->
         <form>
             <div class="usernamelogin">
-                <label for="username">Nombre de usuario</label><br />
-                <input type="text" id="userLogin" name="username" placeholder="Nombre de usuario o email"/>
+                <label for="userlogin">Nombre de usuario</label><br />
+                <input type="text" id="userlogin" name="username" placeholder="Nombre de usuario o email" />
             </div>
 
             <div class="passwordlogin">
                 <label for="passwd1">Contraseña</label><br />
-                <input id="passwd1" type="password" name="password" placeholder="Contraseña" />
+                <input id="passwd1" type="password" name="password" placeholder="Contraseña" required/>
                 <span class="passwd1"><i class="fas fa-eye"></i></span>
             </div>
 
             <!-- TODO crear boton de login -->
-            <div class="button">
-                <button type="submit" name="login" class="loginButton">
-                    Login
-                </button>
-            </div>
-            <div class="registro">
-                ¿Aun no eres miembro?  <a href="signup.html" >Registrate</a>
-            </div>
+            <div id="erroreslogin"></div>
 
         </form>
+        <div class="button">
+            <button type="submit" name="login" class="loginButton">
+                Login
+            </button>
+
+        </div>
+
+        <div class="registro">
+            ¿Aun no eres miembro?  <a href="signup.html" >Registrate</a>
+        </div>
     </div>
 </div>
 <script src="js/script.js"></script>
-
+<script src="js/validation.mjs"></script>
 </body>
 </html>

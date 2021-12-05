@@ -53,7 +53,10 @@ Mobile size
     border-bottom-right-radius: 1rem;
 }
 
-
+#erroreslogin{
+    color: red;
+    display: flex;
+}
 .loginButton{
     border: none;
     background: var(--color-secondary);
