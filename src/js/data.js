@@ -162,3 +162,32 @@ export const events = [
 ]
 
 // TODO Crear Tabla de Usuarios
+
+export const users = [
+    {
+        usuario: 'maite.ls',
+        email: 'maiteladaria@gmail.com',
+        password: 'Pepito123!?'
+    },
+    {
+        usuario: 'ignacioakrich',
+        email: 'ignacioakrich@gmail.com',
+        password: 'Pepita123!?'
+    },
+    {
+        usuario: 'joansonsardina',
+        email: 'joandesoncarrio@gmail.com',
+        password: 'santLlorenç123!?'
+    },
+    {
+        usuario: 'juanluis.ls',
+        email: 'juanluis.ladaria@gmail.com',
+        password: 'CrownDeWorld123_!'
+    },
+    {
+        usuario: 'Ignaliete',
+        email: 'kikorivera@hotmail.com',
+        password: 'soyLoMas123!?'
+    }
+
+]

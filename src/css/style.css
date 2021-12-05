@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Lato:wght@300&family=Monoton&display=swap');
 :root{
     --color-primary: black;
     --color-primary-variant: rgb(242,243,248);
@@ -9,61 +10,69 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #0F1112;
+    font-family: 'Heebo', sans-serif;
 
 }
 /* TODO css del login */
-.imageBackgroundLogin{
-    display: flex;
-    background: url('../img/indice.jpg') no-repeat;
-    background-size: cover;
+.imagelogin{
+    background: url('../img/índice.jpg') no-repeat;
+    width: 20rem;
+    height: 30rem;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: -15px 0 10px -10px var(--color-secondary);
 }
 /*
 Mobile size
  */
 .login {
-
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
     align-items: center;
 }
 
 .titleslogin{
-   color: white;
-    display: flex;
+    color: var(--color-primary);
 }
-.formlogin {
+
+.login-form{
     display: flex;
-    background-color: white;
-    /* padding: 50px; */
-    align-self: center;
-    border-radius: 1rem;
-    width: 70vw;
-    height: 40vh;
+    background-color: var(--color-primary-variant);
+    width: 20rem;
+    height: 30rem;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
     align-items: center;
-
+    justify-content: center;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
-.labelLogin{
-    margin: 25px;
+
+.loginButton{
+    border: none;
+    background: var(--color-secondary);
+    color: var(--fondo-layout);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    width: 7rem;
+    height: 2rem;
 }
 
-
+.loginButton:hover{
+    background:var(--color-secondary-variant);
+    align-self: center;
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 5px var(--overlay) inset;
+}
 /* TODO css del signup */
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #0F1112;
-}
 
 .image{
     background: url('../img/índice.jpg') no-repeat;
@@ -152,7 +161,7 @@ input[type="password" i] {
 
 .logo{
     position: absolute;
-    top: 13%;
+    top: 18%;
     left: 51%;
 }
 
@@ -174,7 +183,41 @@ input[type="password" i] {
  }
 
 @media only screen and (max-width: 40em){
-    
+
+/*
+TODO MEDIA LOGIN
+ */
+    .login{
+        background: url('../img/índice.jpg') no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        color: var(--fondo-layout);
+    }
+    .imagelogin{
+        display: none;
+    }
+
+    .login-form{
+        width: 16rem;
+        height: 23rem;
+        align-self: center;
+        border-radius: 1rem;
+        color: var(--color-primary);
+    }
+    .titleslogin{
+        position: relative;
+        top:-8%;
+        color: var(--color-primary);
+    }
+    .loginButton{
+        margin-top: 1rem;
+    }
+    .registro{
+        font-size: 0.9rem;
+    }
+/*
+TODO MEDIA SIGN UP
+ */
 .signup-form {
     width: 16rem;
     height: 25rem;
@@ -223,3 +266,4 @@ form{
 }
 
 }
+

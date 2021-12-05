@@ -16,7 +16,9 @@ TODO validar el name
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
 */
-
+    function  validarNombre(){
+        let username = document.getElementById('username')
+    }
 
 /* 
 TODO validar el email 
