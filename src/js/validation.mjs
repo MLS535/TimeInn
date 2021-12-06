@@ -1,8 +1,8 @@
-/* 
+/*
  TODO mensajes del login incorrecto
     Saldrá un mensaje de error en el formulario (los errores tendrán el color de error de la Paleta de Colores) 
  */
-
+//import { users} from "./data.js";
 
 //TODO La validacion de los campos a de ser con expresiones regulares siempre que sea posible
 /*
@@ -17,6 +17,27 @@ TODO validar el name
     - numero de caracteres entre 3 y 20
 */
 
+function  validarNombre(username, errores){
+
+    if ( username.length < 3 || username.length >=20)
+        return errores.innerText = "El numero de caracteres debe comprender entre 3 y 20";
+    if ( username.indexOf("@") === -1 )
+         validarEmail(username);
+      validarEmailSalir(username,errores);
+}
+
+var prueba = document.querySelector('.loginButton');
+
+prueba.addEventListener("click", function (e){
+    e.preventDefault();
+    let errores = document.getElementById('erroreslogin');
+    //Añadir preventDefault y cambiar a submit el boton para que no se actualice y se pierda info
+    let username = document.getElementById('userlogin').value;
+    let passwdlogin = document.getElementById('passwdlogin').value;
+    validarNombre(username, errores);
+    validarPasswordSalir(passwdlogin, errores);
+
+});
 
 /* 
 TODO validar el email 
@@ -31,11 +52,11 @@ TODO validar el email
         - Solo puede haber una @ y un punto
 */
 function validarEmail(email) {
-    //la primera letra en mayúscula 
+    //la primera letra en mayúscula
     if (email.charAt(0) != email.charAt(0).toUpperCase()) return "El email debe empezar con una letra mayúscula";
     //el resto en minúscula
     if (email.substring(1).toLowerCase() != email.substring(1)) return "El email debe empezar con una letra mayúscula";
-    
+
     //Solo pueden haber una @ y un punto
     if (email.indexOf("@") == -1) return "El email debe tener una @";
     if (email.indexOf(".") == -1) return "El email debe tener un punto";
@@ -48,12 +69,12 @@ function validarEmail(email) {
     let dataEmail = {
         email: email
     };
-    return dataEmail;   
+    return dataEmail;
 }
 
-/* 
+/*
 TODO validar el password
-    - valida al salir del campo (al perder el foco) 
+    - valida al salir del campo (al perder el foco)
     - Muestra mensajes debajo de los campos para los errores que puedan suceder.
     - Patron de validacion:
         - Longitud mínima de siete caracteres
@@ -71,52 +92,50 @@ function validarPassword(password){
     if (!password.match(/\d/)) return "La contraseña debe incluir al menos un número";
     //Incluir caracteres espespeciales (por ejemplo, !, $, %, &, etc.)
     if (!password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/)) return "La contraseña debe incluir al menos un caracter especial";
-    
+
     let dataPassword = {
         password: password
     };
     return dataPassword;
-    
+
 }
 
-//validacion del submit   
-function validations() { 
-        let email = document.getElementById('email').value;
-        let password = document.getElementById('passwd1').value;
-        let confirmPassword = document.getElementById('passwd2').value;
-
-        validarEmailSalir();
-        validarPasswordSalir()
-        if (password != confirmPassword) {
-            document.getElementById("error").innerHTML = "Las contraseñas no coinciden"; 
-            return false; 
-        } else {
-            document.getElementById("error").innerHTML = "";
-            return true;
-    }
-    };
-    
-// validacion del email al salir del campo
-function validarEmailSalir() {
+//validacion del submit
+function validations() {
     let email = document.getElementById('email').value;
-    let resultEmail = validarEmail(email);
-    if (typeof resultEmail == "string") {
-        document.getElementById("error").innerHTML = "Error Email: "+ resultEmail;
+    let password = document.getElementById('passwd1').value;
+    let confirmPassword = document.getElementById('passwd2').value;
+    let error =  document.getElementById("error");
+    validarEmailSalir(email, error);
+    validarPasswordSalir(password, error)
+    if (password != confirmPassword) {
+        error.innerHTML = "Las contraseñas no coinciden";
         return false;
     } else {
-        document.getElementById("error").innerHTML = "";
+        error.innerHTML = "";
+        return true;
+    }
+};
+
+// validacion del email al salir del campo
+function validarEmailSalir(email, errores) {
+    let resultEmail = validarEmail(email);
+    if (typeof resultEmail == "string") {
+        errores.innerHTML = "Error Email: "+ resultEmail;
+        return false;
+    } else {
+        errores.innerHTML = "";
     }
 }
 
 // validacion del password al salir del campo
-function validarPasswordSalir() {
-    let password = document.getElementById('passwd1').value;
+function validarPasswordSalir(password, errores) {
     let resultPassword = validarPassword(password);
     if (typeof resultPassword == "string") {
-        document.getElementById("error").innerHTML = "Error Contraseña: "+ resultPassword; 
+        errores.innerHTML = "Error Contraseña: "+ resultPassword;
         return false;
     } else {
-        document.getElementById("error").innerHTML = "";
+        errores.innerHTML = "";
     }
-    
+
 }

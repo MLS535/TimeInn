@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;400&family=Lato:wght@300&family=Monoton&display=swap');
 :root{
     --color-primary: black;
     --color-primary-variant: rgb(242,243,248);
@@ -6,16 +7,75 @@
     --fondo-layout:white;
     --overlay: rgba(0, 0, 0, 0.7);
 }
-
-/* TODO css del login */
-
-/* TODO css del signup */
-
 body{
     margin: 0;
     padding: 0;
     background-color: #0F1112;
+    font-family: 'Heebo', sans-serif;
+
 }
+/* TODO css del login */
+.imagelogin{
+    background: url('../img/índice.jpg') no-repeat;
+    width: 20rem;
+    height: 30rem;
+    justify-content: center;
+    background-size: cover;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: -15px 0 10px -10px var(--color-secondary);
+}
+/*
+Mobile size
+ */
+.login {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titleslogin{
+    color: var(--color-primary);
+}
+
+.login-form{
+    display: flex;
+    background-color: var(--color-primary-variant);
+    width: 20rem;
+    height: 30rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+#erroreslogin{
+    color: red;
+    display: flex;
+}
+.loginButton{
+    border: none;
+    background: var(--color-secondary);
+    color: var(--fondo-layout);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    width: 7rem;
+    height: 2rem;
+}
+
+.loginButton:hover{
+    background:var(--color-secondary-variant);
+    align-self: center;
+    letter-spacing: 0.2em;
+    box-shadow: 0 0 5px var(--overlay) inset;
+}
+/* TODO css del signup */
+
 
 .image{
     background: url('../img/índice.jpg') no-repeat;
@@ -105,7 +165,7 @@ input[type="password" i] {
 
 .logo{
     position: absolute;
-    top: 13%;
+    top: 18%;
     left: 51%;
 }
 
@@ -134,7 +194,41 @@ input[type="password" i] {
  }
 
 @media only screen and (max-width: 40em){
-    
+
+/*
+TODO MEDIA LOGIN
+ */
+    .login{
+        background: url('../img/índice.jpg') no-repeat;
+        background-size: cover;
+        flex-direction: column;
+        color: var(--fondo-layout);
+    }
+    .imagelogin{
+        display: none;
+    }
+
+    .login-form{
+        width: 16rem;
+        height: 23rem;
+        align-self: center;
+        border-radius: 1rem;
+        color: var(--color-primary);
+    }
+    .titleslogin{
+        position: relative;
+        top:-8%;
+        color: var(--color-primary);
+    }
+    .loginButton{
+        margin-top: 1rem;
+    }
+    .registro{
+        font-size: 0.9rem;
+    }
+/*
+TODO MEDIA SIGN UP
+ */
 .signup-form {
     width: 16rem;
     height: 25rem;
@@ -183,3 +277,4 @@ form{
 }
 
 }
+
