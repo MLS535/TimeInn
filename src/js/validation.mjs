@@ -17,45 +17,45 @@ TODO validar el name
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
 */
-function checkData(username, errores){
-   users.filter(a => {
-           if(!(a.usuario  === username)){
-               errores.innerHTML = 'El nombre del usuario no es correcto'
-           }
-   }
-
-   );
+function checkData(username, password, errores){
+ let resultado =  users.find( a => a.email === username && a.password === password);
+if ( resultado ){
+    errores.innerHTML = 'todo correcto'
+}else
+    errores.innerHTML = 'Usuario o contraseña erronea'
 }
 
-function  validarNombre(username, errores){
+function checkEmail(email, errores){
+   let resultado = users.find(a =>
+        a.email  === email )
+    if ( resultado ){
+        errores.innerHTML ='Email ya existe'
+    }
 
-    if ( username.length < 3 || username.length >=20)
-        return errores.innerText = "El numero de caracteres debe comprender entre 3 y 20";
-    // if ( username.indexOf("@") === -1 )
-    //      validarEmail(username);
-    //   validarEmailSalir(username,errores);
-    if (users.some(function (u){
-        return u.usuario.value === username;
-    }) ){
-        return errores.innerText = 'El usuario es correcto';
-    }else {
-        return errores.innerText='el usuario es incorrecto';
+}
+function checkNameInData(name, errores){
+    let resultado = users.find(a =>
+        a.usuario  === name )
+    if ( resultado ){
+        errores.innerHTML ='El usuario ya existe'
     }
 }
 
-var prueba = document.querySelector('.loginButton');
+function  validarNombre(username, errores){
+    if ( username.length < 3 || username.length >=20)
+        return errores.innerText = "El numero de caracteres debe comprender entre 3 y 20";
+}
 
-// prueba.addEventListener("click", function (){
-//
-//     let errores = document.getElementById('erroreslogin');
-//     //Añadir preventDefault y cambiar a submit el boton para que no se actualice y se pierda info
-//     let username = document.getElementById('userlogin').value;
-//     let passwdlogin = document.getElementById('passwdlogin').value;
-//    checkData(username, errores);
-//    // validarNombre(username, errores);
-//   //  validarPasswordSalir(passwdlogin, errores);
-//
-// });
+var submit = document.querySelector('.loginButton');
+
+submit.addEventListener("click", function (e){
+    e.preventDefault();
+    let errores = document.getElementById('erroreslogin');
+    //Añadir preventDefault y cambiar a submit el boton para que no se actualice y se pierda info
+    let username = document.getElementById('userlogin').value;
+    let passwdlogin = document.getElementById('passwdlogin').value;
+    checkData(username, passwdlogin, errores);
+});
 
 /* 
 TODO validar el email 
@@ -127,12 +127,12 @@ function validations() {
     let confirmPassword = document.getElementById('passwd2').value;
     let error =  document.getElementById("error");
     validarEmailSalir(email, error);
-   // validarPasswordSalir(password, error)
+    validarPasswordSalir(password, error)
     if (password != confirmPassword) {
         error.innerHTML = "Las contraseñas no coinciden";
         return false;
     } else {
-       error.innerHTML = "";
+        error.innerHTML = "";
         return true;
     }
 };
@@ -141,10 +141,10 @@ function validations() {
 function validarEmailSalir(email, errores) {
     let resultEmail = validarEmail(email);
     if (typeof resultEmail == "string") {
-      errores.innerHTML = "Error Email: "+ resultEmail;
+        errores.innerHTML = "Error Email: "+ resultEmail;
         return false;
     } else {
-       errores.innerHTML = "";
+        errores.innerHTML = "";
     }
 }
 
@@ -152,10 +152,10 @@ function validarEmailSalir(email, errores) {
 function validarPasswordSalir(password, errores) {
     let resultPassword = validarPassword(password);
     if (typeof resultPassword == "string") {
-       errores.innerHTML = "Error Contraseña: "+ resultPassword;
+        errores.innerHTML = "Error Contraseña: "+ resultPassword;
         return false;
     } else {
-      errores.innerHTML = "";
+        errores.innerHTML = "";
     }
 
 }
