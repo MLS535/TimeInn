@@ -82,9 +82,7 @@ function validarEmail(email) {
     // entr el @ y el punto, debe haber entre 5 y 10 minusculas
     if (email.substring(email.indexOf("@")+1, email.indexOf(".")).length < 5 || email.substring(email.indexOf("@")+1, email.indexOf(".")).length > 10) return "entr el @ y el punto, debe haber entre 5 y 10 minusculas";
     //despues del punto, solo puede haber com, net o gov
-    if (email.substring(email.indexOf(".")+1) != "com" &&
-        email.substring(email.indexOf(".")+1) != "net" &&
-        email.substring(email.indexOf(".")+1) != "gov") return "despues del punto, solo puede haber com, net o gov";
+    if (email.substring(email.indexOf(".")+1) != "com" && email.substring(email.indexOf(".")+1) != "net" && email.substring(email.indexOf(".")+1) != "gov") return "despues del punto, solo puede haber com, net o gov";
     //Validar que el email no exista en la tabla de usuarios
     let dataEmail = {
         email: email

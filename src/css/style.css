@@ -131,6 +131,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -183,6 +184,13 @@ input[type="password" i] {
  span:hover{
     color: var(--color-secondary);
     cursor: pointer;
+ }
+
+ #error{
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 0.3rem;
+    text-align: center;
  }
 
 @media only screen and (max-width: 40em){
