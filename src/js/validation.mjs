@@ -16,7 +16,15 @@ TODO validar el name
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
 */
+function  validarNombre(username) {
+    if (username.length < 3 || username.length > 20) return "El nombre debe tener entre 3 y 20 caracteres";
+    
+    let dataName ={
+        username: username
+    };
+    return dataName;
 
+    }
 
 /* 
 TODO validar el email 
@@ -81,19 +89,21 @@ function validarPassword(password){
 
 //validacion del submit   
 function validations() { 
-        let email = document.getElementById('email').value;
         let password = document.getElementById('passwd1').value;
         let confirmPassword = document.getElementById('passwd2').value;
-
-        validarEmailSalir();
-        validarPasswordSalir()
-        if (password != confirmPassword) {
-            document.getElementById("error").innerHTML = "Las contraseñas no coinciden"; 
-            return false; 
+        if (validarUsernameSalir() == false) {
+            return false;
+        } else if (validarEmailSalir() == false) {
+            return false;
+        } else if (validarPasswordSalir() == false) {
+            return false;
+        } else if (password != confirmPassword) {
+            document.getElementById("error").innerHTML = "Las contraseñas no coinciden";
+            return false;
         } else {
             document.getElementById("error").innerHTML = "";
             return true;
-    }
+        }
     };
     
 // validacion del email al salir del campo
@@ -118,5 +128,16 @@ function validarPasswordSalir() {
     } else {
         document.getElementById("error").innerHTML = "";
     }
-    
 }
+
+// validacion del username al salir del campo
+    function validarUsernameSalir() {
+        let username = document.getElementById('username').value;
+        let resultUsername = validarNombre(username);
+        if (typeof resultUsername == "string") {
+            document.getElementById("error").innerHTML = "Error Nombre de Usuario: "+ resultUsername; 
+            return false;
+        } else {
+            document.getElementById("error").innerHTML = "";
+        }
+    }
