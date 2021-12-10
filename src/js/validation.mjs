@@ -42,11 +42,6 @@ function checkNameInData(name, errores){
     }
 }
 
-function  validarNombre(username, errores){
-    if ( username.length < 3 || username.length >=20)
-        return errores.innerText = "El numero de caracteres debe comprender entre 3 y 20";
-}
-
 var submit = document.querySelector('.loginButton');
 
 submit.addEventListener("click", function (e){
@@ -57,6 +52,15 @@ submit.addEventListener("click", function (e){
     let passwdlogin = document.getElementById('passwdlogin').value;
     checkData(username, passwdlogin, errores);
 });
+function  validarNombre(username) {
+    if (username.length < 3 || username.length > 20) return "El nombre debe tener entre 3 y 20 caracteres";
+
+    let dataName ={
+        username: username
+    };
+    return dataName;
+
+    }
 
 /* 
 TODO validar el email 
@@ -85,6 +89,7 @@ function validarEmail(email) {
     //despues del punto, solo puede haber com, net o gov
     if (email.substring(email.indexOf(".")+1) != "com" && email.substring(email.indexOf(".")+1) != "net" && email.substring(email.indexOf(".")+1) != "gov") return "despues del punto, solo puede haber com, net o gov";
     //Validar que el email no exista en la tabla de usuarios
+
     let dataEmail = {
         email: email
     };
@@ -121,40 +126,55 @@ function validarPassword(password){
 
 //validacion del submit
 function validations() {
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('passwd1').value;
-    let confirmPassword = document.getElementById('passwd2').value;
-    let error =  document.getElementById("error");
-    validarEmailSalir(email, error);
-    validarPasswordSalir(password, error)
-    if (password != confirmPassword) {
-        error.innerHTML = "Las contraseñas no coinciden";
-        return false;
-    } else {
-        error.innerHTML = "";
-        return true;
-    }
-};
+        let password = document.getElementById('passwd1').value;
+        let confirmPassword = document.getElementById('passwd2').value;
+        if (validarUsernameSalir() == false) {
+            return false;
+        } else if (validarEmailSalir() == false) {
+            return false;
+        } else if (validarPasswordSalir() == false) {
+            return false;
+        } else if (password != confirmPassword) {
+            document.getElementById("error").innerHTML = "Las contraseñas no coinciden";
+            return false;
+        } else {
+            document.getElementById("error").innerHTML = "";
+            return true;
+        }
+    };
 
 // validacion del email al salir del campo
-function validarEmailSalir(email, errores) {
+function validarEmailSalir() {
+    let email = document.getElementById('email').value;
     let resultEmail = validarEmail(email);
     if (typeof resultEmail == "string") {
-        errores.innerHTML = "Error Email: "+ resultEmail;
+        document.getElementById("error").innerHTML = "Error Email: "+ resultEmail;
         return false;
     } else {
-        errores.innerHTML = "";
+        document.getElementById("error").innerHTML = "";
     }
 }
 
 // validacion del password al salir del campo
-function validarPasswordSalir(password, errores) {
+function validarPasswordSalir() {
+    let password = document.getElementById('passwd1').value;
     let resultPassword = validarPassword(password);
     if (typeof resultPassword == "string") {
-        errores.innerHTML = "Error Contraseña: "+ resultPassword;
+        document.getElementById("error").innerHTML = "Error Contraseña: "+ resultPassword;
         return false;
     } else {
-        errores.innerHTML = "";
+        document.getElementById("error").innerHTML = "";
     }
-
 }
+
+// validacion del username al salir del campo
+    function validarUsernameSalir() {
+        let username = document.getElementById('username').value;
+        let resultUsername = validarNombre(username);
+        if (typeof resultUsername == "string") {
+            document.getElementById("error").innerHTML = "Error Nombre de Usuario: "+ resultUsername;
+            return false;
+        } else {
+            document.getElementById("error").innerHTML = "";
+        }
+    }
