@@ -2,7 +2,8 @@
  TODO mensajes del login incorrecto
     Saldrá un mensaje de error en el formulario (los errores tendrán el color de error de la Paleta de Colores) 
  */
-//import { users} from "./data.js";
+
+import { users} from "./data.js";
 
 //TODO La validacion de los campos a de ser con expresiones regulares siempre que sea posible
 /*
@@ -16,28 +17,45 @@ TODO validar el name
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
 */
+function checkData(username, errores){
+   users.filter(a => {
+           if(!(a.usuario  === username)){
+               errores.innerHTML = 'El nombre del usuario no es correcto'
+           }
+   }
+
+   );
+}
 
 function  validarNombre(username, errores){
 
     if ( username.length < 3 || username.length >=20)
         return errores.innerText = "El numero de caracteres debe comprender entre 3 y 20";
-    if ( username.indexOf("@") === -1 )
-         validarEmail(username);
-      validarEmailSalir(username,errores);
+    // if ( username.indexOf("@") === -1 )
+    //      validarEmail(username);
+    //   validarEmailSalir(username,errores);
+    if (users.some(function (u){
+        return u.usuario.value === username;
+    }) ){
+        return errores.innerText = 'El usuario es correcto';
+    }else {
+        return errores.innerText='el usuario es incorrecto';
+    }
 }
 
 var prueba = document.querySelector('.loginButton');
 
-prueba.addEventListener("click", function (e){
-    e.preventDefault();
-    let errores = document.getElementById('erroreslogin');
-    //Añadir preventDefault y cambiar a submit el boton para que no se actualice y se pierda info
-    let username = document.getElementById('userlogin').value;
-    let passwdlogin = document.getElementById('passwdlogin').value;
-    validarNombre(username, errores);
-    validarPasswordSalir(passwdlogin, errores);
-
-});
+// prueba.addEventListener("click", function (){
+//
+//     let errores = document.getElementById('erroreslogin');
+//     //Añadir preventDefault y cambiar a submit el boton para que no se actualice y se pierda info
+//     let username = document.getElementById('userlogin').value;
+//     let passwdlogin = document.getElementById('passwdlogin').value;
+//    checkData(username, errores);
+//    // validarNombre(username, errores);
+//   //  validarPasswordSalir(passwdlogin, errores);
+//
+// });
 
 /* 
 TODO validar el email 
@@ -109,7 +127,7 @@ function validations() {
     let confirmPassword = document.getElementById('passwd2').value;
     let error =  document.getElementById("error");
     validarEmailSalir(email, error);
-    validarPasswordSalir(password, error)
+   // validarPasswordSalir(password, error)
     if (password != confirmPassword) {
         error.innerHTML = "Las contraseñas no coinciden";
         return false;
