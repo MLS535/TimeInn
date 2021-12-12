@@ -2,7 +2,20 @@
  TODO Crear Cookies del nombre de usuario
     El nombre de usuario se guarda en una Cookie. Así al refrescar la página, seguirá saliendo el mensaje “Hola, Maria” 
 */
-
+//crear cookies del nombre de usuario id=userlogin
+  var today = new Date();
+  var expiry = new Date(today.getTime() + 7 * 24 * 3600 * 1000);
+  
+  function setCookie(name, value) {
+      document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+  }
+  //this should set the UserName cookie to the proper value;
+  function storeValues(username) {
+      setCookie("username", username);;
+  
+  }
+    storeValues(resultUsername.username);
+  
 /*
 TODO Crear una funcion para mostrar y ocultar las contraseñas al clicar en el icono, tambien cambiar el icono al ocultar
 */
