@@ -21,7 +21,7 @@ function checkData(username, password, errores){
  let resultado =  users.find( a => a.email === username && a.password === password);
 if ( resultado ){
     //todo Aquí añadir funcion de la cookie
-    errores.innerHTML = 'todo correcto'
+    window.location.replace("index.html");
 }else
     errores.innerHTML = 'Usuario o contraseña erronea'
 }
@@ -158,3 +158,4 @@ function validarPasswordSalir(password, errores) {
     }
 
 }
+
