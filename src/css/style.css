@@ -80,7 +80,7 @@ Mobile size
 .image{
     background: url('../img/índice.jpg') no-repeat;
     width: 20rem;
-    height: 30rem;
+    height: 32rem;
     justify-content: center;
     background-size: cover;
     border-top-left-radius: 1rem;
@@ -92,10 +92,9 @@ Mobile size
     display: flex;
     background-color: var(--color-primary-variant);
     width: 20rem;
-    height: 30rem;
+    height: 32rem;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
@@ -132,7 +131,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .button{
@@ -147,7 +146,6 @@ form>div input{
     height: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 0 5px var(--overlay) inset;
-    margin-top: 0.3rem;
     padding-left: 1rem;
 }
 
@@ -165,8 +163,8 @@ input[type="password" i] {
 
 .logo{
     position: absolute;
-    top: 18%;
-    left: 51%;
+    top: 10%;
+    left: 39%;
 }
 
  .logo img{
@@ -186,11 +184,11 @@ input[type="password" i] {
     cursor: pointer;
  }
 
- #error{
+ #erroruser, #erroremail, #errorpasswd1, #errorpasswd2{
     color: red;
-    font-size: 1.2rem;
-    margin-top: 0.3rem;
-    text-align: center;
+    font-size: 0.7em;
+    width: 13rem;
+    height: 0.6rem;
  }
 
 @media only screen and (max-width: 40em){
@@ -231,7 +229,7 @@ TODO MEDIA SIGN UP
  */
 .signup-form {
     width: 16rem;
-    height: 25rem;
+    height: 28rem;
     align-self: center;
     border-radius: 1rem;
     color: black;
@@ -246,6 +244,8 @@ TODO MEDIA SIGN UP
 
 .signupButton{
     margin-top: 1rem;
+    position: absolute;
+    bottom: -9%;
 }
 
 form{

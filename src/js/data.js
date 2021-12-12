@@ -171,7 +171,7 @@ export const users = [
     },
     {
         usuario: 'ignacioakrich',
-        email: 'ignacioakrich@gmail.com',
+        email: 'Ignacioakrich@gmail.com',
         password: 'Pepita123!?'
     },
     {
