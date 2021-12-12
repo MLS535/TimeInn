@@ -1,9 +1,10 @@
+
 /*
  TODO mensajes del login incorrecto
     Saldrá un mensaje de error en el formulario (los errores tendrán el color de error de la Paleta de Colores) 
  */
 
-// import { users} from "./data.js";
+
 
 //TODO La validacion de los campos a de ser con expresiones regulares siempre que sea posible
 /*
@@ -17,46 +18,24 @@ TODO validar el name
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
 */
-/* function checkData(username, password, errores){
- let resultado =  users.find( a => a.email === username && a.password === password);
-if ( resultado ){
-    //todo Aquí añadir funcion de la cookie
-    window.location.replace("index.html");
-}else
-    errores.innerHTML = 'Usuario o contraseña erronea'
-}
 
-function checkEmail(email, errores){
-   let resultado = users.find(a =>
-        a.email  === email )
-    if ( resultado ){
-        errores.innerHTML ='Email ya existe'
-    }
-
-}
-function checkNameInData(name, errores){
+export function checkEmail(users,email){
     let resultado = users.find(a =>
-        a.usuario  === name )
-    if ( resultado ){
-        errores.innerHTML ='El usuario ya existe'
-    }
-}
+         a.email  === email )
+     if ( resultado ) {
+         document.getElementById('email').innerHTML = "Email ya existe";
+         }
 
 
+ }
+export function checkNameInData(users,name){
+     let resultado = users.find(a =>
+         a.usuario  === name )
+     if ( resultado ) return 'El usuario ya existe'
+ }
 
-var submit = document.querySelector('.loginButton');
-
-submit.addEventListener("click", function (e){
-    e.preventDefault();
-    let errores = document.getElementById('erroreslogin');
-    //Añadir preventDefault y cambiar a submit el boton para que no se actualice y se pierda info
-    let username = document.getElementById('userlogin').value;
-    let passwdlogin = document.getElementById('passwdlogin').value;
-    checkData(username, passwdlogin, errores);
-}); */
-function  validarNombre(username) {
+ export function  validarNombre(username) {
     if (username.length < 3 || username.length > 20) return "El nombre debe tener entre 3 y 20 caracteres";
-
     let dataName ={
         username: username
     };
@@ -76,7 +55,7 @@ TODO validar el email
         - tipo: Solo pudeden ser com, net o gov
         - Solo puede haber una @ y un punto
 */
-function validarEmail(email) {
+export function validarEmail(email) {
     //la primera letra en mayúscula
     if (email.charAt(0) != email.charAt(0).toUpperCase()) return "El email debe empezar con una letra mayúscula";
     //el resto en minúscula
@@ -108,7 +87,7 @@ TODO validar el password
         - Incluir números
         - Incluir caracteres espespeciales (por ejemplo, !, $, %, &, etc.)
 */
-function validarPassword(password){
+export function validarPassword(password){
     //Longitud mínima de siete caracteres
     if (password.length < 6) return "La contraseña debe tener al menos 7 caracteres";
     //Incluir letras mayúsculas y minúsculas
@@ -126,7 +105,7 @@ function validarPassword(password){
 
 }
 
-//validacion del submit
+/* //validacion del submit
 function validations() {
         let password = document.getElementById('passwd1').value;
         let confirmPassword = document.getElementById('passwd2').value;
@@ -137,10 +116,10 @@ function validations() {
         } else if (validarPasswordSalir() == false) {
             return false;
         } else if (password != confirmPassword) {
-            document.getElementById("error").innerHTML = "Las contraseñas no coinciden";
+            document.getElementById("errorpasswd2").innerHTML = "Las contraseñas no coinciden";
             return false;
         } else {
-            document.getElementById("error").innerHTML = "";
+            document.getElementById("errorpasswd2").innerHTML = "";
             return true;
         }
     };
@@ -150,10 +129,10 @@ function validarEmailSalir() {
     let email = document.getElementById('email').value;
     let resultEmail = validarEmail(email);
     if (typeof resultEmail == "string") {
-        document.getElementById("error").innerHTML = "Error Email: "+ resultEmail;
+        document.getElementById("erroremail").innerHTML = resultEmail;
         return false;
     } else {
-        document.getElementById("error").innerHTML = "";
+        document.getElementById("erroremail").innerHTML = "";
     }
 }
 
@@ -162,10 +141,10 @@ function validarPasswordSalir() {
     let password = document.getElementById('passwd1').value;
     let resultPassword = validarPassword(password);
     if (typeof resultPassword == "string") {
-        document.getElementById("error").innerHTML = "Error Contraseña: "+ resultPassword;
+        document.getElementById("errorpasswd1").innerHTML =  resultPassword;
         return false;
     } else {
-        document.getElementById("error").innerHTML = "";
+        document.getElementById("errorpasswd1").innerHTML = "";
     }
 }
 
@@ -174,9 +153,9 @@ function validarPasswordSalir() {
         let username = document.getElementById('username').value;
         let resultUsername = validarNombre(username);
         if (typeof resultUsername == "string") {
-            document.getElementById("error").innerHTML = "Error Nombre de Usuario: "+ resultUsername;
+            document.getElementById("erroruser").innerHTML = resultUsername;
             return false;
         } else {
-            document.getElementById("error").innerHTML = "";
+            document.getElementById("erroruser").innerHTML = "";
         }
-    }
+    } */
