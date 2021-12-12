@@ -3,7 +3,7 @@
     Saldrá un mensaje de error en el formulario (los errores tendrán el color de error de la Paleta de Colores) 
  */
 
-import { users} from "./data.js";
+// import { users} from "./data.js";
 
 //TODO La validacion de los campos a de ser con expresiones regulares siempre que sea posible
 /*
@@ -17,7 +17,7 @@ TODO validar el name
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
 */
-function checkData(username, password, errores){
+/* function checkData(username, password, errores){
  let resultado =  users.find( a => a.email === username && a.password === password);
 if ( resultado ){
     //todo Aquí añadir funcion de la cookie
@@ -51,7 +51,7 @@ submit.addEventListener("click", function (e){
     let username = document.getElementById('userlogin').value;
     let passwdlogin = document.getElementById('passwdlogin').value;
     checkData(username, passwdlogin, errores);
-});
+}); */
 function  validarNombre(username) {
     if (username.length < 3 || username.length > 20) return "El nombre debe tener entre 3 y 20 caracteres";
 
