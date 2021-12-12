@@ -9,7 +9,7 @@ function checkData(username, password, errores){
        errores.innerHTML = 'Usuario o contraseña erronea'
    }
    
-   function checkEmail(email, errores){
+   /* function checkEmail(email, errores){
       let resultado = users.find(a =>
            a.email  === email )
        if ( resultado ){
@@ -23,7 +23,7 @@ function checkData(username, password, errores){
        if ( resultado ){
            errores.innerHTML ='El usuario ya existe'
        }
-   }
+   } */
    
    var submit = document.querySelector('.loginButton');
    

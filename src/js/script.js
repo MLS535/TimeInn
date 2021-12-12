@@ -3,23 +3,19 @@
     El nombre de usuario se guarda en una Cookie. Así al refrescar la página, seguirá saliendo el mensaje “Hola, Maria” 
 */
 //crear cookies del nombre de usuario id=userlogin
-function createCookie(name, value, days) {
-    var expires;
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
-    } else {
-        expires = "";
-    }
-    document.cookie = name + "=" + value + expires + "; path=/";
-}
-//this should set the UserName cookie to the proper value;
-function setUserNameCookie(userName) {
-    createCookie("UserName", userName, 1);
-}
-
-
+  var today = new Date();
+  var expiry = new Date(today.getTime() + 7 * 24 * 3600 * 1000);
+  
+  function setCookie(name, value) {
+      document.cookie=name + "=" + escape(value) + "; path=/; expires=" + expiry.toGMTString();
+  }
+  //this should set the UserName cookie to the proper value;
+  function storeValues(username) {
+      setCookie("username", username);;
+  
+  }
+    storeValues(resultUsername.username);
+  
 /*
 TODO Crear una funcion para mostrar y ocultar las contraseñas al clicar en el icono, tambien cambiar el icono al ocultar
 */
