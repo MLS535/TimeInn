@@ -17,8 +17,8 @@ TODO validar el name
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
 */
-function checkData(username, password, errores){
- let resultado =  users.find( a => a.email === username && a.password === password);
+function checkData(emaik, password, errores){
+ let resultado =  users.find( a => a.email === email && a.password === password);
 if ( resultado ){
     //todo Aquí añadir funcion de la cookie
     window.location.replace("index.html");
