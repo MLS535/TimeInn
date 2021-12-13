@@ -28,7 +28,6 @@
     El nombre de usuario se guarda en una Cookie. Así al refrescar la página, seguirá saliendo el mensaje “Hola, Maria” */
    
 //al darle al boton de submit, crear una cookie con el nombre de usuario
-
 function createCookie(name, value, days) {
     var expires;
     if (days) {
