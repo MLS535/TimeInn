@@ -22,16 +22,14 @@ TODO validar el email
     - no debe existir en la Tabla de Usuarios
     - Patron de validacion:
         nombre@nombreorganizacion.tipo
-        - nombre: solo la primera letra en mayúscula y el resto en minúscula
+        - nombre: solo la primera letra puede estar en mayúscula y el resto en minúscula
         - nombre de la organización: entre 5 y 10 minusculas
         - tipo: Solo pudeden ser com, net o gov
         - Solo puede haber una @ y un punto
 */
 export function validarEmail(email,users) {
-    //la primera letra en mayúscula
-    if (email.charAt(0) != email.charAt(0).toUpperCase()) return "El email debe empezar con una letra mayúscula";
-    //el resto en minúscula
-    if (email.substring(1).toLowerCase() != email.substring(1)) return "El email debe empezar con una letra mayúscula";
+    //la primera letra puede estar en mayúscula y el resto en minúscula
+    if (email.substring(1).toLowerCase() != email.substring(1)) return "El email solo puede tener la primera letra en mayúscula";
 
     //Solo pueden haber una @ y un punto
     if (email.indexOf("@") == -1) return "El email debe tener una @";

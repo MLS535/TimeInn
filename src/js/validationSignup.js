@@ -1,5 +1,4 @@
 import {validarEmail, validarNombre, validarPassword} from './validation.mjs';
-//import {users} from "./data.js";
 
  //validacion del submit
   document.querySelector('#formSignup').addEventListener('submit', function (e) {
@@ -18,7 +17,7 @@ function validarEmailSalir(){
         document.getElementById("erroremail").innerHTML = "";
     }
 }
-document.getElementById("email").onmouseleave = function () {
+document.getElementById("email").onblur = function () {
 validarEmailSalir();
 }
 
@@ -32,7 +31,7 @@ if (typeof resultPassword == "string") {
 } else {
     document.getElementById("errorpasswd1").innerHTML = "";
 }}
-document.getElementById("passwd1").onmouseleave = function () {
+document.getElementById("passwd1").onblur = function () {
 validarPasswdSalir();
 }
 
@@ -49,12 +48,11 @@ function validarUsernameSalir(){
     }
 }
 
-document.getElementById("username").onmouseleave = function () {
+document.getElementById("username").onblur = function () {
     validarUsernameSalir();
 }
 
-//local storage
-//var users1 = [];
+//TODO local storage
 var users1 = [];
 var localStorageKeyName = 'data';
 //function to store user name and password
@@ -67,7 +65,6 @@ function store(theForm) {
     //Creamos un array que almacena los usuarios y las contraseñas
     //var usuarios = JSON.parse(localStorage.getItem("usuarios")||"[]"); // get current objects
 
-
     if (dataInLocalStorage !== null) {
         users1 = JSON.parse(dataInLocalStorage);
     }
@@ -78,50 +75,14 @@ function store(theForm) {
     };
 
     //Hacemos un push de usuarios a usuario
-   // usuarios.push(usuario); //push new one
     users1.push(usuario);
 
     localStorage.setItem(localStorageKeyName, JSON.stringify(users1));
     console.log(usuario)
 
     //Se almacenan todos los usuarios en un array. Este array se almacen en el localStorage de Usuarios
-    //
-    //
-    // localStorage.setItem("usuarios" ,JSON.stringify(usuarios))
-  /*  var mensaje = document.getElementById('welcomeMessage');
-    mensaje.innerHTML = ''; */
-  //  localStorage.setItem("username", inputUsername.value);
-
-  //  localStorage.setItem("password", inputPassword.value);
- //   document.getElementById('welcomeMessage').innerHTML = "Welcome " + localStorage.getItem('username') + "!";
-/*     users1.forEach(function (x) {
-        mensaje.innerHTML ='hola '+ x.username;
-        console.log (mensaje);
-    }); */
-    // window.localStorage.clear();
  return false;
-} // end store()
-
-//function to sign in
-/* function login(theForm) {
-    users1 = JSON.parse(dataInLocalStorage);
-    document.getElementById('welcomeMessage').innerHTML = "";
-    var inputUsername = theForm["username"];
-    var inputEmail = theForm["email"];
-    var inputPassword = theForm["password"];
-    var username = inputUsername.value;
-    var email = inputEmail.value;
-    var password = inputPassword.value;
-       let resultado = users1.find(a => a.username === username);
-        if (!resultado) {
-            document.getElementById('welcomeMessage').innerHTML = "Invalid Log-in!";
-        } else {
-            document.getElementById('welcomeMessage').innerHTML = "Welcome " + username + "!";
-        }
-    } */
-
-
-// end login()
+} 
 
 var registro = document.querySelector('#formSignup');
 if (  registro){
