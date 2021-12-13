@@ -53,6 +53,12 @@ Event Page
     color: var(--color-secondary);
 }
 
+#cerrarsesion{
+    display: block;
+    margin-top: -1rem;
+    min-width: 6rem;
+}
+
 .addEvent{
     font-size: 1.5em;
     background-color: var(--color-secondary);
@@ -1117,6 +1123,7 @@ OVERLAY WITH FORM
     text-align: center;
     text-decoration: none;
     outline: none;
+    min-width: 6rem;
 }
 
 .header .menu {
@@ -1229,6 +1236,7 @@ OVERLAY WITH FORM
 .eventIndexOff{
     display: none;
 }
+
 
 
 /*
@@ -1422,7 +1430,7 @@ TODO DESDE AQUI HAMBURGUESA
 
     .search .input_search {
         width: 50vw;
-        margin-top: 7.5rem;
+        margin-top: 15.5rem;
 
     }
 

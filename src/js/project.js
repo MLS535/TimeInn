@@ -31,6 +31,9 @@ window.addEventListener("DOMContentLoaded", function () {
   checkCookie();
   changeToNew();
   changeToEvent();
+  sesionIniciada();
+  showButton();
+  cerrarSesion();
 });
 
 //Slide front
@@ -132,7 +135,6 @@ function checkCookie() {
     if (document.cookie != "") {
       document.querySelector('.overlay2').className = 'overlayOff';
     }}
-    
 
 //selector entre eventos y noticias
 
@@ -160,3 +162,54 @@ function changeToEvent(){
     });
   });
 }
+
+//TODO mostrar la sesión iniciada
+//si la cookie con name=username existe, mostrara el valor de la cookie
+const cookieValue = document.cookie
+  .split('; ')
+  .find(row => row.startsWith('username='))
+  .split('=')[1];
+
+function sesionIniciada() {
+  const output = document.getElementById('cookie-value')
+  document.getElementById('iniciarsesion').innerHTML = cookieValue;
+  document.getElementById('iniciarsesion').id = 'sesionIniciada';
+  document.getElementById('sesionIniciada').removeAttribute('href');
+}
+
+//eliminar la cookie
+function deleteCookie() {
+  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+}
+
+
+//al apretar un boton aparecera otro boton 
+function showButton(){
+  const buttons = document.querySelectorAll('#sesionIniciada');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function(){
+      let cerrarSesion = document.getElementById('cerrarsesion')
+      if (cerrarSesion.style.display === "none") {
+        cerrarSesion.style.display = "block";
+      } else {
+      cerrarSesion.style.display = 'none';
+      }
+    });
+  });
+}
+
+function cerrarSesion(){
+  const buttons = document.querySelectorAll('#cerrarsesion');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function(){
+      deleteCookie();
+      document.getElementById('sesionIniciada').id = 'iniciarsesion';
+      document.getElementById('iniciarsesion').innerHTML = 'Iniciar Sesión';
+      document.getElementById('iniciarsesion').href = 'login.html';
+      document.getElementById('cerrarsesion').style.display = 'none';
+    });
+  });
+}
+
