@@ -66,3 +66,85 @@ function validarUsernameSalir(){
 document.getElementById("username").onmouseleave = function () {
     validarUsernameSalir();
 }
+
+//local storage
+var users1 = [];
+var localStorageKeyName = 'data';
+//function to store user name and password
+var dataInLocalStorage = localStorage.getItem(localStorageKeyName);
+function store(theForm) {
+
+    var inputUsername= theForm["username"];
+    var inputEmail = theForm["email"];
+    var inputPassword= theForm["password"];
+    //Creamos un array que almacena los usuarios y las contraseñas
+    //var usuarios = JSON.parse(localStorage.getItem("usuarios")||"[]"); // get current objects
+
+
+    if (dataInLocalStorage !== null) {
+        users1 = JSON.parse(dataInLocalStorage);
+    }
+    var usuario = {
+        username   : inputUsername.value,
+        email      : inputEmail.value,
+        password   : inputPassword.value,
+    };
+
+    //Hacemos un push de usuarios a usuario
+   // usuarios.push(usuario); //push new one
+    users1.push(usuario);
+
+    localStorage.setItem(localStorageKeyName, JSON.stringify(users1));
+    console.log(usuario)
+
+    //Se almacenan todos los usuarios en un array. Este array se almacen en el localStorage de Usuarios
+    //
+    //
+    // localStorage.setItem("usuarios" ,JSON.stringify(usuarios))
+  /*  var mensaje = document.getElementById('welcomeMessage');
+    mensaje.innerHTML = ''; */
+  //  localStorage.setItem("username", inputUsername.value);
+
+  //  localStorage.setItem("password", inputPassword.value);
+ //   document.getElementById('welcomeMessage').innerHTML = "Welcome " + localStorage.getItem('username') + "!";
+/*     users1.forEach(function (x) {
+        mensaje.innerHTML ='hola '+ x.username;
+        console.log (mensaje);
+    }); */
+    // window.localStorage.clear();
+ return false;
+} // end store()
+
+//function to sign in
+/* function login(theForm) {
+    users1 = JSON.parse(dataInLocalStorage);
+    document.getElementById('welcomeMessage').innerHTML = "";
+    var inputUsername = theForm["username"];
+    var inputEmail = theForm["email"];
+    var inputPassword = theForm["password"];
+    var username = inputUsername.value;
+    var email = inputEmail.value;
+    var password = inputPassword.value;
+       let resultado = users1.find(a => a.username === username);
+        if (!resultado) {
+            document.getElementById('welcomeMessage').innerHTML = "Invalid Log-in!";
+        } else {
+            document.getElementById('welcomeMessage').innerHTML = "Welcome " + username + "!";
+        }
+    } */
+
+
+// end login()
+
+var registro = document.querySelector('#formSignup');
+if (  registro){
+    registro.addEventListener('submit', function (e){
+        e.preventDefault();
+        store(this);
+    })
+}else {
+    document.getElementById('signon').addEventListener('submit', function (e){
+        e.preventDefault();
+        login(this);
+    })
+}
