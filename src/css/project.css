@@ -53,6 +53,11 @@ Event Page
     color: var(--color-secondary);
 }
 
+#cerrarsesion{
+    display: block;
+    margin-top: -2rem;
+}
+
 .addEvent{
     font-size: 1.5em;
     background-color: var(--color-secondary);

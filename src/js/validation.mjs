@@ -1,41 +1,13 @@
-
-/*
- TODO mensajes del login incorrecto
-    Saldrá un mensaje de error en el formulario (los errores tendrán el color de error de la Paleta de Colores) 
- */
-
-
-
 //TODO La validacion de los campos a de ser con expresiones regulares siempre que sea posible
-/*
- TODO mensajes del login correcto
-    redireccionamos a front page y se muestra un mensaje como “Hola, Maria” (por ejemplo, si la usuaria es Maria) 
-*/
-
-
 /* 
 TODO validar el name 
     - no puede estar vacío
     - numero de caracteres entre 3 y 20
+    - no debe existir en la Tabla de Usuarios
 */
-
-export function checkEmail(users,email){
-    let resultado = users.find(a =>
-         a.email  === email )
-     if ( resultado ) {
-         document.getElementById('email').innerHTML = "Email ya existe";
-         }
-
-
- }
-export function checkNameInData(users,name){
-     let resultado = users.find(a =>
-         a.usuario  === name )
-     if ( resultado ) return 'El usuario ya existe'
- }
-
- export function  validarNombre(username) {
+ export function  validarNombre(username,users) {
     if (username.length < 3 || username.length > 20) return "El nombre debe tener entre 3 y 20 caracteres";
+    if (users.find(a => a.usuario  === username)) return "El usuario ya existe";
     let dataName ={
         username: username
     };
@@ -55,7 +27,7 @@ TODO validar el email
         - tipo: Solo pudeden ser com, net o gov
         - Solo puede haber una @ y un punto
 */
-export function validarEmail(email) {
+export function validarEmail(email,users) {
     //la primera letra en mayúscula
     if (email.charAt(0) != email.charAt(0).toUpperCase()) return "El email debe empezar con una letra mayúscula";
     //el resto en minúscula
@@ -70,7 +42,7 @@ export function validarEmail(email) {
     //despues del punto, solo puede haber com, net o gov
     if (email.substring(email.indexOf(".")+1) != "com" && email.substring(email.indexOf(".")+1) != "net" && email.substring(email.indexOf(".")+1) != "gov") return "despues del punto, solo puede haber com, net o gov";
     //Validar que el email no exista en la tabla de usuarios
-
+    if ( users.find(a => a.email  === email ) ) return "Email ya existe";
     let dataEmail = {
         email: email
     };
@@ -104,58 +76,3 @@ export function validarPassword(password){
     return dataPassword;
 
 }
-
-/* //validacion del submit
-function validations() {
-        let password = document.getElementById('passwd1').value;
-        let confirmPassword = document.getElementById('passwd2').value;
-        if (validarUsernameSalir() == false) {
-            return false;
-        } else if (validarEmailSalir() == false) {
-            return false;
-        } else if (validarPasswordSalir() == false) {
-            return false;
-        } else if (password != confirmPassword) {
-            document.getElementById("errorpasswd2").innerHTML = "Las contraseñas no coinciden";
-            return false;
-        } else {
-            document.getElementById("errorpasswd2").innerHTML = "";
-            return true;
-        }
-    };
-
-// validacion del email al salir del campo
-function validarEmailSalir() {
-    let email = document.getElementById('email').value;
-    let resultEmail = validarEmail(email);
-    if (typeof resultEmail == "string") {
-        document.getElementById("erroremail").innerHTML = resultEmail;
-        return false;
-    } else {
-        document.getElementById("erroremail").innerHTML = "";
-    }
-}
-
-// validacion del password al salir del campo
-function validarPasswordSalir() {
-    let password = document.getElementById('passwd1').value;
-    let resultPassword = validarPassword(password);
-    if (typeof resultPassword == "string") {
-        document.getElementById("errorpasswd1").innerHTML =  resultPassword;
-        return false;
-    } else {
-        document.getElementById("errorpasswd1").innerHTML = "";
-    }
-}
-
-// validacion del username al salir del campo
-    function validarUsernameSalir() {
-        let username = document.getElementById('username').value;
-        let resultUsername = validarNombre(username);
-        if (typeof resultUsername == "string") {
-            document.getElementById("erroruser").innerHTML = resultUsername;
-            return false;
-        } else {
-            document.getElementById("erroruser").innerHTML = "";
-        }
-    } */

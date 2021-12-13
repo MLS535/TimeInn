@@ -1,4 +1,4 @@
-import {validarEmail, validarNombre, validarPassword, checkNameInData, checkEmail } from './validation.mjs';
+import {validarEmail, validarNombre, validarPassword} from './validation.mjs';
 import {users} from "./data.js";
 
  //validacion del submit
@@ -25,7 +25,7 @@ import {users} from "./data.js";
 // validacion del email al salir del campo
 function validarEmailSalir(){
     let email = document.getElementById('email').value;
-    let resultEmail = validarEmail(email);
+    let resultEmail = validarEmail(email,users);
     if (typeof resultEmail == "string") {
         document.getElementById("erroremail").innerHTML = resultEmail;
         return false;
@@ -54,7 +54,7 @@ validarPasswdSalir();
 // validacion del username al salir del campo
 function validarUsernameSalir(){
     let username = document.getElementById('username').value;
-    let resultUsername = validarNombre(username);
+    let resultUsername = validarNombre(username,users);
     if (typeof resultUsername == "string") {
         document.getElementById("erroruser").innerHTML = resultUsername;
         return false;
