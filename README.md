@@ -2,6 +2,7 @@
 
 ## Tabla de contenidos:
 ---
+- [Cambios_P3](#Cambios-en-P3)
 - [Descripción y contexto](#descripción-y-contexto)
 - [Guía de usuario](#guía-de-usuario)
 - [Dificultades del proyecto](#Dificultades-del-proyecto)
@@ -13,6 +14,50 @@
 - [Netlify](#Netlify)
 - [Autor/es](#autores)
 
+#Cambios en P3 + Pc3 FORMULARIOS:
+---
+<h2> Formulario idea general:</h2>
+Nuestro formulario se accede a través del index con el botón iniciar sesión que está arriba a la derecha de TimeInn. Una vez dentro de iniciar sesión
+se encontrará con login (login.html) en el que el usuario pondrá su usuario y contraseña o podrá optar por registrarse (signup.html).
+En nuestro caso y como forma de ampliación hemos utilizado **LOCALSTORAGE**  por lo que el usuario deberá primero registrarse y si no existe el email o el nombre
+aparecerá en la pantalla de login. El usuario en esa pantalla podrá poner el nombre de usuario o email y la contraseña que anteriormente en el sign-up
+habrá puesto. Gracias a Localstorage almacenamos los usuarios ya creados y comprobará si existe o no, por lo que está sería nuestra tabla de usuarios.
+Para poder ver la tabla de localstorage hemos utilizado la extensión de chrome:
+https://chrome.google.com/webstore/detail/local-storage-explorer/hglfomidogadbhelcfomenpieffpfaeb/related
+
+- En el documento de js script.js tenemos la función de visualización para visualizar la contraseña o no.
+- En el documento de validation.mjs tenemos todas las funciones de comprobar el email, nombre y contraseña cuando se registra el usuario.
+- En el documento de validationLogin.js en Login comprobamos que existe o no el usuario introducido. Si existe te redirige a index.html
+- En el documento de validationSignup.js creamos el usuario si todas las validaciones de signup están correctas o no. Si existe te redirige a login.html
+- En el documento de projects.js modificamos la cookie para que mostrase el nombre de usuario o email en el index.html.
+---
+<h3> Validaciones </h3>
+En nuestro formulario hemos añadido:
+- mensajes del login incorrecto:
+  Saldrá un mensaje de error en el formulario de color rojo en cuanto el usuario salga de encima del input con el ratón.
+  Utilizamos expresiones regulares en password para validar que sea correcto.
+    - Validar el nombre, hemos tenido en cuenta lo siguiente:
+      - no puede estar vacío (saldrá un mensaje de que el número de caracteres debe ser entre 3 y 20)
+      - numero de caracteres entre 3 y 20
+    - Validar el email, hemos tenido en cuenta los siguientes patrones:
+      - valida al salir del campo (al perder el foco)
+      - no puede estar vacío
+      - no debe existir en la Tabla de Usuarios
+        - Patron de validacion:
+          Nombre@nombreorganizacion.tipo
+        - nombre: solo la primera letra en mayúscula y el resto en minúscula
+        - nombre de la organización: entre 5 y 10 minusculas
+        - tipo: Solo pueden ser com, net o gov.
+        - Solo puede haber una @ y un punto.
+    - Validar la contraseña, hemos tenido en cuenta los siguientes patrones:  
+      - valida al salir del campo (al perder el foco)
+      - Muestra mensajes debajo de los campos para los errores que puedan suceder.
+      - Patron de validacion:
+        - Longitud mínima de siete caracteres
+        - Incluir letras mayúsculas y minúsculas
+        - Incluir números
+        - Incluir caracteres espespeciales (por ejemplo, !, $, %, &, etc.)
+      
 ## Descripción y contexto
 ---
 Está es una página de consulta de noticias y eventos de música. Tenemos eventos destacados y noticias patrocinadas. Hay una segunda página que nos permite
