@@ -161,7 +161,7 @@ export const events = [
     }
 ]
 
-// TODO Crear Tabla de Usuarios
+//no lo hemos utilizado porque utilizamos LOCALSTORAGE
 
 export const users = [
     {

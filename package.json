@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "<h1>TimeInn</h1>",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "mocha test"
   },

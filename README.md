@@ -25,7 +25,8 @@ habrá puesto. Gracias a Localstorage almacenamos los usuarios ya creados y comp
 Para poder ver la tabla de localstorage hemos utilizado la extensión de chrome:
 https://chrome.google.com/webstore/detail/local-storage-explorer/hglfomidogadbhelcfomenpieffpfaeb/related
 
-- En el documento de js script.js tenemos la función de visualización para visualizar la contraseña o no.
+- En el documento de js script.js tenemos la función de visualización para visualizar la contraseña o no. Nosotros hemos optado a que con un click 
+  aparezca y se muestre la contraseña y al volver a pulsar click no se muestre basandonos en google que realiza la misma funcionalidad.
 - En el documento de validation.mjs tenemos todas las funciones de comprobar el email, nombre y contraseña cuando se registra el usuario.
 - En el documento de validationLogin.js en Login comprobamos que existe o no el usuario introducido. Si existe te redirige a index.html
 - En el documento de validationSignup.js creamos el usuario si todas las validaciones de signup están correctas o no. Si existe te redirige a login.html
