@@ -1,6 +1,10 @@
- import { users} from "./data.js";
+ //import { users} from "./data.js";
  function checkData(username, password, errores){
-     let resultado =  users.find( a => (a.usuario === username ||a.email === username) && a.password === password);
+    var users1 = [];
+    var localStorageKeyName = 'data';
+    var dataInLocalStorage = localStorage.getItem(localStorageKeyName);
+    users1 = JSON.parse(dataInLocalStorage);
+     let resultado =  users1.find( a => (a.username === username ||a.email === username) && a.password === password);
      if ( resultado ){
          //todo Aquí añadir funcion de la cookie
          storeValues();

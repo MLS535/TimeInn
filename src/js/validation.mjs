@@ -7,7 +7,7 @@ TODO validar el name
 */
  export function  validarNombre(username,users) {
     if (username.length < 3 || username.length > 20) return "El nombre debe tener entre 3 y 20 caracteres";
-    if (users.find(a => a.usuario  === username)) return "El usuario ya existe";
+    if (users.find(a => a.username  === username)) return "El usuario ya existe";
     let dataName ={
         username: username
     };

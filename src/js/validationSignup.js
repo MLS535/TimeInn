@@ -1,31 +1,16 @@
 import {validarEmail, validarNombre, validarPassword} from './validation.mjs';
-import {users} from "./data.js";
+//import {users} from "./data.js";
 
  //validacion del submit
   document.querySelector('#formSignup').addEventListener('submit', function (e) {
     e.preventDefault();
-    let password = document.getElementById('passwd1').value;
-    let confirmPassword = document.getElementById('passwd2').value;
-    if (validarUsernameSalir() == false) {
-        return false;
-    } else if (validarEmailSalir() == false) {
-        return false;
-    } else if (validarPasswdSalir() == false) {
-        return false;
-    } else if (password != confirmPassword) {
-        document.getElementById("errorpasswd2").innerHTML = "Las contraseñas no coinciden";
-        return false;
-    } else {
-        document.getElementById("errorpasswd2").innerHTML = "";
-        //TODO: funcion de localstorage
-        window.location.replace("login.html");
-    }
 });
 
 // validacion del email al salir del campo
 function validarEmailSalir(){
+    users1 = JSON.parse(dataInLocalStorage);
     let email = document.getElementById('email').value;
-    let resultEmail = validarEmail(email,users);
+    let resultEmail = validarEmail(email,users1);
     if (typeof resultEmail == "string") {
         document.getElementById("erroremail").innerHTML = resultEmail;
         return false;
@@ -53,8 +38,9 @@ validarPasswdSalir();
 
 // validacion del username al salir del campo
 function validarUsernameSalir(){
+    users1 = JSON.parse(dataInLocalStorage);
     let username = document.getElementById('username').value;
-    let resultUsername = validarNombre(username,users);
+    let resultUsername = validarNombre(username,users1);
     if (typeof resultUsername == "string") {
         document.getElementById("erroruser").innerHTML = resultUsername;
         return false;
@@ -68,6 +54,7 @@ document.getElementById("username").onmouseleave = function () {
 }
 
 //local storage
+//var users1 = [];
 var users1 = [];
 var localStorageKeyName = 'data';
 //function to store user name and password
@@ -140,7 +127,24 @@ var registro = document.querySelector('#formSignup');
 if (  registro){
     registro.addEventListener('submit', function (e){
         e.preventDefault();
-        store(this);
+        let password = document.getElementById('passwd1').value;
+        let confirmPassword = document.getElementById('passwd2').value;
+        if (validarUsernameSalir() == false) {
+            return false;
+        } else if (validarEmailSalir() == false) {
+            return false;
+        } else if (validarPasswdSalir() == false) {
+            return false;
+        } else if (password != confirmPassword) {
+            document.getElementById("errorpasswd2").innerHTML = "Las contraseñas no coinciden";
+            return false;
+        } else {
+            document.getElementById("errorpasswd2").innerHTML = "";
+            //TODO: funcion de localstorage
+            store(this);
+            
+            window.location.replace("login.html");
+        }
     })
 }else {
     document.getElementById('signon').addEventListener('submit', function (e){
