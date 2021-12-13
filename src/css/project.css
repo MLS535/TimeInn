@@ -55,7 +55,8 @@ Event Page
 
 #cerrarsesion{
     display: block;
-    margin-top: -2rem;
+    margin-top: -1rem;
+    min-width: 6rem;
 }
 
 .addEvent{
@@ -1122,6 +1123,7 @@ OVERLAY WITH FORM
     text-align: center;
     text-decoration: none;
     outline: none;
+    min-width: 6rem;
 }
 
 .header .menu {

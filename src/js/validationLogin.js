@@ -1,5 +1,4 @@
- //import { users} from "./data.js";
- function checkData(username, password, errores){
+function checkData(username, password, errores){
     var users1 = [];
     var localStorageKeyName = 'data';
     var dataInLocalStorage = localStorage.getItem(localStorageKeyName);
@@ -24,8 +23,8 @@
        let errores = document.getElementById('erroreslogin');
        //Añadir preventDefault y cambiar a submit el boton para que no se actualice y se pierda info
        let username = document.getElementById('userlogin').value;
-       let passwdlogin = document.getElementById('passwdlogin').value;
-       checkData(username, passwdlogin, errores);
+       let passwd1 = document.getElementById('passwd1').value;
+       checkData(username, passwd1, errores);
    });
 
    /* TODO Crear Cookies del nombre de usuario
