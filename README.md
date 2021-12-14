@@ -31,6 +31,9 @@ https://chrome.google.com/webstore/detail/local-storage-explorer/hglfomidogadbhe
 - En el documento de validationLogin.js en Login comprobamos que existe o no el usuario introducido. Si existe te redirige a index.html
 - En el documento de validationSignup.js creamos el usuario si todas las validaciones de signup están correctas o no. Si existe te redirige a login.html
 - En el documento de projects.js modificamos la cookie para que mostrase el nombre de usuario o email en el index.html.
+
+<h3> Tests </h3>
+Creado tests en la carpeta tests. Son dos describe y 3 its.
 ---
 <h3> Validaciones </h3>
 En nuestro formulario hemos añadido:
