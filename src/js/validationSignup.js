@@ -1,5 +1,4 @@
 import {validarEmail, validarNombre, validarPassword} from './validation.mjs';
-
  //validacion del submit
   document.querySelector('#formSignup').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -65,7 +64,7 @@ function store(theForm) {
     //Creamos un array que almacena los usuarios y las contraseñas
     //var usuarios = JSON.parse(localStorage.getItem("usuarios")||"[]"); // get current objects
 
-    if (dataInLocalStorage !== null) {
+    if (dataInLocalStorage != null) {
         users1 = JSON.parse(dataInLocalStorage);
     }
     var usuario = {
@@ -85,7 +84,7 @@ function store(theForm) {
 } 
 
 var registro = document.querySelector('#formSignup');
-if (  registro){
+// if (  registro){
     registro.addEventListener('submit', function (e){
         e.preventDefault();
         let password = document.getElementById('passwd1').value;
@@ -107,9 +106,23 @@ if (  registro){
             window.location.replace("login.html");
         }
     })
-}else {
+/* }else {
     document.getElementById('signon').addEventListener('submit', function (e){
         e.preventDefault();
         login(this);
     })
+} */
+
+function primerUsuario(){
+    if (dataInLocalStorage == null) {
+        var usuario1 ={
+                username   : "pepe",
+                email      : "pepe@gmail.com",
+                password   : "Asd123.",
+        }
+        users1.push(usuario1);
+        localStorage.setItem(localStorageKeyName, JSON.stringify(users1));
+    }
 }
+
+primerUsuario();
